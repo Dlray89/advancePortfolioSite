@@ -23,8 +23,8 @@ const Footer = () => {
                     </Typography>
                 </Grid>
 
-                <Grid item direction='column' justify='space-between' className={classes.servicesContainter}>
-                    <Grid container className={classes.TitleLink} >
+                <Grid container direction='column' justify='space-between' className={classes.servicesContainter}>
+                    <Grid item className={classes.TitleLink} >
                         Services
                     </Grid>
                     <Grid container direction='column' justify='space-between'>
@@ -42,7 +42,7 @@ const Footer = () => {
                     
                 </Grid>
 
-                <Grid item direction='column' >
+                <Grid container direction='column' >
                     <Grid container className={classes.TitleLink}>
                         <Typography>
                             About
