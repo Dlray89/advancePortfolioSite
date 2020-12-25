@@ -1,6 +1,6 @@
 import React from 'react'
 import { useStyles } from './footer_styles'
-import {Divider, Grid, Typography, IconButton, useTheme, useMediaQuery, Hidden } from '@material-ui/core'
+import {Grid, Typography,useTheme, useMediaQuery, Hidden } from '@material-ui/core'
 import Logo from '../../asset/images/David.png'
 //Social media imports
 import Facebook from '../../asset/Social Media Logos/icons8-facebook.svg'

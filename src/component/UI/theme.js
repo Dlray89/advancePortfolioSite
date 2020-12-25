@@ -13,10 +13,8 @@ const font = 'Lustria serif'
 const logoFont = 'Smokum, cursive;'
 
 //font sizes
-const logoSize = '18px'
-const smallSize = '12px'
+
 const medSize = '15px'
-const largeSize = '18px'
 
 export default createMuiTheme({
     palette:{

@@ -4,7 +4,6 @@ import {
   Card,
   Grid,
   Button,
-  CardActionArea,
   CardContent,
   Hidden
 } from "@material-ui/core";

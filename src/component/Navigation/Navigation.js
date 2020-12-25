@@ -38,7 +38,7 @@ const Navigation = () => {
   const classes = useStyles();
   const [value, setValue] = useState(0);
   const [open, setOpen] = useState(false);
-  const iOS = process.browser && /iPad|iPhone| iPod/.test(navigator.userAgent);
+  // const iOS = process.browser && /iPad|iPhone| iPod/.test(navigator.userAgent);
   const theme = useTheme();
   const mobileMatch = useMediaQuery(theme.breakpoints.down("sm"));
 
@@ -50,9 +50,9 @@ const Navigation = () => {
     setOpen(true);
   };
 
-  const closeMobileNav = () => {
-    setOpen(false);
-  };
+  // const closeMobileNav = () => {
+  //   setOpen(false);
+  // };
 
   const navigationLinks = [
     { id: 1, name: "Home", link: "/" },
