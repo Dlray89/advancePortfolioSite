@@ -51,13 +51,5 @@ export const useStyles = makeStyles((theme) => ({
     mobileLinks:{
         color: theme.palette.common.black
     },
-    navButton:{
-        background: theme.palette.common.lightBrown,
-        color:theme.palette.common.black,
-        marginRight:'3em',
-        '&:hover':{
-            borderColor:  theme.palette.common.lightBrown,
-            color:  theme.palette.common.lightBrown,
-        }
-    }
+    
 }))

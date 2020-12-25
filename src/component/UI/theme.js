@@ -44,6 +44,41 @@ export default createMuiTheme({
             fontFamily: `${logoFont}`,
             color: tan,
             fontSize:'20px'
+        },
+        subtitle1:{
+            fontSize:'0.85em',
+            textAlign:'center'
+        },
+        body1:{
+            fontSize:'0.55em'
+        },
+        h2:{
+            fontSize:'1.25em',
+            textAlign:'center'
+        },
+        h3:{
+            fontSize:'1.5em',
+            textAlign:'center'
+        }
+    },
+    overrides:{
+        MuiInputLabel:{
+            root:{
+                color: lightWalnut,
+                fontSize:'1rem',
+                textAlign:'center',
+            }
+        },
+        MuiInput:{
+            underline: {
+                '&:before':{
+                    borderBottom: `2px solid ${camel}`
+                },
+                '&:hover:not($disable):not($focused):not($error):before':{
+                    borderBottom: `2px solid ${camel}`
+
+                }
+            }
         }
     }
     

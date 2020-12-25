@@ -18,6 +18,7 @@ import {
   Button
 } from "@material-ui/core";
 import MenuIcon from "@material-ui/icons/Menu";
+import ContactButton from '../UI/contactButton/contactButton'
 
 import { Link } from "react-router-dom";
 
@@ -105,7 +106,7 @@ const Navigation = () => {
           />
         ))}
       </Tabs>
-      <Button variant='outlined' className={classes.navButton}>Contact Me</Button>
+      <ContactButton variant='outlined' className={classes.navButton}>Contact Me</ContactButton>
     </React.Fragment>
   );
 
