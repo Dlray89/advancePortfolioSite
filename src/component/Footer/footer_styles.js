@@ -28,7 +28,7 @@ export const useStyles = makeStyles((theme) => ({
     width:'20%',
     [theme.breakpoints.down('sm')]:{
         width:'60%',
-        marginTop:'2em'
+        margin:'0 auto',
     }
   },
   footerText:{
@@ -36,7 +36,7 @@ export const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down('sm')]:{
         width:'100%',
         textAlign:'center',
-        fontSize:'1.0em'
+        fontSize:'1.5em'
     }
     
 
@@ -47,6 +47,7 @@ export const useStyles = makeStyles((theme) => ({
       verticalAlign:'text-bottom',
       [theme.breakpoints.down('sm')]:{
         width:'60%',
+        margin: '0 auto'
     }
   },
 
