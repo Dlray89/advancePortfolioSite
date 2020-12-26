@@ -15,7 +15,6 @@ function App() {
         <Route exact path='/' component={LandingPage}   />
         <Route exact path='/projects' component={() => <div>Projects</div>}  />
         <Route exact path='/blogs' component={() => <div>Blogs</div>}  />
-        <Route exact path='/contact' component={() => <div>Contact</div>}  />
 
       </Switch>
       <Footer  />

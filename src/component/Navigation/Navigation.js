@@ -77,11 +77,6 @@ const Navigation = () => {
           setValue(2);
         }
         break;
-      case "/contact":
-        if (value !== 3) {
-          setValue(3);
-        }
-        break;
       default:
         break;
     }
