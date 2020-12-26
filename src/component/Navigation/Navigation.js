@@ -15,7 +15,6 @@ import {
   useMediaQuery,
   useTheme,
   IconButton,
-  Button
 } from "@material-ui/core";
 import MenuIcon from "@material-ui/icons/Menu";
 import ContactButton from '../UI/contactButton/contactButton'
