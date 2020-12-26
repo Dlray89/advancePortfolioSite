@@ -6,7 +6,12 @@ export const useStyles = makeStyles((theme) => ({
     mainContainer:{
     },
     appbar:{
-        zIndex: theme.zIndex.modal + 1
+        zIndex: theme.zIndex.modal + 1,
+        [theme.breakpoints.down('sm')]:{
+            zIndex: theme.zIndex.modal + 1,
+
+
+        }
     },
     tabContainer:{
         marginLeft: 'auto'

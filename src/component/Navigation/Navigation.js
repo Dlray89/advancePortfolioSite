@@ -38,7 +38,7 @@ const Navigation = () => {
   const classes = useStyles();
   const [value, setValue] = useState(0);
   const [open, setOpen] = useState(false);
-  // const iOS = process.browser && /iPad|iPhone| iPod/.test(navigator.userAgent);
+  const iOS = process.browser && /iPad|iPhone| iPod/.test(navigator.userAgent);
   const theme = useTheme();
   const mobileMatch = useMediaQuery(theme.breakpoints.down("sm"));
 
@@ -112,6 +112,8 @@ const Navigation = () => {
   const mobileNav = (
     <React.Fragment>
       <SwipeableDrawer
+      disableBackdropTransition={!iOS}
+      disableDiscovery={iOS}
         open={open}
         onOpen={() => setOpen(true)}
         onClose={() => setOpen(false)}
