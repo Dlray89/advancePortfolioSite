@@ -46,8 +46,8 @@ export const useStyles = makeStyles((theme) => ({
       width:'20%',
       verticalAlign:'text-bottom',
       [theme.breakpoints.down('sm')]:{
-        width:'60%',
-        margin: '0 auto'
+        width:'80%',
+        margin: '0 auto',
     }
   },
 

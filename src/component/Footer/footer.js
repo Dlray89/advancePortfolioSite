@@ -82,7 +82,7 @@ const Footer = () => {
                 </Typography>
              </Grid>
 
-             <Grid container direction={mobileMatchSM ? "row" : 'column'} className={classes.socialMediaContainer}>
+             <Grid container justify={mobileMatchSM ? "center" : null} direction={mobileMatchSM ? "row" : null} className={classes.socialMediaContainer}>
                  <Grid item>
                      <img className={classes.icons} src={Facebook} alt='facebook icon' />
                  </Grid>
