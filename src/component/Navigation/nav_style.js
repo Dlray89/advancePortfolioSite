@@ -12,7 +12,9 @@ export const useStyles = makeStyles((theme) => ({
         marginLeft: 'auto'
     },
     tabs:{
-        ...theme.typography.links
+        fontFamily: 'Lustria serif',
+        color:theme.palette.common.lightBrown,
+        fontSize: '15px'
     },
     logoContainer:{
         height: '6em'
