@@ -5,6 +5,9 @@ export const useStyles = makeStyles((theme) => ({
     background: theme.palette.common.lightBrown,
     color: theme.palette.common.black,
     marginRight: "3em",
+    [theme.breakpoints.down('sm')]:{
+        margin: '0 auto'
+    },
     "&:hover": {
       borderColor: theme.palette.common.lightBrown,
       color: theme.palette.common.lightBrown,

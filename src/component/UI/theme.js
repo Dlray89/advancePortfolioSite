@@ -9,8 +9,8 @@ const tan = '#ddca7d'
 const rasinBlack = '#242331'
 const cafeNoir = '#533e2d'
 //Font-here
-const font = 'Lustria serif'
-const logoFont = 'Smokum, cursive;'
+// const font = 'Lustria serif'
+// const logoFont = 'Smokum, cursive'
 
 //font sizes
 
@@ -26,22 +26,22 @@ export default createMuiTheme({
             medBrownTwo: camel
         },
         primary:{
-            main: `${rasinBlack}`,
+            main: rasinBlack,
             
         },
         secondary: {
-            main: `${tan}`,
+            main: tan,
         },
     
     },
     typography:{
         links:{
-            fontFamily: `${font}`,
+            fontFamily: 'Lustria serif',
             color: lightWalnut,
             fontSize:medSize
         },
         logo:{
-            fontFamily: `${logoFont}`,
+            fontFamily: 'Smokum cursive',
             color: tan,
             fontSize:'20px'
         },

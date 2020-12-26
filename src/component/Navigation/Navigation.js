@@ -128,10 +128,9 @@ const Navigation = () => {
             <ListItemText className={classes.mobileLinks}>Blogs</ListItemText>
           </ListItem>
 
-          <ListItem button style={{background: theme.palette.common.black}} divider component={Link} to='/contact'>
-            <ListItemText style={{color:theme.palette.common.lightBrown, fontWeight:500}} className={classes.mobileLinks}>Contact</ListItemText>
-          </ListItem>
-        </List>
+         </List>
+         <ContactButton variant='outlined' className={classes.mobileButton}>Contact Me</ContactButton>
+        
       </SwipeableDrawer>
 
       <IconButton style={{ marginLeft: "auto" }} onClick={handleMobileNav}>

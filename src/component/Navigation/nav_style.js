@@ -7,11 +7,6 @@ export const useStyles = makeStyles((theme) => ({
     },
     appbar:{
         zIndex: theme.zIndex.modal + 1,
-        [theme.breakpoints.down('sm')]:{
-            zIndex: theme.zIndex.modal + 1,
-
-
-        }
     },
     tabContainer:{
         marginLeft: 'auto'
@@ -54,7 +49,9 @@ export const useStyles = makeStyles((theme) => ({
         textDecoration: 'none'
     },  
     mobileLinks:{
-        color: theme.palette.common.black
+        color: theme.palette.common.black,
+        fontSize:'1.7em',
+        textAlign:'center'
     },
     
 }))
