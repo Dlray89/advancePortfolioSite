@@ -12,9 +12,7 @@ export const useStyles = makeStyles((theme) => ({
         marginLeft: 'auto'
     },
     tabs:{
-        fontFamily: 'Lustria serif',
-        color:theme.palette.common.lightBrown,
-        fontSize: '15px'
+        ...theme.typography.links
     },
     logoContainer:{
         height: '6em'
@@ -37,7 +35,6 @@ export const useStyles = makeStyles((theme) => ({
     mobileDrawer:{
         background:'#eae9bb',
         color: theme.palette.common.lightBrownn,
-        zIndex: 0,
         width:'28.52%',
         [theme.breakpoints.down('sm')]:{
             width:'23.2%'
