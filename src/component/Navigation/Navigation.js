@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, createRef } from "react";
 import { useStyles } from "./nav_style";
 import Logo from "../../asset/images/David.png";
 
@@ -36,6 +36,8 @@ const ElevationScroll = (props) => {
 
 const Navigation = () => {
   const classes = useStyles();
+  const ref = createRef()
+
   const [value, setValue] = useState(0);
   const [open, setOpen] = useState(false);
   const iOS = process.browser && /iPad|iPhone| iPod/.test(navigator.userAgent);
@@ -57,7 +59,7 @@ const Navigation = () => {
   const navigationLinks = [
     { id: 1, name: "Home", link: "/" },
     { id: 2, name: "Projects", link: "/projects" },
-    { id: 3, name: "Blogs", link: "/blogs" },
+    { id: 3, name: "Services", link: "/services" },
   ];
 
   useEffect(() => {
@@ -72,7 +74,7 @@ const Navigation = () => {
           setValue(1);
         }
         break;
-      case "/blogs":
+      case "/services":
         if (value !== 2) {
           setValue(2);
         }
@@ -89,6 +91,7 @@ const Navigation = () => {
         value={value}
         onChange={changeHandler}
         className={classes.tabContainer}
+        
       >
         {navigationLinks.map((link) => (
           <Tab
@@ -113,8 +116,9 @@ const Navigation = () => {
         onOpen={() => setOpen(true)}
         onClose={() => setOpen(false)}
         classes={{paper: classes.mobileDrawer}}
+        ref={ref}
       >
-        <div className={classes.toolbarMargin}  />
+        <div ref={ref} className={classes.toolbarMargin}  />
         <List>
           <ListItem button divider className={classes.linksContainer} component={Link} to='/' >
             <ListItemText className={classes.mobileLinks}>Home</ListItemText>
@@ -124,8 +128,8 @@ const Navigation = () => {
             <ListItemText  className={classes.mobileLinks}>Projects</ListItemText>
           </ListItem>
 
-          <ListItem button divider component={Link} to='/blogs'>
-            <ListItemText className={classes.mobileLinks}>Blogs</ListItemText>
+          <ListItem button divider component={Link} to='/services'>
+            <ListItemText className={classes.mobileLinks}>Services</ListItemText>
           </ListItem>
 
          </List>
@@ -133,22 +137,23 @@ const Navigation = () => {
         
       </SwipeableDrawer>
 
-      <IconButton style={{ marginLeft: "auto" }} onClick={handleMobileNav}>
-        <MenuIcon className={classes.menuButton} />
+      <IconButton  style={{ marginLeft: "auto" }} onClick={() => setOpen(!open)}>
+        <MenuIcon  className={classes.menuButton} />
       </IconButton>
     </React.Fragment>
   );
 
   return (
     <div className={classes.mainContainer}>
-      <ElevationScroll>
-        <AppBar color="primary" position="fixed" className={classes.appbar}>
+      <ElevationScroll >
+        <AppBar ref={ref} color="primary" position="fixed" className={classes.appbar}>
           <Toolbar disableGutters>
             <div className={classes.logoContainer}>
               <img
                 className={classes.logo}
                 alt="logo for David Ray website"
                 src={Logo}
+                ref={ref}
               />
             </div>
             {mobileMatch ? mobileNav : deskTopNav}

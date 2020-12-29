@@ -22,6 +22,7 @@ export const useStyles = makeStyles((theme) => ({
     width: "100%" },
     dialogTitle: {
     fontSize: "2em",
+    marginTop:'2em'
   },
   contactInfo: {
     width: "30%",
@@ -46,5 +47,9 @@ export const useStyles = makeStyles((theme) => ({
   sendIcon:{
       height:'2em',
       marginLeft:'0.25em'
+  },
+  title:{
+    fontSize:'1em'
   }
+
 }));

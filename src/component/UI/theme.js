@@ -36,30 +36,42 @@ export default createMuiTheme({
     },
     typography:{
         links:{
-            fontFamily: 'Lustria serif',
+            fontFamily: 'Lustria, serif',
             color: lightWalnut,
             fontSize:medSize
         },
-        logo:{
-            fontFamily: 'Smokum cursive',
-            color: tan,
-            fontSize:'20px'
-        },
-        subtitle1:{
-            fontSize:'0.85em',
-            textAlign:'center'
-        },
-        body1:{
-            fontSize:'0.55em'
-        },
         h2:{
-            fontSize:'1.25em',
-            textAlign:'center'
+            fontSize:'2em',
+            fontFamily: 'Smokum cursive',
         },
         h3:{
             fontSize:'1.5em',
             textAlign:'center'
+        },
+        h5:{
+            fontFamily: 'Smokum cursive',
+            fontSize:'2em',
+            color:tan,
+            textAlign:'center'
+        }   ,   
+        body1:{
+            fontSize:'0.55em'
+        },
+        body2:{
+            fontFamily: 'Smokum cursive',
+            fontSize:'1.4em',
+            color: tan
+        },
+        subtitle1:{
+            fontSize:'0.85em',
+            textAlign:'center',
+            fontFamily: 'Smokum cursive',
+        },
+        subtitle2:{
+            fontSize:'0.85em',
+            textAlign:'start'
         }
+        
     },
     overrides:{
         MuiInputLabel:{

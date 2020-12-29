@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import axios from "axios";
 import {
   Button,
   TextField,
@@ -7,24 +8,69 @@ import {
   Dialog,
   DialogContent,
   DialogTitle,
+  Divider,
+  CircularProgress,
+  Snackbar,
 } from "@material-ui/core";
 import { useStyles } from "./contactButton_Style";
 import Phone from "../../../asset/Social Media Logos/icons8-phone-50.png";
 import Email from "../../../asset/Social Media Logos/icons8-email-50.png";
-import website from "../../../asset/Social Media Logos/icons8-website-50.png";
+import location from "../../../asset/Social Media Logos/icons8-location-50.png";
 import AirplaneSend from "../../../asset/Social Media Logos/icons8-email-send-48.png";
 import Cancel from "../../../asset/Social Media Logos/icons8-cancel-48.png";
-
-
 
 const ContactButton = () => {
   const classes = useStyles();
   const [open, setOpen] = useState(false);
 
-  const [name, setName] = useState('')
-  const [email, setEmail] = useState('')
-  const [phone, setPhone] = useState('')
-  const [message, setMessage] = useState('')
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [emailHelper, setEmailHelper] = useState("");
+
+  const [phone, setPhone] = useState("");
+  const [phoneHelper, setPhoneHelper] = useState("");
+
+  const [message, setMessage] = useState("");
+  const [loading, setLoading] = useState(false);
+
+  const [alert, setAlert] = useState({
+    open: false,
+    message: "",
+    background: "",
+  });
+
+  const onChangeValidation = (event) => {
+    let valid;
+
+    switch (event.target.id) {
+      case "email":
+        setEmail(event.target.value);
+        valid = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(
+          event.target.value
+        );
+
+        if (!valid) {
+          setEmailHelper("Please enter an vaild email");
+        } else {
+          setEmailHelper("");
+        }
+        break;
+      case "phone":
+        setPhone(event.target.value);
+        valid = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/.test(
+          event.target.value
+        );
+
+        if (!valid) {
+          setPhoneHelper("Please enter a valid phone number");
+        } else {
+          setPhoneHelper("");
+        }
+        break;
+      default:
+        break;
+    }
+  };
 
   const openDialog = () => {
     setOpen(true);
@@ -34,6 +80,38 @@ const ContactButton = () => {
     setOpen(false);
   };
 
+  const onConfirm = () => {
+    setLoading(true);
+    axios
+      .get(
+        "https://us-central1-tech-portfolio-83a00.cloudfunctions.net/sendMail", {params: {
+          name: name,
+          email: email,
+          phone: phone,
+          message: message
+        }}
+      )
+      .then((res) => {
+        setLoading(false);
+        setName("");
+        setEmail("");
+        setPhone("");
+        setMessage("");
+        setAlert({open: true, message: 'sent successfully', background: '#4bb543'})
+      })
+      .catch((err) => {setLoading(false); setAlert({open: true, message:"Something went wrong. Please try again", background:'#ff3232'})});
+  };
+
+  const buttonContents = (
+    <React.Fragment>
+      Send Request{" "}
+      <img
+        className={classes.sendIcon}
+        alt="airplane send icon"
+        src={AirplaneSend}
+      />
+    </React.Fragment>
+  );
 
   return (
     <React.Fragment>
@@ -44,67 +122,195 @@ const ContactButton = () => {
       >
         Contact Me
       </Button>
-      <Dialog open={open} onClose={closeDialog} classes={{paper: classes.dialog}}>
+      <Dialog
+        open={open}
+        onClose={closeDialog}
+        classes={{ paper: classes.dialog }}
+      >
         <DialogTitle className={classes.dialogTitle}>
-          <Typography >
+          <Typography className={classes.Title}>
             Lets Chat about your future and turn your vision into reality
           </Typography>
-          
         </DialogTitle>
         <DialogContent>
-          <Grid container direction='row' justify='center'>
-          <Grid container item direction='row' alignItems='center' className={classes.contactInfo}>
-            <Grid item>
-              <img src={Phone} alt='phone icon' className={classes.contactIcons}  />
-            </Grid>
-            <Grid item>614.681.0179</Grid>
-          </Grid>
-
-          <Grid container item direction='row' alignItems='center' className={classes.contactInfo}>
-            <Grid item>
-              <img src={Email} alt='phone icon' className={classes.contactIcons}  />
-            </Grid>
-            <Grid item>dlrayjr89@gmail.com</Grid>
-          </Grid>
-
-          <Grid container item direction='row' alignItems='center' className={classes.contactInfo}>
-            <Grid item>
-              <img src={website} alt='phone icon' className={classes.contactIcons}  />
-            </Grid>
-            <Grid item>www.dapthedev.com</Grid>
-          </Grid>
-
-          </Grid>
-
-          <Grid item container direction='column' justify='center' style={{border:'solid 2px yellow'}}>
-            <Grid item className={classes.inputContainer} >
-              <TextField margin='dense' className={classes.input} placeholder='name' value={name} onChange={(e) => setName(e.target.value)}  />
-            </Grid>
-
-            <Grid item  className={classes.inputContainer} >
-              <TextField margin='dense' className={classes.input} placeholder='email' value={email} onChange={(e) => setEmail(e.target.value)}  />
-            </Grid>
-
-            <Grid item  className={classes.inputContainer} >
-              <TextField margin='dense' className={classes.input} placeholder='phone number' value={phone} onChange={(e) => setPhone(e.target.value)}  />
-            </Grid>
-
-            <Grid item  className={classes.inputContainer} >
-              <TextField margin='dense' multiline rows={10} className={classes.input} placeholder='Message' value={message} onChange={(e) => setMessage(e.target.value)}  />
-            </Grid>
-
-            <Grid item container justify='space-evenly' className={classes.inputContainer} >
+          <Grid container direction="row" justify="center">
+            <Grid
+              container
+              item
+              direction="column"
+              alignItems="center"
+              className={classes.contactInfo}
+            >
               <Grid item>
-              <Button className={classes.contactButton} variant='contained'>Send Request <img className={classes.sendIcon} alt='airplane send icon' src={AirplaneSend}  /></Button>
-            
+                <img
+                  src={Phone}
+                  alt="phone icon"
+                  className={classes.contactIcons}
+                />
               </Grid>
               <Grid item>
-                  <Button className={classes.contactButton} variant='contained' onClick={closeDialog}>Cancel <img className={classes.sendIcon} alt='cancel icon' src={Cancel}  /></Button>
+                {" "}
+                <a
+                  style={{ textDecoration: "none", color: "inherit" }}
+                  href="tel:614.681.0179"
+                >
+                  614.681.0179
+                </a>
               </Grid>
+            </Grid>
+
+            <Grid
+              container
+              item
+              direction="column"
+              alignItems="center"
+              className={classes.contactInfo}
+            >
+              <Grid item>
+                <img
+                  src={Email}
+                  alt="phone icon"
+                  className={classes.contactIcons}
+                />
               </Grid>
+              <Grid item>
+                <a
+                  style={{ textDecoration: "none", color: "inherit" }}
+                  href="mailto:dlrayjr89@gmail.com"
+                >
+                  dlrayjr89@gmail.com
+                </a>{" "}
+              </Grid>
+            </Grid>
+
+            <Grid
+              container
+              item
+              direction="column"
+              alignItems="center"
+              className={classes.contactInfo}
+            >
+              <Grid item>
+                <img
+                  src={location}
+                  alt="location icon"
+                  className={classes.contactIcons}
+                />
+              </Grid>
+              <Grid item> Marietta, GA</Grid>
+            </Grid>
           </Grid>
-      
+          <Divider />
+
+          <Grid item container direction="column" justify="center">
+            <Grid item className={classes.inputContainer}>
+              <TextField
+                variant="outlined"
+                id="name"
+                margin="dense"
+                className={classes.input}
+                placeholder="Name"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+              />
+            </Grid>
+
+            <Grid item className={classes.inputContainer}>
+              <TextField
+                variant="outlined"
+                id="email"
+                margin="dense"
+                error={emailHelper.length !== 0}
+                helperText={emailHelper}
+                className={classes.input}
+                placeholder="Email"
+                value={email}
+                onChange={onChangeValidation}
+              />
+            </Grid>
+
+            <Grid item className={classes.inputContainer}>
+              <TextField
+                variant="outlined"
+                id="phone"
+                margin="dense"
+                error={phoneHelper.length !== 0}
+                helperText={phoneHelper}
+                className={classes.input}
+                placeholder="Phone Number"
+                value={phone}
+                onChange={onChangeValidation}
+              />
+            </Grid>
+
+            <Grid item className={classes.inputContainer}>
+              <TextField
+                variant="outlined"
+                id="message"
+                margin="dense"
+                multiline
+                rows={10}
+                className={classes.input}
+                placeholder="Message"
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
+              />
+            </Grid>
+
+            <Grid
+              item
+              container
+              justify="space-evenly"
+              className={classes.inputContainer}
+            >
+              <Grid item>
+                <Button
+                  disabled={
+                    name.length === 0 ||
+                    message.length === 0 ||
+                    phoneHelper.length !== 0 ||
+                    emailHelper.length !== 0
+                  }
+                  onClick={onConfirm}
+                  className={classes.contactButton}
+                  variant="contained"
+                >
+                  {loading ? (
+                    <CircularProgress color="secondary" size={30} />
+                  ) : (
+                    buttonContents
+                  )}
+                </Button>
+              </Grid>
+              <Grid item>
+                <Button
+                  className={classes.contactButton}
+                  variant="contained"
+                  onClick={closeDialog}
+                >
+                  Cancel{" "}
+                  <img
+                    className={classes.sendIcon}
+                    alt="cancel icon"
+                    src={Cancel}
+                  />
+                </Button>
+              </Grid>
+            </Grid>
+          </Grid>
         </DialogContent>
+        <Snackbar
+          open={alert.open}
+          message={alert.message}
+          ContentProps={{
+            style: {
+              background: alert.background,
+            },
+          }}
+          anchorOrigin={{ vertical: "bottom", horizontal: "center" }}
+          onClose={() => setAlert({ ...alert, open: false })}
+          autoHideDuration={4000}
+        />
       </Dialog>
     </React.Fragment>
   );

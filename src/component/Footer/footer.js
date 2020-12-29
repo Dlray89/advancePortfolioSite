@@ -19,7 +19,7 @@ const Footer = () => {
             <Grid container direction='row' justify='space-evenly' item style={{marginTop:'1.5em'}} >
            <Grid item className={classes.home}>
                <Grid item>
-                    <Typography variant='h2'>
+                    <Typography variant='h3'>
                         Home
                     </Typography>
                </Grid>
@@ -27,7 +27,7 @@ const Footer = () => {
 
            <Grid item  className={classes.services} >
                <Grid item>
-                   <Typography variant='h2'>
+                   <Typography variant='h3'>
                        Services
                    </Typography>
                </Grid>
@@ -53,7 +53,7 @@ const Footer = () => {
 
            <Grid container item direction='column' className={classes.information}>
                <Grid item>
-                   <Typography variant='h2'>
+                   <Typography variant='h3'>
                         Information
                    </Typography>
                </Grid>
