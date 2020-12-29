@@ -22,7 +22,6 @@ export const useStyles = makeStyles((theme) => ({
     width: "100%" },
     dialogTitle: {
     fontSize: "2em",
-    marginTop:'2em'
   },
   contactInfo: {
     width: "30%",
@@ -42,7 +41,8 @@ export const useStyles = makeStyles((theme) => ({
   contactButton:{
       background: theme.palette.common.black,
       color: theme.palette.common.lightBrown,
-      marginTop:'1em'
+      marginTop:'1em',
+      
   },
   sendIcon:{
       height:'2em',

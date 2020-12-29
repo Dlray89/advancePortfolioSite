@@ -55,7 +55,7 @@ export default createMuiTheme({
             textAlign:'center'
         }   ,   
         body1:{
-            fontSize:'0.55em'
+            fontSize:'0.85em'
         },
         body2:{
             fontFamily: 'Smokum cursive',

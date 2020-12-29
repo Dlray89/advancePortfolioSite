@@ -123,6 +123,7 @@ const ContactButton = () => {
         Contact Me
       </Button>
       <Dialog
+      style={{marginTop:'7em'}}
         open={open}
         onClose={closeDialog}
         classes={{ paper: classes.dialog }}

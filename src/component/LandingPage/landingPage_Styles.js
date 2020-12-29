@@ -58,12 +58,14 @@ export const useStyles = makeStyles((theme) => ({
         border:'solid 1px #ddca7d',
         color: theme.palette.common.darkBrown,
         background:theme.palette.common.lightBrown,
+        '&:hover':{
+            background: theme.palette.common.black,
+            color:theme.palette.common.lightBrown
+          },
         [theme.breakpoints.down('sm')]:{
                 fontSize:'0.75em'
         },
-        '&:hover':{
-            color:'white'
-        }
+        
     },
     buttonIcon:{
         height:'2.5em',
@@ -156,6 +158,108 @@ export const useStyles = makeStyles((theme) => ({
     techIcons:{
         height:'2.2em',
         marginLeft:'0.55em'
+    },
+    myMissionContainer:{
+        background: theme.palette.common.black,
+        color: theme.palette.common.lightBrown,
+        padding:'3%'
+        
+    },
+    myMissionTitle:{
+        fontSize:'2.5em',
+        textAlign:'center',
+        fontFamily: 'Smokum cursive'
+    },
+    myMissionText:{
+        fontSize:'1.2em',
+        textAlign:'center',
+        fontFamily: 'Smokum cursive'
+
+    },
+    websiteContainer:{
+        width:'60%',
+        marginTop:'1em',
+        marginLeft:'3em'
+
+    },
+    websiteContentContainer:{
+        marginRight:'0.75em'
+    },
+    websiteTitle:{
+        fontSize:'2em',
+        marginBottom:'1em'
+    },
+    websiteSubtitle:{
+        fontSize:'1.1em',
+        marginBottom:'0.75em',
+        width:'100%',
+        
+    },
+    websiteButton:{
+
+    },
+    webdesignImgContainer:{
+    },
+    webdesignImg:{
+        width:'20em'
+    },
+    webAppContainer:{
+        width:'57.5%',
+        marginTop:'3em',
+        marginLeft: 'auto',
+        marginRight:'3em'
+
+
+    },
+    webAppContentContainer:{
+        marginRight:'0.75em'
+    },
+    webAppTitle:{
+        fontSize:'2em',
+        marginBottom:'1em'
+    },
+    webAppSubtitle:{
+        fontSize:'1.1em',
+        marginBottom:'0.75em',
+        width:'100%',
+        
+    },
+    webAppButton:{
+
+    },
+    webAppImgContainer:{
+    },
+    webAppImg:{
+        width:'20em'
+    },
+
+    responsiveContainer:{
+        width:'57.5%',
+        marginTop:'3em',
+        marginLeft:'3em'
+
+
+    },
+    responsiveContentContainer:{
+        marginRight:'0.75em'
+    },
+    responsiveTitle:{
+        fontSize:'2em',
+        marginBottom:'1em'
+    },
+    responsiveSubtitle:{
+        fontSize:'1.1em',
+        marginBottom:'0.75em',
+        width:'100%',
+        
+    },
+    responsiveButton:{
+
+    },
+    responsiveImgContainer:{
+    },
+    responsiveImg:{
+        width:'20em'
     }
  
 
