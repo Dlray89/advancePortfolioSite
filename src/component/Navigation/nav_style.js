@@ -43,7 +43,7 @@ export const useStyles = makeStyles((theme) => ({
       width: "40%",
     },
     [theme.breakpoints.down("xs")]: {
-      width: "43.8%",
+      width: "61%",
     },
   },
   mobileLogo: {
@@ -52,7 +52,7 @@ export const useStyles = makeStyles((theme) => ({
       width: "22em",
     },
     [theme.breakpoints.down("xs")]: {
-      width: "16em",
+      width: "12em",
     },
   },
   linksContainer: {
