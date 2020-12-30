@@ -37,7 +37,6 @@ export const useStyles = makeStyles((theme) => ({
     },
   },
   mobileDrawer: {
-    background: "#eae9bb",
      
     [theme.breakpoints.down("sm")]: {
       width: "23%",
