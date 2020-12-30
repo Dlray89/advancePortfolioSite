@@ -138,8 +138,10 @@ const Navigation = () => {
         
       </SwipeableDrawer>
 
-      <IconButton className={classes.buttonContainer}  onClick={() => setOpen(!open)}>
-        <MenuIcon  className={classes.menuButton} />
+      <IconButton style={{marginLeft: 'auto'}}  onClick={() => setOpen(!open)}>
+        <MenuIcon style={{ color: theme.palette.common.lightBrown,
+    height: "1.5em",
+    width: "1.5em",}}  />
       </IconButton>
     </React.Fragment>
   );

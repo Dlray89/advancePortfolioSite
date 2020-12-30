@@ -1,7 +1,7 @@
 import Navigation from './component/Navigation/Navigation'
 import Footer from './component/Footer/footer'
 import {BrowserRouter, Switch, Route} from 'react-router-dom'
-import { ThemeProvider , StylesProvider} from "@material-ui/styles"
+import { ThemeProvider} from "@material-ui/styles"
 import theme from './component/UI/theme'
 import LandingPage from "./component/LandingPage/LandingPage"
 import Portfolio from './component/PorfolioPage/PorfolioPage'
@@ -10,7 +10,6 @@ import Portfolio from './component/PorfolioPage/PorfolioPage'
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <StylesProvider>
       <BrowserRouter>
       <Navigation  />
       <Switch>
@@ -21,7 +20,6 @@ function App() {
       </Switch>
       <Footer  />
       </BrowserRouter>
-      </StylesProvider>
     
     </ThemeProvider>
   );
