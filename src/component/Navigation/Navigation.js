@@ -118,7 +118,7 @@ const Navigation = () => {
         classes={{paper: classes.mobileDrawer}}
       >
         <div>
-          <img className={classes.mobileLogo} src={Logo}  />
+          <img alt='Logo for David Ray website' className={classes.mobileLogo} src={Logo}  />
         </div>
         <List>
           <ListItem button divider className={classes.linksContainer} component={Link} to='/' >

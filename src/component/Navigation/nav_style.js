@@ -41,7 +41,6 @@ export const useStyles = makeStyles((theme) => ({
     color: theme.palette.common.lightBrownn,
     [theme.breakpoints.down("sm")]: {
       width: "40%",
-      border: "solid 2px red",
     },
     [theme.breakpoints.down("xs")]: {
       width: "43.8%",
@@ -50,11 +49,10 @@ export const useStyles = makeStyles((theme) => ({
   mobileLogo: {
     width: "25em",
     [theme.breakpoints.down("sm")]: {
-      width: "25em",
+      width: "22em",
     },
     [theme.breakpoints.down("xs")]: {
       width: "16em",
-      border: "solid 2px red",
     },
   },
   linksContainer: {

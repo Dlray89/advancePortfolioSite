@@ -118,33 +118,27 @@ export const useStyle = makeStyles((theme) => ({
     },
     [theme.breakpoints.down("xs")]: {
       textAlign: "center",
-      border:'solid 2px red',
-      width:'100%'
+      border: "solid 2px red",
+      width: "100%",
     },
   },
   buttonContainers: {
     margin: "0.15em 0%",
-    [theme.breakpoints.down("md")]: {
-    },
-    [theme.breakpoints.down("sm")]: {
-    },
+    [theme.breakpoints.down("md")]: {},
+    [theme.breakpoints.down("sm")]: {},
     [theme.breakpoints.down("xs")]: {
-      border:'solid 2px red'
+      border: "solid 2px red",
     },
   },
   buttons: {
-    background: '#558c8c',
-        color: 'White',
-        width: "33em",
-        "&:hover": {
-            background: theme.palette.common.lightBrown,
-            color: 'white',
-          },
-   
+    background: "#558c8c",
+    color: "White",
+    width: "33em",
     "&:hover": {
       background: theme.palette.common.lightBrown,
-      color: 'white',
+      color: "white",
     },
+
     [theme.breakpoints.down("md")]: {
       width: "30em",
     },
