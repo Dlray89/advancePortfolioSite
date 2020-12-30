@@ -15,7 +15,7 @@ export const useStyles = makeStyles((theme) => ({
             backgroundSize:'100%',
             backgroundPosition:'center',
             backgroundPositionY:'-0em',
-            height:'29em'
+            height:'22em'
         }
       },
     
