@@ -12,7 +12,6 @@ export const useStyles = makeStyles((theme) => ({
   },
   buttonContainer: {
     marginLeft: "auto",
-    
   },
   logoContainer: {
     height: "6em",
@@ -38,13 +37,19 @@ export const useStyles = makeStyles((theme) => ({
     },
   },
   mobileDrawer: {
-    
-    
+    background: "#eae9bb",
+      width: "23.5%",
     [theme.breakpoints.down("sm")]: {
-      width: "40%",
+      width: "50%",
+      
+    },
+    [theme.breakpoints.down("md")]: {
+      width: "36.5%",
+      
     },
     [theme.breakpoints.down("xs")]: {
-      width: "40%",
+      width: "42%",
+      
     },
   },
   mobileLogo: {

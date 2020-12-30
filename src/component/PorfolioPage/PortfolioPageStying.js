@@ -118,7 +118,6 @@ export const useStyle = makeStyles((theme) => ({
     },
     [theme.breakpoints.down("xs")]: {
       textAlign: "center",
-      border: "solid 2px red",
       width: "100%",
     },
   },
@@ -127,7 +126,6 @@ export const useStyle = makeStyles((theme) => ({
     [theme.breakpoints.down("md")]: {},
     [theme.breakpoints.down("sm")]: {},
     [theme.breakpoints.down("xs")]: {
-      border: "solid 2px red",
     },
   },
   buttons: {

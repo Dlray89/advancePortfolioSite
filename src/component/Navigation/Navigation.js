@@ -116,15 +116,10 @@ const Navigation = () => {
         onOpen={() => setOpen(true)}
         onClose={() => setOpen(false)}
         classes={{paper: classes.mobileDrawer}}
-        PaperProps={{
-          style:{
-            background: "#eae9bb",
-          }
-        }}
+        
       >
-        <div>
-          <img alt='Logo for David Ray website' className={classes.mobileLogo} src={Logo}  />
-        </div>
+        <div className={classes.toolbarMargin}  />
+      
         <List>
           <ListItem button divider component={Link} to='/' >
             <ListItemText style={{color:theme.palette.common.black, fontSize: "1.7em",
