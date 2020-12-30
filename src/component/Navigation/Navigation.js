@@ -57,9 +57,9 @@ const Navigation = () => {
   // };
 
   const navigationLinks = [
-    { id: 1, name: "Home", link: "/" },
-    { id: 2, name: "Projects", link: "/projects" },
-    { id: 3, name: "Services", link: "/services" },
+    { name: "Home", link: "/" },
+    { name: "Portfolio", link: "/projects" },
+    { name: "Services", link: "/services" },
   ];
 
   useEffect(() => {

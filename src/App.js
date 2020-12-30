@@ -4,6 +4,7 @@ import {BrowserRouter, Switch, Route} from 'react-router-dom'
 import { ThemeProvider} from "@material-ui/styles"
 import theme from './component/UI/theme'
 import LandingPage from "./component/LandingPage/LandingPage"
+import Portfolio from './component/PorfolioPage/PorfolioPage'
 
 
 function App() {
@@ -13,7 +14,7 @@ function App() {
       <Navigation  />
       <Switch>
         <Route exact path='/' component={LandingPage}   />
-        <Route exact path='/projects' component={() => <div>Projects</div>}  />
+        <Route exact path='/projects' component={Portfolio}  />
         <Route exact path='/services' component={() => <div>Services</div>}  />
 
       </Switch>
