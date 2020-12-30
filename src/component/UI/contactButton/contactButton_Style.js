@@ -5,6 +5,7 @@ export const useStyles = makeStyles((theme) => ({
     background: '#558c8c',
     color: 'White',
     marginRight: "3em",
+    marginLeft: '2em',
     [theme.breakpoints.down('sm')]:{
         margin: '0 auto'
     },

@@ -38,8 +38,8 @@ export const useStyles = makeStyles((theme) => ({
     },
   },
   mobileDrawer: {
-    background: "#eae9bb",
-    color: theme.palette.common.lightBrown,
+    
+    
     [theme.breakpoints.down("sm")]: {
       width: "40%",
     },
@@ -54,7 +54,6 @@ export const useStyles = makeStyles((theme) => ({
     },
     [theme.breakpoints.down("xs")]: {
       width: "12.2em",
-      border:'solid 2px red'
     },
   },
   linksContainer: {

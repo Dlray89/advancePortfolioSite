@@ -95,7 +95,7 @@ const Navigation = () => {
       >
         {navigationLinks.map((link) => (
           <Tab
-            className={classes.tabs}
+          style={{color:theme.palette.common.lightBrown ,}}
             component={Link}
             to={link.link}
             label={link.name}
@@ -116,20 +116,28 @@ const Navigation = () => {
         onOpen={() => setOpen(true)}
         onClose={() => setOpen(false)}
         classes={{paper: classes.mobileDrawer}}
+        PaperProps={{
+          style:{
+            background: "#eae9bb",
+          }
+        }}
       >
         <div>
           <img alt='Logo for David Ray website' className={classes.mobileLogo} src={Logo}  />
         </div>
         <List>
-          <ListItem button divider classes={{ selected: classes.linksContainer}} component={Link} to='/' >
-            <ListItemText className={classes.mobileLinks}>Home</ListItemText>
+          <ListItem button divider component={Link} to='/' >
+            <ListItemText style={{color:theme.palette.common.black, fontSize: "1.7em",
+    textAlign: "center"}} className={classes.mobileLinks}>Home</ListItemText>
           </ListItem>
 
-          <ListItem button divider classes={{ selected: classes.linksContainer}} component={Link} to='/projects'>
+          <ListItem style={{color:theme.palette.common.black, fontSize: "1em",
+    textAlign: "center"}} button divider component={Link} to='/projects'>
             <ListItemText  className={classes.mobileLinks}>Projects</ListItemText>
           </ListItem>
 
-          <ListItem button divider classes={{ selected: classes.linksContainer}} component={Link} to='/services'>
+          <ListItem style={{color:theme.palette.common.black, fontSize: "1em",
+    textAlign: "center"}} button divider component={Link} to='/services'>
             <ListItemText className={classes.mobileLinks}>Services</ListItemText>
           </ListItem>
 
