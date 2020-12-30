@@ -12,11 +12,7 @@ export const useStyles = makeStyles((theme) => ({
   },
   buttonContainer: {
     marginLeft: "auto",
-    [theme.breakpoints.down('sm')]:{
-        marginLeft: "auto",
-
-
-    }
+    
   },
   logoContainer: {
     height: "6em",
@@ -46,13 +42,10 @@ export const useStyles = makeStyles((theme) => ({
     color: theme.palette.common.lightBrownn,
     [theme.breakpoints.down("sm")]: {
       width: "40%",
-      background: "#eae9bb",
-    color: theme.palette.common.lightBrownn,
     },
     [theme.breakpoints.down("xs")]: {
-      width: "61%",
-      background: "#eae9bb",
-    color: theme.palette.common.lightBrownn,
+      width: "40%",
+      border:'solid 2px yellow'
     },
   },
   mobileLogo: {
@@ -61,7 +54,8 @@ export const useStyles = makeStyles((theme) => ({
       width: "22em",
     },
     [theme.breakpoints.down("xs")]: {
-      width: "12em",
+      width: "12.2em",
+      border:'solid 2px red'
     },
   },
   linksContainer: {
