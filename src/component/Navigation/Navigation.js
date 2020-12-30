@@ -57,9 +57,9 @@ const Navigation = () => {
   // };
 
   const navigationLinks = [
-    { name: "Home", link: "/" },
-    { name: "Portfolio", link: "/projects" },
-    { name: "Services", link: "/services" },
+    {id: 1, name: "Home", link: "/" },
+    {id: 2, name: "Portfolio", link: "/projects" },
+    {id: 3, name: "Services", link: "/services" },
   ];
 
   useEffect(() => {
@@ -99,6 +99,7 @@ const Navigation = () => {
             component={Link}
             to={link.link}
             label={link.name}
+            key={link.id}
           />
         ))}
       </Tabs>
