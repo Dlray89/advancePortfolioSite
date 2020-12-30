@@ -157,7 +157,7 @@ const Navigation = () => {
   return (
     <div className={classes.mainContainer}>
       <ElevationScroll >
-        <AppBar ref={ref} color="primary" position="fixed" className={classes.appbar}>
+        <AppBar ref={ref} color="primary" position="fixed" style={{zIndex: theme.zIndex.modal + 1}}>
           <Toolbar disableGutters>
             <div className={classes.logoContainer}>
               <img
