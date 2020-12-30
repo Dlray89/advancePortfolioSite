@@ -9,11 +9,9 @@ import {
   useTheme,
   TextField,
   InputAdornment,
-  useMediaQuery
 } from "@material-ui/core";
 
 import SearchIcon from "@material-ui/icons/Search";
-import { Autocomplete } from "@material-ui/lab";
 import Sauti from "../../asset/images/sauti.PNG";
 import Conway from "../../asset/images/conway.PNG";
 import Insure from "../../asset/images/insure.png";
@@ -71,19 +69,10 @@ const projects = [
 const PortfolioPage = () => {
   const classes = useStyle();
   const theme = useTheme();
-  const [open, setOpen] = useState(false);
   const [search, setSearch] = useState("");
   const [searchResult, setSearchResult] = useState(projects);
-  const modileMD = useMediaQuery(theme.breakpoints.down('md'))
 
-  const handleDialog = () => {
-    setOpen(true);
-  };
-
-  const closeDialog = () => {
-    setOpen(false);
-  };
-
+ 
   const handleSearch = (e) => {
     setSearch(e.target.value);
   };
