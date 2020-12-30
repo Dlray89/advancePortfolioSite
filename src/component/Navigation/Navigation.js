@@ -116,6 +116,11 @@ const Navigation = () => {
         onOpen={() => setOpen(true)}
         onClose={() => setOpen(false)}
         classes={{paper: classes.mobileDrawer}}
+        PaperProps={{
+          style:{
+            background: "#eae9bb",
+          }
+        }}
       
       >
         <div className={classes.toolbarMargin}  />
