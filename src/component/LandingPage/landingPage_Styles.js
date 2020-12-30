@@ -1,6 +1,7 @@
 import {makeStyles} from '@material-ui/core'
 import FrontEndDesign from '../../asset/images/frontEndDevelopment.jpg'
 import mobileBackground from '../../asset/images/mobileBackground.jpg'
+import callToactionImg from '../../asset/images/callToAction.jpg'
 
 
 
@@ -27,6 +28,9 @@ export const useStyles = makeStyles((theme) => ({
       }
     
         
+    },
+    servicesContainer:{
+          
     },
     introCard:{
         position: 'absolute',
@@ -80,7 +84,7 @@ export const useStyles = makeStyles((theme) => ({
         boxShadow: theme.shadows[10],
         [theme.breakpoints.down('sm')]:{
             width:'100%',
-            border:'solid 2px red',
+            
             margin: 0
         },
         [theme.breakpoints.down('md')]:{
@@ -179,11 +183,27 @@ export const useStyles = makeStyles((theme) => ({
     websiteContainer:{
         width:'60%',
         marginTop:'1em',
-        marginLeft:'3em'
+        marginLeft:'3em',
+        [theme.breakpoints.down('md')]:{
+            
+            width:'100%',
+            margin: 0,
+            display:'flex',
+            flexDirection:'column-reverse',
+            marginBottom:'8em',
+            marginTop:'5em'
+        }
 
     },
     websiteContentContainer:{
-        marginRight:'0.75em'
+        marginRight:'0.75em',
+        [theme.breakpoints.down('md')]:{
+            
+            width:'100%',
+            margin: 0,
+            textAlign:'center',
+          
+        }
     },
     websiteTitle:{
         fontSize:'2em',
@@ -193,26 +213,51 @@ export const useStyles = makeStyles((theme) => ({
         fontSize:'1.1em',
         marginBottom:'0.75em',
         width:'100%',
+       
         
     },
     websiteButton:{
+        BackgroundColor: '#558c8c'
 
     },
     webdesignImgContainer:{
+        [theme.breakpoints.down('md')]:{
+            
+            textAlign:'center',
+            width:'100%'
+        }
     },
     webdesignImg:{
-        width:'20em'
+        width:'20em',
+        [theme.breakpoints.down('md')]:{
+            width: '30.2'
+        }
     },
     webAppContainer:{
         width:'57.5%',
         marginTop:'3em',
         marginLeft: 'auto',
-        marginRight:'3em'
+        marginRight:'3em',
+        [theme.breakpoints.down('md')]:{
+            
+            width:'100%',
+            margin: 0,
+            display:'flex',
+            flexDirection:'column-reverse',
+            marginBottom:'8em'
+        }
 
 
     },
     webAppContentContainer:{
-        marginRight:'0.75em'
+        marginRight:'0.75em',
+        [theme.breakpoints.down('md')]:{
+            
+            width:'100%',
+            margin: 0,
+            textAlign:'center',
+          
+        }
     },
     webAppTitle:{
         fontSize:'2em',
@@ -225,23 +270,46 @@ export const useStyles = makeStyles((theme) => ({
         
     },
     webAppButton:{
+       
 
     },
     webAppImgContainer:{
+        [theme.breakpoints.down('md')]:{
+            
+            textAlign:'center',
+            width:'100%'
+        }
     },
     webAppImg:{
-        width:'20em'
+        width:'20em',
+        [theme.breakpoints.down('md')]:{
+            width: '30.2'
+        }
     },
 
     responsiveContainer:{
         width:'57.5%',
         marginTop:'3em',
-        marginLeft:'3em'
+        marginLeft:'3em',
+        [theme.breakpoints.down('md')]:{
+            
+            width:'100%',
+            margin: 0,
+            display:'flex',
+            flexDirection:'column-reverse'
+        }
 
 
     },
     responsiveContentContainer:{
-        marginRight:'0.75em'
+        marginRight:'0.75em',
+        [theme.breakpoints.down('md')]:{
+            
+            width:'100%',
+            margin: 0,
+            textAlign:'center',
+          
+        }
     },
     responsiveTitle:{
         fontSize:'2em',
@@ -257,9 +325,58 @@ export const useStyles = makeStyles((theme) => ({
 
     },
     responsiveImgContainer:{
+        [theme.breakpoints.down('md')]:{
+            
+            textAlign:'center',
+            width:'100%'
+        }
     },
     responsiveImg:{
-        width:'20em'
+        width:'20em',
+        [theme.breakpoints.down('md')]:{
+            width: '30.2'
+        }
+    },
+    callToAction:{
+        background:'url(' + callToactionImg +')',
+        backgroundRepeat:'no-repeat',
+        backgroundPosition:'center',
+        backgroundSize:'100em',
+        height:'60em',
+        position: 'relative',
+        marginTop:'9em',
+        marginBottom: 0,
+        [theme.breakpoints.down('md')]:{
+            backgroundSize:'75em'
+        }
+    },
+    callToActionLayer: {
+        backgroundColor: 'rgba(27, 20, 17, 0.9)',
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        width: '100%',
+        height: '100%'
+    },
+    callToActionCard:{
+        height:'18em',
+        width:'30%',
+        background: '#242331',
+        [theme.breakpoints.down('md')]:{
+            width:'70%'
+        }
+    },
+    cardCTAContent:{
+        color: theme.palette.common.lightBrown
+    },
+    cardCTAButton:{
+        background: '#558c8c',
+        color: 'white',
+        marginTop:'2em',
+        '&:hover':{
+            background: theme.palette.common.lightBrown,
+            color:'white'
+        }
     }
  
 

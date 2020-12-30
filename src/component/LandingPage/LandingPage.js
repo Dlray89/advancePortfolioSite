@@ -8,6 +8,9 @@ import {
   CardContent,
   Hidden,
   Typography,
+  useTheme,
+  useMediaQuery,
+  CardHeader
 } from "@material-ui/core";
 
 import Arrow from "../../asset/Social Media Logos/icons8-right-arrow-100.png";
@@ -30,6 +33,8 @@ import ResponsiveDesign from '../../asset/images/responsiveDesign.jpg'
 
 const LandingPage = (props) => {
   const classes = useStyles();
+  const theme = useTheme()
+  const mobileMD = useMediaQuery(theme.breakpoints.down('md'))
 
   // const technologies = [
   //   {
@@ -77,6 +82,7 @@ const LandingPage = (props) => {
   // ];
 
   return (
+  
     <div>
       <div className={classes.landingPage}>
         <Hidden xsDown smDown>
@@ -155,7 +161,7 @@ const LandingPage = (props) => {
       </Grid>
 
 
-      <Grid item container style={{border:'solid 2px'}}>
+      <Grid item container alignItems={mobileMD ? null : 'center'} justify={mobileMD ? 'center' : null} className={classes.servicesContainer}>
          {/*website container */}
         <Grid item container className={classes.websiteContainer}>
 
@@ -164,10 +170,10 @@ const LandingPage = (props) => {
               Website Development
             </Typography>
             <Typography className={classes.websiteSubtitle}>
-              Connect, Build, and increase engagement. <br />
+            <span style={{color: '#558c8c', fontWeight: 900}}>Connect, Build, and increase engagement. <br /></span>
               Your own custom site build for users to interact with you vision
             </Typography>
-            <Button className={classes.websiteButton} variant='contained'>Learn More</Button>
+            <Button style={{ background: '#558c8c', color:'white'}} className={classes.websiteButton} variant='contained'>Get Started</Button>
           </Grid>
 
           <Grid className={classes.webdesignImgContainer} item>
@@ -181,13 +187,13 @@ const LandingPage = (props) => {
          
           <Grid item className={classes.webAppContentContainer}>
             <Typography className={classes.webAppTitle}>
-              Web Application Development
+              Front-End Applications
             </Typography>
             <Typography className={classes.webAppSubtitle}>
-              Extend Functionality, Access, and Longevity <br />
+            <span style={{color: '#558c8c', fontWeight: 900}}>Extend Functionality, Access, and Longevity <br /></span>
               Integrate your users web experience by creating a web application <br />for all your loyal users
             </Typography>
-            <Button className={classes.webAppButton} variant='contained'>Learn More</Button>
+            <Button className={classes.webAppButton} variant='contained' style={{ background: '#558c8c', color:'white'}}>Get Started</Button>
           </Grid>
 
           <Grid className={classes.webAppImgContainer} item>
@@ -204,11 +210,11 @@ const LandingPage = (props) => {
               Responsive Design
             </Typography>
             <Typography className={classes.responsiveSubtitle}>
-              Mobile Phone's, Tablets, Desktop's <br />
+              <span style={{color: '#558c8c', fontWeight: 900}}>Mobile Phone's, Tablets, Desktop's </span><br />
               Your own custom site will be avaliable for all screens sizes <br /> so your customer can continue to enjoy what you have <br />
               have to offer.
             </Typography>
-            <Button className={classes.responsiveButton} variant='contained'>Learn More</Button>
+            <Button style={{ background: '#558c8c', color:'white'}} className={classes.responsiveButton} variant='contained'>Get Started</Button>
           </Grid>
 
           <Grid className={classes.responsiveImgContainer} item>
@@ -219,6 +225,39 @@ const LandingPage = (props) => {
 
 
         
+      </Grid>
+
+      <Grid item container className={classes.callToAction}>
+        <Grid item container justify='center' alignItems='center' className={classes.callToActionLayer}>
+        <Card className={classes.callToActionCard}>
+          <CardHeader title='Let get started today. ' />
+          <Grid alignItems='center' justify='center' container item>
+           
+            
+           
+
+            <Grid item className={classes.cardCTAContent}>
+              <ul>
+                <li>Website Development</li>
+              </ul>
+
+              <ul>
+                <li>Front-End Applications</li>
+              </ul>
+              
+              <ul>
+                <li>Responsive Design</li>
+              </ul>
+            </Grid>
+            
+          </Grid>
+          
+          <Grid container justify='center' item>
+            <Button variant='contained' className={classes.cardCTAButton}>Start Service</Button>
+          </Grid>
+        </Card>
+        </Grid>
+
       </Grid>
     </div>
   );

@@ -4,7 +4,6 @@ import pattern from "../../asset/patterns/leftPattern.svg";
 export const useStyles = makeStyles((theme) => ({
   footer: {
     background: theme.palette.common.black,
-    marginTop: "10em",
     color: theme.palette.common.lightBrown,
     height: "14.53em",
     backgroundImage: "url(" + pattern + ")",
