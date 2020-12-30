@@ -95,7 +95,6 @@ const Navigation = () => {
       >
         {navigationLinks.map((link) => (
           <Tab
-            key={value + 1}
             className={classes.tabs}
             component={Link}
             to={link.link}
@@ -116,7 +115,6 @@ const Navigation = () => {
         onOpen={() => setOpen(true)}
         onClose={() => setOpen(false)}
         classes={{paper: classes.mobileDrawer}}
-        ref={ref}
       >
         <div ref={ref} className={classes.toolbarMargin}  />
         <List>
@@ -137,7 +135,7 @@ const Navigation = () => {
         
       </SwipeableDrawer>
 
-      <IconButton  style={{ marginLeft: "auto" }} onClick={() => setOpen(!open)}>
+      <IconButton className={classes.buttonContainer}  onClick={() => setOpen(!open)}>
         <MenuIcon  className={classes.menuButton} />
       </IconButton>
     </React.Fragment>

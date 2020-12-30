@@ -18,6 +18,9 @@ export const useStyles = makeStyles((theme) => ({
         color: '#a27035',
         fontSize:'1.1em'
     },
+    buttonContainer:{
+        marginLeft: "auto" 
+    },
     logoContainer:{
         height: '6em'
     },
