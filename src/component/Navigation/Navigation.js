@@ -95,7 +95,7 @@ const Navigation = () => {
       >
         {navigationLinks.map((link) => (
           <Tab
-            key={link.id}
+            key={value + 1}
             className={classes.tabs}
             component={Link}
             to={link.link}
