@@ -36,51 +36,6 @@ const LandingPage = (props) => {
   const theme = useTheme()
   const mobileMD = useMediaQuery(theme.breakpoints.down('md'))
 
-  // const technologies = [
-  //   {
-  //     id: 1,
-  //     name: "HTML",
-  //     img: HTML,
-  //     details:
-  //       "HTML(Hypertext Markup Language) is the standard markup language for documents designed to be displayed in a web browser. ",
-  //   },
-  //   {
-  //     id: 2,
-  //     name: "CSS",
-  //     img: CSS,
-  //     details:
-  //       "CSS (Cascading Style Sheets) describes how HTML elements are to be displayed on screen, paper, or in other media. CSS saves a lot of work. It can control the layout of multiple web pages all at once.",
-  //   },
-  //   {
-  //     id: 3,
-  //     name: "Javascript",
-  //     img: Javascript,
-  //     details:
-  //       "JavaScript is a client-side scripting language, which means the source code is processed by the client's web browser rather than on the web server. This means JavaScript functions can run after a webpage has loaded without communicating with the serve ",
-  //   },
-  //   {
-  //     id: 4,
-  //     name: "React",
-  //     img: react,
-  //     details:
-  //       "React is a library for building composable user interfaces. It encourages the creation of reusable UI components, which present data that changes over time. ",
-  //   },
-  //   {
-  //     id: 5,
-  //     name: "Material-UI",
-  //     img: MaterialUI,
-  //     details:
-  //       "Material-UI is a design system to give user a fantastic feel in there websites or application it is backed by open-source code and developed by Google.  ",
-  //   },
-  //   {
-  //     id: 6,
-  //     name: "Figma",
-  //     img: Figma,
-  //     details:
-  //       "Figma is a browser-based UI and UX design application, with excellent design, prototyping, and code-generation tools.",
-  //   },
-  // ];
-
   return (
   
     <div>

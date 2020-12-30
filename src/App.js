@@ -5,6 +5,7 @@ import { ThemeProvider} from "@material-ui/styles"
 import theme from './component/UI/theme'
 import LandingPage from "./component/LandingPage/LandingPage"
 import Portfolio from './component/PorfolioPage/PorfolioPage'
+import Services from './component/ServicesPage/servicesPage'
 
 
 function App() {
@@ -15,7 +16,7 @@ function App() {
       <Switch>
         <Route exact path='/' component={LandingPage}   />
         <Route exact path='/projects' component={Portfolio}  />
-        <Route exact path='/services' component={() => <div>Services</div>}  />
+        <Route exact path='/services' component={Services}  />
 
       </Switch>
       <Footer  />

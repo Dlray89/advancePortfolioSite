@@ -377,7 +377,9 @@ export const useStyles = makeStyles((theme) => ({
         width:'30%',
         background: '#242331',
         [theme.breakpoints.down('md')]:{
-            width:'70%'
+            width:'70%',
+            height: "20em",
+
         }
     },
     cardCTAContent:{
