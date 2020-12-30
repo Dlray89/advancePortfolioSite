@@ -173,7 +173,7 @@ const LandingPage = (props) => {
             <span style={{color: '#558c8c', fontWeight: 900}}>Connect, Build, and increase engagement. <br /></span>
               Your own custom site build for users to interact with you vision
             </Typography>
-            <Button style={{ background: '#558c8c', color:'white'}} className={classes.websiteButton} variant='contained'>Get Started</Button>
+            <Button className={classes.websiteButton} variant='contained'>Get Started</Button>
           </Grid>
 
           <Grid className={classes.webdesignImgContainer} item>
@@ -193,7 +193,7 @@ const LandingPage = (props) => {
             <span style={{color: '#558c8c', fontWeight: 900}}>Extend Functionality, Access, and Longevity <br /></span>
               Integrate your users web experience by creating a web application <br />for all your loyal users
             </Typography>
-            <Button className={classes.webAppButton} variant='contained' style={{ background: '#558c8c', color:'white'}}>Get Started</Button>
+            <Button className={classes.webAppButton} variant='contained'> Get Started</Button>
           </Grid>
 
           <Grid className={classes.webAppImgContainer} item>
@@ -214,7 +214,7 @@ const LandingPage = (props) => {
               Your own custom site will be avaliable for all screens sizes <br /> so your customer can continue to enjoy what you have <br />
               have to offer.
             </Typography>
-            <Button style={{ background: '#558c8c', color:'white'}} className={classes.responsiveButton} variant='contained'>Get Started</Button>
+            <Button  className={classes.responsiveButton} variant='contained'>Get Started</Button>
           </Grid>
 
           <Grid className={classes.responsiveImgContainer} item>

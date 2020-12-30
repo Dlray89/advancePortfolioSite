@@ -117,7 +117,9 @@ const Navigation = () => {
         onClose={() => setOpen(false)}
         classes={{paper: classes.mobileDrawer}}
       >
-        <div ref={ref} className={classes.toolbarMargin}  />
+        <div>
+          <img className={classes.mobileLogo} src={Logo}  />
+        </div>
         <List>
           <ListItem button divider className={classes.linksContainer} component={Link} to='/' >
             <ListItemText className={classes.mobileLinks}>Home</ListItemText>

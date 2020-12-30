@@ -2,15 +2,15 @@ import { makeStyles } from "@material-ui/core";
 
 export const useStyles = makeStyles((theme) => ({
   navButton: {
-    background: theme.palette.common.lightBrown,
-    color: theme.palette.common.black,
+    background: '#558c8c',
+    color: 'White',
     marginRight: "3em",
     [theme.breakpoints.down('sm')]:{
         margin: '0 auto'
     },
     "&:hover": {
-      borderColor: theme.palette.common.lightBrown,
-      color: theme.palette.common.lightBrown,
+      background: theme.palette.common.lightBrown,
+      color: 'white',
     },
   },
   message: {

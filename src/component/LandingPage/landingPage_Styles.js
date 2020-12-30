@@ -59,12 +59,11 @@ export const useStyles = makeStyles((theme) => ({
         marginLeft:'0.65em'
     },
     headerButton:{
-        border:'solid 1px #ddca7d',
-        color: theme.palette.common.darkBrown,
-        background:theme.palette.common.lightBrown,
-        '&:hover':{
-            background: theme.palette.common.black,
-            color:theme.palette.common.lightBrown
+        background: '#558c8c',
+        color: 'White',
+        "&:hover": {
+            background: theme.palette.common.lightBrown,
+            color: 'white',
           },
         [theme.breakpoints.down('sm')]:{
                 fontSize:'0.75em'
@@ -217,7 +216,12 @@ export const useStyles = makeStyles((theme) => ({
         
     },
     websiteButton:{
-        BackgroundColor: '#558c8c'
+        background: '#558c8c',
+        color: 'White',
+        "&:hover": {
+            background: theme.palette.common.lightBrown,
+            color: 'white',
+          },
 
     },
     webdesignImgContainer:{
@@ -270,7 +274,12 @@ export const useStyles = makeStyles((theme) => ({
         
     },
     webAppButton:{
-       
+        background: '#558c8c',
+        color: 'White',
+        "&:hover": {
+            background: theme.palette.common.lightBrown,
+            color: 'white',
+          },
 
     },
     webAppImgContainer:{
@@ -322,7 +331,12 @@ export const useStyles = makeStyles((theme) => ({
         
     },
     responsiveButton:{
-
+        background: '#558c8c',
+        color: 'White',
+        "&:hover": {
+            background: theme.palette.common.lightBrown,
+            color: 'white',
+          },
     },
     responsiveImgContainer:{
         [theme.breakpoints.down('md')]:{
@@ -373,10 +387,10 @@ export const useStyles = makeStyles((theme) => ({
         background: '#558c8c',
         color: 'white',
         marginTop:'2em',
-        '&:hover':{
+        "&:hover": {
             background: theme.palette.common.lightBrown,
-            color:'white'
-        }
+            color: 'white',
+          },
     }
  
 
