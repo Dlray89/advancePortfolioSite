@@ -2,7 +2,9 @@ import {makeStyles} from '@material-ui/core'
 
 
 
+
 export const useStyles = makeStyles((theme) => ({
+    
     mainContainer:{
     },
     appbar:{
@@ -12,7 +14,9 @@ export const useStyles = makeStyles((theme) => ({
         marginLeft: 'auto'
     },
     tabs:{
-        ...theme.typography.links
+        fontFamily: 'Lustria, serif',
+        color: '#a27035',
+        fontSize:'1.1em'
     },
     logoContainer:{
         height: '6em'
