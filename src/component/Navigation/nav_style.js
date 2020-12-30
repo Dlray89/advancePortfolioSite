@@ -39,13 +39,12 @@ export const useStyles = makeStyles((theme) => ({
   },
   mobileDrawer: {
     background: "#eae9bb",
-    color: theme.palette.common.lightBrownn,
+    color: theme.palette.common.lightBrown,
     [theme.breakpoints.down("sm")]: {
       width: "40%",
     },
     [theme.breakpoints.down("xs")]: {
       width: "40%",
-      border:'solid 2px yellow'
     },
   },
   mobileLogo: {

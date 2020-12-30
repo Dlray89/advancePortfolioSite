@@ -121,15 +121,15 @@ const Navigation = () => {
           <img alt='Logo for David Ray website' className={classes.mobileLogo} src={Logo}  />
         </div>
         <List>
-          <ListItem button divider className={classes.linksContainer} component={Link} to='/' >
+          <ListItem button divider classes={{ selected: classes.linksContainer}} component={Link} to='/' >
             <ListItemText className={classes.mobileLinks}>Home</ListItemText>
           </ListItem>
 
-          <ListItem button divider component={Link} to='/projects'>
+          <ListItem button divider classes={{ selected: classes.linksContainer}} component={Link} to='/projects'>
             <ListItemText  className={classes.mobileLinks}>Projects</ListItemText>
           </ListItem>
 
-          <ListItem button divider component={Link} to='/services'>
+          <ListItem button divider classes={{ selected: classes.linksContainer}} component={Link} to='/services'>
             <ListItemText className={classes.mobileLinks}>Services</ListItemText>
           </ListItem>
 
