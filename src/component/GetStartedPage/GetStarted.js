@@ -14,7 +14,7 @@ const Questions = [
     active: true,
     options: [
       {
-        id: 1,
+        id: 2,
         service: "Website Development",
         subtitle: null,
         icon: WebDesignIcon,
@@ -23,7 +23,7 @@ const Questions = [
         cost: 0,
       },
       {
-        id: 2,
+        id: 3,
         service: "Front-End Application",
         subtitle: null,
         icon: WebApp,
@@ -32,7 +32,7 @@ const Questions = [
         cost: 0,
       },
       {
-        id: 3,
+        id: 4,
         service: "Responsive Design",
         subtitle: null,
         icon: Responsive,
@@ -70,16 +70,16 @@ const GetStartedPage = () => {
 
         <Grid className={classes.questionContainer} container item>
           {Questions.map((question) => (
-            <Grid container justify='center' alignItems='center' item>
-              <Grid item key={question.id}>
+            <Grid key={question.id} container justify='center' alignItems='center' item>
+              <Grid item >
               <Typography className={classes.mainQuestion}>{question.question}</Typography>
               </Grid>
 
               <Grid container direction='row' justify='center' alignItems='center' item> 
               {question.options.map(item => (
-                  <Grid key={item.id} className={classes.servicesContainer} container direction='column' justify='center' alignItems='center' item>
-                      <Grid className={classes.services}>{item.service}</Grid>
-                      <Grid ><img className={classes.servicesIcons} alt={item.iconAlt} src={item.icon}   /></Grid>
+                  <Grid key={item.id}  className={classes.servicesContainer} container direction='column' justify='center' alignItems='center' item>
+                      <Grid  className={classes.services}>{item.service}</Grid>
+                      <Grid   ><img  className={classes.servicesIcons} alt={item.iconAlt} src={item.icon}   /></Grid>
                   
                   </Grid>
               ))}
