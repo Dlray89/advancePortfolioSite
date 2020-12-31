@@ -1,5 +1,5 @@
 import { makeStyles } from "@material-ui/core";
-import pattern from "../../asset/patterns/leftPattern.svg";
+import pattern from "../../../asset/patterns/leftPattern.svg";
 
 export const useStyles = makeStyles((theme) => ({
   footer: {

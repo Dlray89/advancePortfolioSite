@@ -1,399 +1,368 @@
-import {makeStyles} from '@material-ui/core'
-import FrontEndDesign from '../../asset/images/frontEndDevelopment.jpg'
-import mobileBackground from '../../asset/images/mobileBackground.jpg'
-import callToactionImg from '../../asset/images/callToAction.jpg'
-
-
+import { makeStyles } from "@material-ui/core";
+import FrontEndDesign from "../../asset/images/frontEndDevelopment.jpg";
+import mobileBackground from "../../asset/images/mobileBackground.jpg";
+import callToactionImg from "../../asset/images/callToAction.jpg";
 
 export const useStyles = makeStyles((theme) => ({
-    landingPage:{
-        backgroundImage:'url('+ FrontEndDesign +')',
-        height:'20em',
-        backgroundRepeat:'no-repeat',
-        backgroundSize:'cover',
-        backgroundPositionY:'-5em',
-        [theme.breakpoints.down('sm')]:{
-            backgroundImage:'url('+ mobileBackground +')',
-            backgroundSize:'100%',
-            backgroundPosition:'center',
-            backgroundPositionY:'-0em',
-            height:'29em'
-      },
-      [theme.breakpoints.down('xs')]:{
-          backgroundImage:'url('+ mobileBackground +')',
-          backgroundSize:'100%',
-          backgroundPosition:'center',
-          backgroundPositionY:'0em',
-          height:'20em'
-      }
-    
-        
+  landingPage: {
+    backgroundImage: "url(" + FrontEndDesign + ")",
+    height: "20em",
+    backgroundRepeat: "no-repeat",
+    backgroundSize: "cover",
+    backgroundPositionY: "-5em",
+    [theme.breakpoints.down("sm")]: {
+      backgroundImage: "url(" + mobileBackground + ")",
+      backgroundSize: "100%",
+      backgroundPosition: "center",
+      backgroundPositionY: "-0em",
+      height: "29em",
     },
-    servicesContainer:{
-          
+    [theme.breakpoints.down("xs")]: {
+      backgroundImage: "url(" + mobileBackground + ")",
+      backgroundSize: "100%",
+      backgroundPosition: "center",
+      backgroundPositionY: "0em",
+      height: "20em",
     },
-    introCard:{
-        position: 'absolute',
-        width:'35%',
-        background: 'rgba(27, 20, 17, 0.7)',
-        color:'#ddca7d',
-        marginLeft:'20em',
-        marginTop:'2.5%',
-        padding:'1%',
-        fontSize:'1.5em',
-        ...theme.shadows[10],
-        
-        [theme.breakpoints.down('md')]:{
-            margin: 0,
-            width:'35%',
-            fontSize:'1.2em',
-            padding:'1em',
-            marginLeft:'32%',
-            marginTop:'4%',
-        },
-    },
-    titlleContainer:{
-        width:'100%'
-    },
-    buttonContainer:{
-        marginLeft:'0.65em'
-    },
-    headerButton:{
-        background: '#558c8c',
-        color: 'White',
-        "&:hover": {
-            background: theme.palette.common.lightBrown,
-            color: 'white',
-          },
-        [theme.breakpoints.down('sm')]:{
-                fontSize:'0.75em'
-        },
-        
-    },
-    buttonIcon:{
-        height:'2.5em',
-    },
-    aboutButtonIcon:{
-        height:'2.5em',
+  },
+  servicesContainer: {},
+  introCard: {
+    position: "absolute",
+    width: "35%",
+    background: "rgba(27, 20, 17, 0.7)",
+    color: "#ddca7d",
+    marginLeft: "20em",
+    marginTop: "5%",
+    padding: "1%",
+    fontSize: "1.5em",
+    ...theme.shadows[10],
 
+    [theme.breakpoints.down("md")]: {
+      margin: 0,
+      width: "35%",
+      fontSize: "1.2em",
+      padding: "1em",
+      marginLeft: "32%",
+      marginTop: "4%",
     },
-    card:{
-        width:'40%',
-        background: theme.palette.common.black,
-        boxShadow: theme.shadows[10],
-        [theme.breakpoints.down('sm')]:{
-            width:'100%',
-            
-            margin: 0
-        },
-        [theme.breakpoints.down('md')]:{
-            width:'70%',
-            margin: '2% auto'
-        }
+  },
+  titlleContainer: {
+    width: "100%",
+  },
+  buttonContainer: {
+    marginLeft: "0.65em",
+  },
+  headerButton: {
+    background: "#558c8c",
+    color: "White",
+    "&:hover": {
+      background: theme.palette.common.lightBrown,
+      color: "white",
     },
-    mainContentContainer:{
-        background: theme.palette.common.lightBrown,
-        padding: "2%",
-        display: "flex",
-        justifyContent: "space-evenly",
-        [theme.breakpoints.down('sm')]:{
-            flexDirection: 'column',
-            width:'95%',
-            border:"solid 2px yellow"
-        },
-        [theme.breakpoints.down('md')]:{
-            flexDirection: 'column',
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "0.75em",
+    },
+  },
+  buttonIcon: {
+    height: "2.5em",
+  },
+  aboutButtonIcon: {
+    height: "2.5em",
+  },
+  card: {
+    width: "40%",
+    background: theme.palette.common.black,
+    boxShadow: theme.shadows[10],
+    [theme.breakpoints.down("sm")]: {
+      width: "100%",
 
-        }
+      margin: 0,
     },
-    pictureContainer:{
-        width:'100%',
-        textAlign:'center',
-        background:'#f7f8fc'
+    [theme.breakpoints.down("md")]: {
+      width: "70%",
+      margin: "2% auto",
     },
-    myMissionPicture:{
-        width:'70%'
+  },
+  mainContentContainer: {
+    background: theme.palette.common.lightBrown,
+    padding: "2%",
+    display: "flex",
+    justifyContent: "space-evenly",
+    [theme.breakpoints.down("sm")]: {
+      flexDirection: "column",
+      width: "95%",
+      border: "solid 2px yellow",
     },
-    myMissionContent:{
-        width:'95.5%',
-        padding:'2%',
-        margin: '1% auto',
-        textAlign:'left',
-        border:'solid 2px #ddca7d',
-        [theme.breakpoints.down('sm')]:{
-            fontSize:'0.95em'
-        }
+    [theme.breakpoints.down("md")]: {
+      flexDirection: "column",
     },
-    divider:{
-        background: theme.palette.common.lightBrown
+  },
+  pictureContainer: {
+    width: "100%",
+    textAlign: "center",
+    background: "#f7f8fc",
+  },
+  myMissionPicture: {
+    width: "70%",
+  },
+  myMissionContent: {
+    width: "95.5%",
+    padding: "2%",
+    margin: "1% auto",
+    textAlign: "left",
+    border: "solid 2px #ddca7d",
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "0.95em",
     },
-    techPictureContainer:{
-        background:'#010e42',
+  },
+  techStackIconContainer: {
+    width: "50%",
+  },
+  techStackIcon:{
+        height:'4em'
+  },
+  divider: {
+    background: theme.palette.common.lightBrown,
+  },
+  techPictureContainer: {
+    background: "#010e42",
+  },
+  myTechnologisePicture: {
+    width: "100%",
+    height: "140%",
+    textAlign: "center",
+  },
+  techContent: {
+    border: "solid 2px #ddca7d",
+    marginTop: "15%",
+    width: "100%",
+  },
+  list: {
+    width: "100%",
+  },
+  listButton: {
+    "&:hover": {
+      background: theme.palette.common.lightBrown,
+      color: theme.palette.common.black,
     },
-    myTechnologisePicture:{
-        width:'100%',
-        height:'140%',
-       textAlign:'center' 
+  },
+  listText: {
+    color: theme.palette.common.lightBrown,
+    textAlign: "center",
+    fontSize: "1.4em",
+    fontFamily: "Smokum cursive",
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "1.2em",
     },
-    techContent:{
-        border:'solid 2px #ddca7d',
-        marginTop:'15%',
-        width:'100%'
+  },
+  techIcons: {
+    height: "2.2em",
+    marginLeft: "0.55em",
+  },
+  myMissionContainer: {
+    background: theme.palette.common.black,
+    color: theme.palette.common.lightBrown,
+    padding: "3%",
+  },
+  myMissionTitle: {
+    fontSize: "2.5em",
+    textAlign: "center",
+    fontFamily: "Smokum cursive",
+  },
+  myMissionText: {
+    fontSize: "1.2em",
+    textAlign: "center",
+    fontFamily: "Smokum cursive",
+  },
+  websiteContainer: {
+    width: "60%",
+    marginTop: "1em",
+    marginLeft: "3em",
+    [theme.breakpoints.down("md")]: {
+      width: "100%",
+      margin: 0,
+      display: "flex",
+      flexDirection: "column-reverse",
+      marginBottom: "8em",
+      marginTop: "5em",
     },
-    list:{
-        width:'100%'
+  },
+  websiteContentContainer: {
+    marginRight: "0.75em",
+    [theme.breakpoints.down("md")]: {
+      width: "100%",
+      margin: 0,
+      textAlign: "center",
     },
-    listButton:{
-        "&:hover":{
-            background:theme.palette.common.lightBrown,
-            color: theme.palette.common.black
-        }
+  },
+  websiteTitle: {
+    fontSize: "2em",
+    marginBottom: "1em",
+  },
+  websiteSubtitle: {
+    fontSize: "1.1em",
+    marginBottom: "0.75em",
+    width: "100%",
+  },
+  websiteButton: {
+    background: "#558c8c",
+    color: "White",
+    "&:hover": {
+      background: theme.palette.common.lightBrown,
+      color: "white",
     },
-    listText:{
-        color: theme.palette.common.lightBrown,
-        textAlign:'center',
-        fontSize:'1.4em',
-        fontFamily: 'Smokum cursive',
-        [theme.breakpoints.down('sm')]:{
-            fontSize:'1.2em'
-        }
+  },
+  webdesignImgContainer: {
+    [theme.breakpoints.down("md")]: {
+      textAlign: "center",
+      width: "100%",
     },
-    techIcons:{
-        height:'2.2em',
-        marginLeft:'0.55em'
+  },
+  webdesignImg: {
+    width: "20em",
+    [theme.breakpoints.down("md")]: {
+      width: "30.2",
     },
-    myMissionContainer:{
-        background: theme.palette.common.black,
-        color: theme.palette.common.lightBrown,
-        padding:'3%'
-        
+  },
+  webAppContainer: {
+    width: "57.5%",
+    marginTop: "3em",
+    marginLeft: "auto",
+    marginRight: "3em",
+    [theme.breakpoints.down("md")]: {
+      width: "100%",
+      margin: 0,
+      display: "flex",
+      flexDirection: "column-reverse",
+      marginBottom: "8em",
     },
-    myMissionTitle:{
-        fontSize:'2.5em',
-        textAlign:'center',
-        fontFamily: 'Smokum cursive'
+  },
+  webAppContentContainer: {
+    marginRight: "0.75em",
+    [theme.breakpoints.down("md")]: {
+      width: "100%",
+      margin: 0,
+      textAlign: "center",
     },
-    myMissionText:{
-        fontSize:'1.2em',
-        textAlign:'center',
-        fontFamily: 'Smokum cursive'
+  },
+  webAppTitle: {
+    fontSize: "2em",
+    marginBottom: "1em",
+  },
+  webAppSubtitle: {
+    fontSize: "1.1em",
+    marginBottom: "0.75em",
+    width: "100%",
+  },
+  webAppButton: {
+    background: "#558c8c",
+    color: "White",
+    "&:hover": {
+      background: theme.palette.common.lightBrown,
+      color: "white",
+    },
+  },
+  webAppImgContainer: {
+    [theme.breakpoints.down("md")]: {
+      textAlign: "center",
+      width: "100%",
+    },
+  },
+  webAppImg: {
+    width: "20em",
+    [theme.breakpoints.down("md")]: {
+      width: "30.2",
+    },
+  },
 
+  responsiveContainer: {
+    width: "57.5%",
+    marginTop: "3em",
+    marginLeft: "3em",
+    [theme.breakpoints.down("md")]: {
+      width: "100%",
+      margin: 0,
+      display: "flex",
+      flexDirection: "column-reverse",
     },
-    websiteContainer:{
-        width:'60%',
-        marginTop:'1em',
-        marginLeft:'3em',
-        [theme.breakpoints.down('md')]:{
-            
-            width:'100%',
-            margin: 0,
-            display:'flex',
-            flexDirection:'column-reverse',
-            marginBottom:'8em',
-            marginTop:'5em'
-        }
-
+  },
+  responsiveContentContainer: {
+    marginRight: "0.75em",
+    [theme.breakpoints.down("md")]: {
+      width: "100%",
+      margin: 0,
+      textAlign: "center",
     },
-    websiteContentContainer:{
-        marginRight:'0.75em',
-        [theme.breakpoints.down('md')]:{
-            
-            width:'100%',
-            margin: 0,
-            textAlign:'center',
-          
-        }
+  },
+  responsiveTitle: {
+    fontSize: "2em",
+    marginBottom: "1em",
+  },
+  responsiveSubtitle: {
+    fontSize: "1.1em",
+    marginBottom: "0.75em",
+    width: "100%",
+  },
+  responsiveButton: {
+    background: "#558c8c",
+    color: "White",
+    "&:hover": {
+      background: theme.palette.common.lightBrown,
+      color: "white",
     },
-    websiteTitle:{
-        fontSize:'2em',
-        marginBottom:'1em'
+  },
+  responsiveImgContainer: {
+    [theme.breakpoints.down("md")]: {
+      textAlign: "center",
+      width: "100%",
     },
-    websiteSubtitle:{
-        fontSize:'1.1em',
-        marginBottom:'0.75em',
-        width:'100%',
-       
-        
+  },
+  responsiveImg: {
+    width: "20em",
+    [theme.breakpoints.down("md")]: {
+      width: "30.2",
     },
-    websiteButton:{
-        background: '#558c8c',
-        color: 'White',
-        "&:hover": {
-            background: theme.palette.common.lightBrown,
-            color: 'white',
-          },
-
+  },
+  callToAction: {
+    background: "url(" + callToactionImg + ")",
+    backgroundRepeat: "no-repeat",
+    backgroundPosition: "center",
+    backgroundSize: "100em",
+    height: "60em",
+    position: "relative",
+    marginTop: "9em",
+    marginBottom: 0,
+    [theme.breakpoints.down("md")]: {
+      backgroundSize: "75em",
     },
-    webdesignImgContainer:{
-        [theme.breakpoints.down('md')]:{
-            
-            textAlign:'center',
-            width:'100%'
-        }
+  },
+  callToActionLayer: {
+    backgroundColor: "rgba(27, 20, 17, 0.9)",
+    position: "absolute",
+    top: 0,
+    left: 0,
+    width: "100%",
+    height: "100%",
+  },
+  callToActionCard: {
+    height: "18em",
+    width: "30%",
+    background: "#242331",
+    [theme.breakpoints.down("md")]: {
+      width: "70%",
+      height: "20em",
     },
-    webdesignImg:{
-        width:'20em',
-        [theme.breakpoints.down('md')]:{
-            width: '30.2'
-        }
+  },
+  cardCTAContent: {
+    color: theme.palette.common.lightBrown,
+  },
+  cardCTAButton: {
+    background: "#558c8c",
+    color: "white",
+    marginTop: "2em",
+    "&:hover": {
+      background: theme.palette.common.lightBrown,
+      color: "white",
     },
-    webAppContainer:{
-        width:'57.5%',
-        marginTop:'3em',
-        marginLeft: 'auto',
-        marginRight:'3em',
-        [theme.breakpoints.down('md')]:{
-            
-            width:'100%',
-            margin: 0,
-            display:'flex',
-            flexDirection:'column-reverse',
-            marginBottom:'8em'
-        }
-
-
-    },
-    webAppContentContainer:{
-        marginRight:'0.75em',
-        [theme.breakpoints.down('md')]:{
-            
-            width:'100%',
-            margin: 0,
-            textAlign:'center',
-          
-        }
-    },
-    webAppTitle:{
-        fontSize:'2em',
-        marginBottom:'1em'
-    },
-    webAppSubtitle:{
-        fontSize:'1.1em',
-        marginBottom:'0.75em',
-        width:'100%',
-        
-    },
-    webAppButton:{
-        background: '#558c8c',
-        color: 'White',
-        "&:hover": {
-            background: theme.palette.common.lightBrown,
-            color: 'white',
-          },
-
-    },
-    webAppImgContainer:{
-        [theme.breakpoints.down('md')]:{
-            
-            textAlign:'center',
-            width:'100%'
-        }
-    },
-    webAppImg:{
-        width:'20em',
-        [theme.breakpoints.down('md')]:{
-            width: '30.2'
-        }
-    },
-
-    responsiveContainer:{
-        width:'57.5%',
-        marginTop:'3em',
-        marginLeft:'3em',
-        [theme.breakpoints.down('md')]:{
-            
-            width:'100%',
-            margin: 0,
-            display:'flex',
-            flexDirection:'column-reverse'
-        }
-
-
-    },
-    responsiveContentContainer:{
-        marginRight:'0.75em',
-        [theme.breakpoints.down('md')]:{
-            
-            width:'100%',
-            margin: 0,
-            textAlign:'center',
-          
-        }
-    },
-    responsiveTitle:{
-        fontSize:'2em',
-        marginBottom:'1em'
-    },
-    responsiveSubtitle:{
-        fontSize:'1.1em',
-        marginBottom:'0.75em',
-        width:'100%',
-        
-    },
-    responsiveButton:{
-        background: '#558c8c',
-        color: 'White',
-        "&:hover": {
-            background: theme.palette.common.lightBrown,
-            color: 'white',
-          },
-    },
-    responsiveImgContainer:{
-        [theme.breakpoints.down('md')]:{
-            
-            textAlign:'center',
-            width:'100%'
-        }
-    },
-    responsiveImg:{
-        width:'20em',
-        [theme.breakpoints.down('md')]:{
-            width: '30.2'
-        }
-    },
-    callToAction:{
-        background:'url(' + callToactionImg +')',
-        backgroundRepeat:'no-repeat',
-        backgroundPosition:'center',
-        backgroundSize:'100em',
-        height:'60em',
-        position: 'relative',
-        marginTop:'9em',
-        marginBottom: 0,
-        [theme.breakpoints.down('md')]:{
-            backgroundSize:'75em'
-        }
-    },
-    callToActionLayer: {
-        backgroundColor: 'rgba(27, 20, 17, 0.9)',
-        position: 'absolute',
-        top: 0,
-        left: 0,
-        width: '100%',
-        height: '100%'
-    },
-    callToActionCard:{
-        height:'18em',
-        width:'30%',
-        background: '#242331',
-        [theme.breakpoints.down('md')]:{
-            width:'70%',
-            height: "20em",
-
-        }
-    },
-    cardCTAContent:{
-        color: theme.palette.common.lightBrown
-    },
-    cardCTAButton:{
-        background: '#558c8c',
-        color: 'white',
-        marginTop:'2em',
-        "&:hover": {
-            background: theme.palette.common.lightBrown,
-            color: 'white',
-          },
-    }
- 
-
-}))
+  },
+}));

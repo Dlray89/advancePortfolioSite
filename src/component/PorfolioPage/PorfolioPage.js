@@ -10,6 +10,7 @@ import {
   TextField,
   InputAdornment,
 } from "@material-ui/core";
+import { Link } from 'react-router-dom'
 
 import SearchIcon from "@material-ui/icons/Search";
 import Sauti from "../../asset/images/sauti.PNG";
@@ -210,7 +211,7 @@ const PortfolioPage = () => {
             </Grid>
 
             <Grid container justify="center" item>
-              <Button variant="contained" className={classes.cardCTAButton}>
+              <Button component={Link} to='/gettingstarted' variant="contained" className={classes.cardCTAButton}>
                 Start Service
               </Button>
             </Grid>

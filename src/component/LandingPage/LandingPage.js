@@ -24,12 +24,22 @@ import ResponsiveDesign from '../../asset/images/responsiveDesign.jpg'
 
 //tech icons
 
-// import HTML from "../../asset/technologiesIcons/icons8-html-filetype-64.png";
-// import CSS from "../../asset/technologiesIcons/icons8-css-filetype-64.png";
-// import Javascript from "../../asset/technologiesIcons/icons8-javascript-64.png";
-// import react from "../../asset/technologiesIcons/icons8-react-native-64.png";
-// import MaterialUI from "../../asset/technologiesIcons/icons8-material-ui-48.png";
-// import Figma from "../../asset/technologiesIcons/icons8-figma-32.png";
+import HTML from "../../asset/technologiesIcons/icons8-html-filetype-64.png";
+import CSS from "../../asset/technologiesIcons/icons8-css-filetype-64.png";
+import Javascript from "../../asset/technologiesIcons/icons8-javascript-64.png";
+import react from "../../asset/technologiesIcons/icons8-react-native-64.png";
+import MaterialUI from "../../asset/technologiesIcons/icons8-material-ui-48.png";
+import Figma from "../../asset/technologiesIcons/icons8-figma-32.png";
+
+
+const techStackIcons = [
+  {id: 1, icon: HTML, alt: 'icons of HTML'},
+  {id: 2, icon: CSS, alt: 'icons of css'},
+  {id: 3, icon: Javascript, alt: 'icons of javascript'},
+  {id: 4, icon: react, alt: 'icons of React'},
+  {id: 5, icon: MaterialUI, alt: 'icons of Material-ui'},
+  {id: 6, icon: Figma, alt: 'icons of Figma'},
+]
 
 const LandingPage = (props) => {
   const classes = useStyles();
@@ -68,34 +78,8 @@ const LandingPage = (props) => {
                     direction="row"
                     justify="space-evenly"
                   >
-                    <Grid item>
-                      <Button
-                        className={classes.headerButton}
-                        variant="contained"
-                      >
-                        Get Started{" "}
-                        <img
-                          className={classes.buttonIcon}
-                          src={Arrow}
-                          alt="arrow pointing right"
-                        />
-                      </Button>
-                    </Grid>
-                    <Grid item>
-                      <Button
-                        variant="contained"
-                        className={classes.headerButton}
-                        component={Link}
-                        to="/aboutme"
-                      >
-                        About me{" "}
-                        <img
-                          className={classes.aboutButtonIcon}
-                          src={Aboutme}
-                          alt="character icon afircan american male"
-                        />
-                      </Button>
-                    </Grid>
+                   
+                    
                   </Grid>
                 </div>
               </Grid>
@@ -103,16 +87,21 @@ const LandingPage = (props) => {
           </Card>
         </Hidden>
       </div>
+
+
       <Grid item container direction='column' justify='center' alignItems='center' className={classes.myMissionContainer}>
         <Grid item>
-          <Typography className={classes.myMissionTitle}>My mission</Typography>
-          <Grid item>
-           <Typography className={classes.myMissionText}>
-           Dapnologies is dedicated to the highest quality of custom design
-            work delivered with imagination, originality and ingenuity
-           </Typography>
+          <Typography className={classes.myMissionTitle}>Personal Tech Stack</Typography>
           </Grid>
-        </Grid>
+
+            <Grid className={classes.techStackIconContainer} container direction='row' justify='space-between' alignItems='center' item>
+             {techStackIcons.map(icon => (
+               <Grid item>
+                 <img className={classes.techStackIcon} alt={icon.alt} src={icon.icon}  />
+               </Grid>
+             ))}
+            </Grid>
+
       </Grid>
 
 
@@ -128,7 +117,7 @@ const LandingPage = (props) => {
             <span style={{color: '#558c8c', fontWeight: 900}}>Connect, Build, and increase engagement. <br /></span>
               Your own custom site build for users to interact with you vision
             </Typography>
-            <Button className={classes.websiteButton} variant='contained'>Get Started</Button>
+            <Button className={classes.websiteButton} component={Link} to='/services' variant='contained'>View Service</Button>
           </Grid>
 
           <Grid className={classes.webdesignImgContainer} item>
@@ -148,7 +137,7 @@ const LandingPage = (props) => {
             <span style={{color: '#558c8c', fontWeight: 900}}>Extend Functionality, Access, and Longevity <br /></span>
               Integrate your users web experience by creating a web application <br />for all your loyal users
             </Typography>
-            <Button className={classes.webAppButton} variant='contained'> Get Started</Button>
+            <Button component={Link} to='/services' className={classes.webAppButton} variant='contained'> View Service</Button>
           </Grid>
 
           <Grid className={classes.webAppImgContainer} item>
@@ -169,7 +158,7 @@ const LandingPage = (props) => {
               Your own custom site will be avaliable for all screens sizes <br /> so your customer can continue to enjoy what you have <br />
               have to offer.
             </Typography>
-            <Button  className={classes.responsiveButton} variant='contained'>Get Started</Button>
+            <Button component={Link} to='/services'  className={classes.responsiveButton} variant='contained'>View Service</Button>
           </Grid>
 
           <Grid className={classes.responsiveImgContainer} item>
@@ -208,7 +197,7 @@ const LandingPage = (props) => {
           </Grid>
           
           <Grid container justify='center' item>
-            <Button variant='contained' className={classes.cardCTAButton}>Start Service</Button>
+            <Button component={Link} to='/gettingstarted' variant='contained' className={classes.cardCTAButton}>Start Service</Button>
           </Grid>
         </Card>
         </Grid>

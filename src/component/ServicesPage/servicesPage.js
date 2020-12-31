@@ -6,6 +6,7 @@ import {
   useTheme,
   useMediaQuery,
 } from "@material-ui/core";
+import { Link } from 'react-router-dom'
 import { useStyles } from "./servicesStyling";
 
 import Webdesign from "../../asset/images/webdesign.jpg";
@@ -45,7 +46,7 @@ const ServicesPage = () => {
               will collaborate on your <br /> vision and plan to increase revenue and 
               engagement of your <br />  business. 
             </Typography>
-            <Button className={classes.websiteButton} variant="contained">
+            <Button component={Link} to='/gettingstarted' className={classes.websiteButton} variant="contained">
               Get Started
             </Button>
           </Grid>
@@ -74,7 +75,7 @@ const ServicesPage = () => {
               build a stronger brand, the best part is that<br />  you can connect better 
               with your customers and<br />  increase profits as well.
             </Typography>
-            <Button className={classes.webAppButton} variant="contained">
+            <Button component={Link} to='/gettingstarted' className={classes.webAppButton} variant="contained">
               {" "}
               Get Started
             </Button>
@@ -107,7 +108,7 @@ const ServicesPage = () => {
              you reach out to more <br /> customers and bring ore value to what you
              already provide.
             </Typography>
-            <Button className={classes.responsiveButton} variant="contained">
+            <Button component={Link} to='/gettingstarted' className={classes.responsiveButton} variant="contained">
               Get Started
             </Button>
           </Grid>

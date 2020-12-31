@@ -1,6 +1,6 @@
 import React, { useEffect, useState, createRef } from "react";
 import { useStyles } from "./nav_style";
-import Logo from "../../asset/images/David.png";
+import Logo from "../../../asset/images/David.png";
 
 import {
   Tab,
@@ -17,7 +17,7 @@ import {
   IconButton,
 } from "@material-ui/core";
 import MenuIcon from "@material-ui/icons/Menu";
-import ContactButton from '../UI/contactButton/contactButton'
+import ContactButton from '../../UI/contactButton/contactButton'
 
 import { Link } from "react-router-dom";
 
