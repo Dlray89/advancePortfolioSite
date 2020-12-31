@@ -13,8 +13,7 @@ import {
   CardHeader
 } from "@material-ui/core";
 
-import Arrow from "../../asset/Social Media Logos/icons8-right-arrow-100.png";
-import Aboutme from "../../asset/Social Media Logos/icons8-account-100.png";
+
 import Webdesign from '../../asset/images/webdesign.jpg'
 import WebApp from '../../asset/images/webApplicationDesign.jpg'
 import ResponsiveDesign from '../../asset/images/responsiveDesign.jpg'
