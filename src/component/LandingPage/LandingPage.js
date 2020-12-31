@@ -96,7 +96,7 @@ const LandingPage = (props) => {
 
             <Grid className={classes.techStackIconContainer} container direction='row' justify='space-between' alignItems='center' item>
              {techStackIcons.map(icon => (
-               <Grid item>
+               <Grid item key={icon.id}>
                  <img className={classes.techStackIcon} alt={icon.alt} src={icon.icon}  />
                </Grid>
              ))}
