@@ -31,7 +31,6 @@ export const useStyles = makeStyles((theme) => ({
     },
     [theme.breakpoints.down('sm')]:{
         width:'80%',
-        margin: 0,
         margin: '0 auto',
         
 
@@ -49,7 +48,6 @@ export const useStyles = makeStyles((theme) => ({
     },
     [theme.breakpoints.down('xs')]:{
         width:'80%',
-        margin: 0,
         margin: '0 auto',
         textAlign:'center'
 
