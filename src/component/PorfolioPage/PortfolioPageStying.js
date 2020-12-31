@@ -75,7 +75,7 @@ export const useStyle = makeStyles((theme) => ({
       width: "56em",
     },
     [theme.breakpoints.down("xs")]: {
-      width: "36em",
+      width: "31.89em",
     },
   },
   contentContainer: {
