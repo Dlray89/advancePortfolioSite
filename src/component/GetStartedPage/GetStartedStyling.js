@@ -26,7 +26,14 @@ export const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down('xs')]:{
         width:'70%',
         margin: 0,
-        marginLeft: '1.65em'
+        fontSize:'2.5em'
+
+    },
+    [theme.breakpoints.down('sm')]:{
+        width:'80%',
+        margin: 0,
+        margin: '0 auto',
+        
 
     }
   },
@@ -36,22 +43,26 @@ export const useStyles = makeStyles((theme) => ({
     },
     [theme.breakpoints.down('sm')]:{
         width:'80%',
-        margin:' 0 auto'
+        margin:' 0 auto',
+        
+        textAlign:'center'
     },
     [theme.breakpoints.down('xs')]:{
         width:'80%',
         margin: 0,
-        marginLeft:'3.7em'
+        margin: '0 auto',
+        textAlign:'center'
 
     }
   },
   img: {
     width: "35em",
     [theme.breakpoints.down("sm")]: {
-        width:'32em'
+        width:'100%',
+        
     },
     [theme.breakpoints.down('xs')]:{
-        width:'23em'
+        width:'100%'
     }
   },
   questionContainer: {
@@ -72,6 +83,9 @@ export const useStyles = makeStyles((theme) => ({
   mainQuestion: {
     fontSize: "1.5em",
     marginBottom: "2em",
+    [theme.breakpoints.down('xs')]:{
+        textAlign:'center'
+    }
   },
   servicesContainer: {
     width: "32%",
