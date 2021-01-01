@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import axios from "axios";
 import {
   Grid,
   Button,
@@ -6,6 +7,12 @@ import {
   useTheme,
   useMediaQuery,
   IconButton,
+  Dialog,
+  DialogContent,
+  DialogTitle,
+  Snackbar,
+  CircularProgress,
+  TextField,
 } from "@material-ui/core";
 import { cloneDeep } from "lodash";
 import { useStyles } from "./GetStartedStyling";
@@ -37,6 +44,9 @@ import LeftArrow from "../../asset/technologiesIcons/icons8-left-arrow-100.png";
 import RightArrow from "../../asset/technologiesIcons/icons8-right-arrow-100 (1).png";
 import disableArrowLeft from "../../asset/Social Media Logos/icons8-arrow-disable-left-100.png";
 import disableArrowRight from "../../asset/Social Media Logos/icons8-arrow-disable-right-100.png";
+import AirplaneSend from "../../asset/Social Media Logos/icons8-email-send-48.png";
+import Cancel from "../../asset/Social Media Logos/icons8-cancel-48.png";
+
 const Questions = [
   {
     id: 1,
@@ -297,6 +307,133 @@ const GetStartedPage = () => {
   const theme = useTheme();
   const mobileMd = useMediaQuery(theme.breakpoints.down("md"));
   const [questions, setQuestions] = useState(Questions);
+  const [open, setOpen] = useState(false);
+  const [total, setTotal] = useState(0);
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [emailHelper, setEmailHelper] = useState("");
+
+  const [phone, setPhone] = useState("");
+  const [phoneHelper, setPhoneHelper] = useState("");
+
+  const [message, setMessage] = useState("");
+  const [loading, setLoading] = useState(false);
+
+  const [alert, setAlert] = useState({
+    open: false,
+    message: "",
+    background: "",
+  });
+
+  const onChangeValidation = (event) => {
+    let valid;
+
+    switch (event.target.id) {
+      case "email":
+        setEmail(event.target.value);
+        valid = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(
+          event.target.value
+        );
+
+        if (!valid) {
+          setEmailHelper("Please enter an vaild email");
+        } else {
+          setEmailHelper("");
+        }
+        break;
+      case "phone":
+        setPhone(event.target.value);
+        valid = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/.test(
+          event.target.value
+        );
+
+        if (!valid) {
+          setPhoneHelper("Please enter a valid phone number");
+        } else {
+          setPhoneHelper("");
+        }
+        break;
+      default:
+        break;
+    }
+  };
+
+  const onConfirm = () => {
+    setLoading(true);
+    axios
+      .get(
+        "https://us-central1-tech-portfolio-83a00.cloudfunctions.net/sendMail",
+        {
+          params: {
+            name: name,
+            email: email,
+            phone: phone,
+            message: message,
+          },
+        }
+      )
+      .then((res) => {
+        setLoading(false);
+        setName("");
+        setEmail("");
+        setPhone("");
+        setMessage("");
+        setAlert({
+          open: true,
+          message: "sent successfully",
+          background: "#4bb543",
+        });
+      })
+      .catch((err) => {
+        setLoading(false);
+        setAlert({
+          open: true,
+          message: "Something went wrong. Please try again",
+          background: "#ff3232",
+        });
+      });
+  };
+
+ 
+  const closeHandle = () => {
+    setOpen(false);
+  };
+
+  const buttonContents = (
+    <React.Fragment>
+      Send Request{" "}
+      <img
+        className={classes.sendIcon}
+        alt="airplane send icon"
+        src={AirplaneSend}
+      />
+    </React.Fragment>
+  );
+
+  const getTotal = () => {
+    let cost = 0;
+
+    const selections = questions
+      .map((question) => question.options.filter((option) => option.selected))
+      .filter((question) => question.length > 0);
+
+    selections.map((options) => options.map((option) => (cost += option.cost)));
+
+    if (questions.length > 2) {
+      const userCost = questions
+        .filter(
+          (question) => question.title === "How many users do you expect?"
+        )
+        .map((question) =>
+          question.options.filter((option) => option.selected)
+        )[0][0].cost;
+
+      cost -= userCost;
+      cost *= userCost;
+    }
+    setTotal(cost);
+    console.log(cost);
+  };
 
   const nextQuestion = () => {
     const newQuestions = cloneDeep(questions);
@@ -350,39 +487,35 @@ const GetStartedPage = () => {
     const activeIndex = currentlyActive[0].id - 1;
 
     const newSelected = newQuestions[activeIndex].options[id - 1];
-    const prevSelected = currentlyActive[0].options.filter(option => option.selected)
+    const prevSelected = currentlyActive[0].options.filter(
+      (option) => option.selected
+    );
 
-    
-
-
-
-    switch (currentlyActive[0].subtitle){
-        case 'Select one.':
-            if (prevSelected[0]){
-                prevSelected[0].selected = !prevSelected[0].selected
-            }
-            newSelected.selected = !newSelected.selected
-            break;
-        default:
-            newSelected.selected = !newSelected.selected
-            break;
-
+    switch (currentlyActive[0].subtitle) {
+      case "Select one.":
+        if (prevSelected[0]) {
+          prevSelected[0].selected = !prevSelected[0].selected;
+        }
+        newSelected.selected = !newSelected.selected;
+        break;
+      default:
+        newSelected.selected = !newSelected.selected;
+        break;
     }
 
-   switch (newSelected.title) {
-        case 'Website Development':
-           setQuestions(websiteQuestions)
-           break;
-        case 'Front-End Application':
-            setQuestions(softwareQuestions)
-            break;
-        case 'Responsive Design':
-            setQuestions(websiteQuestions)
-            break;
-        default:
-            setQuestions(newQuestions)
-   }
-    
+    switch (newSelected.title) {
+      case "Website Development":
+        setQuestions(websiteQuestions);
+        break;
+      case "Front-End Application":
+        setQuestions(softwareQuestions);
+        break;
+      case "Responsive Design":
+        setQuestions(websiteQuestions);
+        break;
+      default:
+        setQuestions(newQuestions);
+    }
   };
 
   return (
@@ -423,11 +556,19 @@ const GetStartedPage = () => {
                 alignItems="center"
                 item
               >
-                <Grid container direction='column' justify='center' alignItems='center' item>
+                <Grid
+                  container
+                  direction="column"
+                  justify="center"
+                  alignItems="center"
+                  item
+                >
                   <Typography className={classes.mainQuestion}>
                     {question.title}
                   </Typography>
-                  <Typography style={{marginBottom:'3em'}} gutterBottom>{question.subtitle}</Typography>
+                  <Typography style={{ marginBottom: "3em" }} gutterBottom>
+                    {question.subtitle}
+                  </Typography>
                 </Grid>
 
                 <Grid
@@ -447,7 +588,14 @@ const GetStartedPage = () => {
                       alignItems="center"
                       item
                       component={Button}
-                      style={{ display: "grid", textTransform: "none", background: item.selected ? theme.palette.common.lightBrown : null, borderRadius: 0 }}
+                      style={{
+                        display: "grid",
+                        textTransform: "none",
+                        background: item.selected
+                          ? theme.palette.common.lightBrown
+                          : null,
+                        borderRadius: 0,
+                      }}
                       onClick={() => HandleSelect(item.id)}
                     >
                       <Grid className={classes.services}>
@@ -504,7 +652,216 @@ const GetStartedPage = () => {
             </Grid>
 
             <Grid item style={{ marginTop: "2em" }}>
-              <Button variant="contained">Get Estimate</Button>
+              <Button
+                variant="contained"
+                onClick={() => {
+                  setOpen(true);
+                  getTotal();
+                }}
+              >
+                Estimate
+              </Button>
+              <Dialog
+                style={{ marginTop: "5em" }}
+                open={open}
+                onClose={closeHandle}
+              >
+                <DialogTitle>
+                  <Grid container justify="center" alignItems="center">
+                    <Grid item>
+                      <Typography>
+                        Your estimate for your digital product.
+                      </Typography>
+                    </Grid>
+                  </Grid>
+                </DialogTitle>
+
+                <DialogContent>
+                  <Grid container item direction="column">
+                    <Grid item container direction="column" justify="center">
+                      <Grid
+                        container
+                        justify="center"
+                        alignItems="center"
+                        item
+                        className={classes.inputContainer}
+                      >
+                        <TextField
+                          variant="outlined"
+                          id="name"
+                          margin="dense"
+                          className={classes.input}
+                          placeholder="Name"
+                          value={name}
+                          onChange={(e) => setName(e.target.value)}
+                        />
+                      </Grid>
+
+                      <Grid
+                        container
+                        justify="center"
+                        item
+                        className={classes.inputContainer}
+                      >
+                        <TextField
+                          variant="outlined"
+                          id="email"
+                          margin="dense"
+                          error={emailHelper.length !== 0}
+                          helperText={emailHelper}
+                          className={classes.input}
+                          placeholder="Email"
+                          value={email}
+                          onChange={onChangeValidation}
+                        />
+                      </Grid>
+
+                      <Grid
+                        container
+                        justify="center"
+                        item
+                        className={classes.inputContainer}
+                      >
+                        <TextField
+                          variant="outlined"
+                          id="phone"
+                          margin="dense"
+                          error={phoneHelper.length !== 0}
+                          helperText={phoneHelper}
+                          className={classes.input}
+                          placeholder="Phone Number"
+                          value={phone}
+                          onChange={onChangeValidation}
+                        />
+                      </Grid>
+
+                      <Grid
+                        container
+                        justify="center"
+                        item
+                        className={classes.inputContainer}
+                      >
+                        <TextField
+                          variant="outlined"
+                          id="message"
+                          margin="dense"
+                          multiline
+                          rows={4}
+                          className={classes.input}
+                          placeholder="Message"
+                          value={message}
+                          onChange={(e) => setMessage(e.target.value)}
+                        />
+                      </Grid>
+                      <Grid
+                        container
+                        item
+                        direction="column"
+                        justify="center"
+                        alignItems="center"
+                      >
+                        <Grid
+                          item
+                          container
+                          direction="column"
+                          justify="center"
+                          alignItems="center"
+                          className={classes.total}
+                        >
+                          <Grid item>
+                            We can create this digital solution for an
+                            estimated:{" "}
+                          </Grid>
+                          <Grid item>
+                            {" "}
+                            <span className={classes.specialText}>
+                              {" "}
+                              ${total.toFixed(2)}
+                            </span>
+                          </Grid>
+                        </Grid>
+                        <Grid
+                          container
+                          item
+                          justify="center"
+                          alignItems="center"
+                          className={classes.totalSubtitle}
+                        >
+                          Fill out your name, phone number, and email, place
+                          your request, and we'll get back to you with details
+                          moving forward and a final price.
+                        </Grid>
+                      </Grid>
+
+                      <Grid
+                        item
+                        container
+                        justify="space-evenly"
+                        alignItems="center"
+                        className={classes.inputContainer}
+                      >
+                        <Grid item>
+                          <Button
+                            disabled={
+                              name.length === 0 ||
+                              message.length === 0 ||
+                              phoneHelper.length !== 0 ||
+                              emailHelper.length !== 0
+                            }
+                            onClick={onConfirm}
+                            className={classes.contactButton}
+                            variant="contained"
+                          >
+                            {loading ? (
+                              <CircularProgress color="secondary" size={30} />
+                            ) : (
+                              buttonContents
+                            )}
+                          </Button>
+                        </Grid>
+                        <Grid item>
+                          <Button
+                            className={classes.contactButton}
+                            variant="contained"
+                            onClick={closeHandle}
+                          >
+                            Cancel{" "}
+                            <img
+                              className={classes.sendIcon}
+                              alt="cancel icon"
+                              src={Cancel}
+                            />
+                          </Button>
+                        </Grid>
+                      </Grid>
+                    </Grid>
+                    <Snackbar
+                      open={alert.open}
+                      message={alert.message}
+                      ContentProps={{
+                        style: {
+                          background: alert.background,
+                          marginBottom: "2em",
+                          fontSize: "0.97em",
+                          textAlign: "center",
+                        },
+                      }}
+                      anchorOrigin={{
+                        vertical: "bottom",
+                        horizontal: "center",
+                      }}
+                      onClose={() => setAlert({ ...alert, open: false })}
+                      autoHideDuration={4000}
+                    />
+                  </Grid>
+                  <Grid justify="center" container item>
+                    <div style={{ fontSize: "0.60em" }}>
+                      {" "}
+                      &copy; 2020 Dapnologies
+                    </div>
+                  </Grid>
+                </DialogContent>
+              </Dialog>
             </Grid>
           </Grid>
         </Grid>

@@ -37,7 +37,7 @@ export const useStyles = makeStyles((theme) => ({
   },
   input: {
     width: "90%",
-    fontSize:'1.5em'
+    fontSize:'0.8em'
   },
   contactButton:{
       background: theme.palette.common.black,
@@ -49,8 +49,9 @@ export const useStyles = makeStyles((theme) => ({
       height:'2em',
       marginLeft:'0.25em'
   },
-  title:{
-    fontSize:'1em'
+  Title:{
+    fontSize:'0.9em',
+    textAlign:'center'
   }
 
 }));

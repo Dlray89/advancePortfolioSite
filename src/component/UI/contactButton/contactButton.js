@@ -15,7 +15,6 @@ import {
 import { useStyles } from "./contactButton_Style";
 import Phone from "../../../asset/Social Media Logos/icons8-phone-50.png";
 import Email from "../../../asset/Social Media Logos/icons8-email-50.png";
-import location from "../../../asset/Social Media Logos/icons8-location-50.png";
 import AirplaneSend from "../../../asset/Social Media Logos/icons8-email-send-48.png";
 import Cancel from "../../../asset/Social Media Logos/icons8-cancel-48.png";
 
@@ -129,12 +128,15 @@ const ContactButton = () => {
         classes={{ paper: classes.dialog }}
       >
         <DialogTitle className={classes.dialogTitle}>
+          <Grid container item justify='center' alignItems='center' >
           <Typography className={classes.Title}>
             Lets Chat about your future and turn your vision into reality
           </Typography>
+          </Grid>
+         
         </DialogTitle>
         <DialogContent>
-          <Grid container direction="row" justify="center">
+          <Grid container direction="row" justify="center" alignItems='center'>
             <Grid
               container
               item
@@ -184,22 +186,7 @@ const ContactButton = () => {
               </Grid>
             </Grid>
 
-            <Grid
-              container
-              item
-              direction="column"
-              alignItems="center"
-              className={classes.contactInfo}
-            >
-              <Grid item>
-                <img
-                  src={location}
-                  alt="location icon"
-                  className={classes.contactIcons}
-                />
-              </Grid>
-              <Grid item> Marietta, GA</Grid>
-            </Grid>
+          
           </Grid>
           <Divider />
 
@@ -250,7 +237,7 @@ const ContactButton = () => {
                 id="message"
                 margin="dense"
                 multiline
-                rows={10}
+                rows={4}
                 className={classes.input}
                 placeholder="Message"
                 value={message}
@@ -306,11 +293,15 @@ const ContactButton = () => {
           ContentProps={{
             style: {
               background: alert.background,
+              marginBottom:'2em',
+              fontSize:'0.97em',
+              textAlign:'center'
             },
           }}
           anchorOrigin={{ vertical: "bottom", horizontal: "center" }}
           onClose={() => setAlert({ ...alert, open: false })}
           autoHideDuration={4000}
+          
         />
       </Dialog>
     </React.Fragment>

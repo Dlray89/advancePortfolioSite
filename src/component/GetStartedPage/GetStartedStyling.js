@@ -103,5 +103,38 @@ export const useStyles = makeStyles((theme) => ({
   },
   arrows:{
     width:'2em'
+  },
+  Dialog:{
+    border:'solid 2px red'
+  },
+  inputContainer:{
+  },
+  input:{
+    width:'70%',
+    [theme.breakpoints.down('xs')]:{
+      fontSize:'0.8em'
+    }
+  },
+  contactButton:{
+   
+    fontSize:'0.75em',
+    [theme.breakpoints.down('xs')]:{
+      fontSize:'0.65em'
+    }
+  },
+  sendIcon:{
+    height:'2em'
+  },
+  total:{
+    textAlign:'center',
+    marginBottom:'1em'
+  },
+  totalSubtitle:{
+    textAlign:'center'
+  },
+  specialText:{
+    color:"#558c8c",
+    fontWeight:700,
+    
   }
 }));
