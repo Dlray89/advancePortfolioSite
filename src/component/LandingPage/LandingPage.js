@@ -56,14 +56,13 @@ const LandingPage = (props) => {
                 <CardContent>
                   <Grid item container>
                     <Grid item className={classes.titlleContainer}>
-                      <Typography style={{ textAlign: "center" }} variant="h2">
-                        Dreams into reality
+                      <Typography style={{ textAlign: "center", fontSize:'1.4em' }} variant="h2">
+                        Turning dreams into reality
                       </Typography>
                     </Grid>
                     <Grid item>
-                      <Typography variant="subtitle1">
-                        Create, support and change the lives of your customers
-                        using the latest and greatest technology
+                      <Typography style={{fontSize:'0.68em'}} variant="subtitle1">
+                      Create, support, and change the lives of your customers using the latest and greatest technology
                       </Typography>
                     </Grid>
                   </Grid>
@@ -114,7 +113,7 @@ const LandingPage = (props) => {
             </Typography>
             <Typography className={classes.websiteSubtitle}>
             <span style={{color: '#558c8c', fontWeight: 900}}>Connect, Build, and increase engagement. <br /></span>
-              Your own custom site build for users to interact with you vision
+            Your custom site build for users to interact with your vision <br />and brand
             </Typography>
             <Button className={classes.websiteButton} component={Link} to='/services' variant='contained'>View Service</Button>
           </Grid>
@@ -134,7 +133,7 @@ const LandingPage = (props) => {
             </Typography>
             <Typography className={classes.webAppSubtitle}>
             <span style={{color: '#558c8c', fontWeight: 900}}>Extend Functionality, Access, and Longevity <br /></span>
-              Integrate your users web experience by creating a web application <br />for all your loyal users
+              Integrate your user's web experience by creating a web  <br />application for all your loyal users
             </Typography>
             <Button component={Link} to='/services' className={classes.webAppButton} variant='contained'> View Service</Button>
           </Grid>
@@ -154,7 +153,7 @@ const LandingPage = (props) => {
             </Typography>
             <Typography className={classes.responsiveSubtitle}>
               <span style={{color: '#558c8c', fontWeight: 900}}>Mobile Phone's, Tablets, Desktop's </span><br />
-              Your own custom site will be avaliable for all screens sizes <br /> so your customer can continue to enjoy what you have <br />
+              Your custom site will be available for all screens sizes <br /> so your customer can continue to enjoy what you have <br />
               have to offer.
             </Typography>
             <Button component={Link} to='/services'  className={classes.responsiveButton} variant='contained'>View Service</Button>

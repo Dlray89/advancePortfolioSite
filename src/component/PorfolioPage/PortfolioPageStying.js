@@ -68,14 +68,13 @@ export const useStyle = makeStyles((theme) => ({
   projectImages: {
     width: "40em",
     [theme.breakpoints.down("md")]: {
-      width: "77.1em",
-      textAlign: "center",
+      width: "100%",
     },
     [theme.breakpoints.down("sm")]: {
-      width: "56em",
+      width: "100%",
     },
     [theme.breakpoints.down("xs")]: {
-      width: "31.89em",
+      width: "100%",
     },
   },
   contentContainer: {

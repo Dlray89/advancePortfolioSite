@@ -65,6 +65,7 @@ export const useStyles = makeStyles((theme) => ({
   },
   questionContainer: {
     width: "55%",
+    marginTop:'5em',
     [theme.breakpoints.down('md')]:{
         width:'47%',
         marginBottom:'2em'
@@ -100,5 +101,8 @@ export const useStyles = makeStyles((theme) => ({
         textAlign:'center'
 
     }
+  },
+  arrows:{
+    width:'2em'
   }
 }));
