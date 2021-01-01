@@ -81,7 +81,6 @@ export const useStyles = makeStyles((theme) => ({
   },
   mainQuestion: {
     fontSize: "1.5em",
-    marginBottom: "2em",
     [theme.breakpoints.down('xs')]:{
         textAlign:'center'
     }
