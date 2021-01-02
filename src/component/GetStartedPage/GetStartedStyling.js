@@ -234,7 +234,8 @@ export const useStyles = makeStyles((theme) => ({
     }
   },
   sendEstimateButtonContainer:{
-    borderBottom:0,
+    textAlign:'center',
+    marginTop:'0.55em',
     [theme.breakpoints.down('xs')]:{
       
       textAlign:'center'
@@ -242,6 +243,7 @@ export const useStyles = makeStyles((theme) => ({
 
   },
   sendEstimateButton:{
+    
     background: '#558c8c',
         color: 'White',
         

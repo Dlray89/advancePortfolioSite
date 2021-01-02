@@ -907,7 +907,7 @@ const GetStartedPage = () => {
                   <Grid container justify="center" alignItems="center">
                     <Grid item>
                       <Typography>
-                        Below is your estimate for your digital product. Please review before sending a request
+                        Below is your estimate for your digital product. Please review before sending a request! (<span style={{color:'red', fontWeight:'700'}}>NOTICE: This will be active by 1/3/2021</span>) Feel free to fill out the contact form about specifics of your product!
                       </Typography>
                     </Grid>
                   </Grid>
