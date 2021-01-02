@@ -153,7 +153,7 @@ const LandingPage = (props) => {
             </Typography>
             <Typography className={classes.responsiveSubtitle}>
               <span style={{color: '#558c8c', fontWeight: 900}}>Mobile Phone's, Tablets, Desktop's </span><br />
-              Your custom site will be available for all screens sizes so your customer can continue to enjoy what you have <br />
+              Your custom site will be available for all screens sizes so your customer can continue to enjoy what you have
               have to offer.
             </Typography>
             <Button component={Link} to='/services'  className={classes.responsiveButton} variant='contained'>View Service</Button>
