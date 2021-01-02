@@ -1,9 +1,8 @@
 import React, { useState } from "react";
-import axios from "axios";
+// import axios from "axios";
 import {
   Grid,
   Button,
-  Typography,
   useTheme,
   useMediaQuery,
   IconButton,
@@ -11,7 +10,7 @@ import {
   DialogContent,
   DialogTitle,
   Snackbar,
-  CircularProgress,
+  // CircularProgress,
   TextField,
 } from "@material-ui/core";
 import { cloneDeep } from "lodash";
@@ -45,7 +44,7 @@ import RightArrow from "../../asset/technologiesIcons/icons8-right-arrow-100 (1)
 import disableArrowLeft from "../../asset/Social Media Logos/icons8-arrow-disable-left-100.png";
 import disableArrowRight from "../../asset/Social Media Logos/icons8-arrow-disable-right-100.png";
 import AirplaneSend from "../../asset/Social Media Logos/icons8-email-send-48.png";
-import Cancel from "../../asset/Social Media Logos/icons8-cancel-48.png";
+// import Cancel from "../../asset/Social Media Logos/icons8-cancel-48.png";
 import CheckMark from "../../asset/Social Media Logos/icons8-check-box-with-check-48.png";
 
 const Questions = [
@@ -326,7 +325,7 @@ const GetStartedPage = () => {
   const [phoneHelper, setPhoneHelper] = useState("");
 
   const [message, setMessage] = useState("");
-  const [loading, setLoading] = useState(false);
+  // const [loading, setLoading] = useState(false);
 
   const [alert, setAlert] = useState({
     open: false,
@@ -367,56 +366,56 @@ const GetStartedPage = () => {
     }
   };
 
-  const onConfirm = () => {
-    setLoading(true);
-    axios
-      .get(
-        "https://us-central1-tech-portfolio-83a00.cloudfunctions.net/sendMail",
-        {
-          params: {
-            name: name,
-            email: email,
-            phone: phone,
-            message: message,
-          },
-        }
-      )
-      .then((res) => {
-        setLoading(false);
-        setName("");
-        setEmail("");
-        setPhone("");
-        setMessage("");
-        setAlert({
-          open: true,
-          message: "sent successfully",
-          background: "#4bb543",
-        });
-      })
-      .catch((err) => {
-        setLoading(false);
-        setAlert({
-          open: true,
-          message: "Something went wrong. Please try again",
-          background: "#ff3232",
-        });
-      });
-  };
+  // const onConfirm = () => {
+  //   setLoading(true);
+  //   axios
+  //     .get(
+  //       "https://us-central1-tech-portfolio-83a00.cloudfunctions.net/sendMail",
+  //       {
+  //         params: {
+  //           name: name,
+  //           email: email,
+  //           phone: phone,
+  //           message: message,
+  //         },
+  //       }
+  //     )
+  //     .then((res) => {
+  //       setLoading(false);
+  //       setName("");
+  //       setEmail("");
+  //       setPhone("");
+  //       setMessage("");
+  //       setAlert({
+  //         open: true,
+  //         message: "sent successfully",
+  //         background: "#4bb543",
+  //       });
+  //     })
+  //     .catch((err) => {
+  //       setLoading(false);
+  //       setAlert({
+  //         open: true,
+  //         message: "Something went wrong. Please try again",
+  //         background: "#ff3232",
+  //       });
+  //     });
+  // };
 
   const closeHandle = () => {
     setOpen(false);
   };
 
-  const buttonContents = (
-    <React.Fragment>
-      Send Request{" "}
-      <img
-        className={classes.sendIcon}
-        alt="airplane send icon"
-        src={AirplaneSend}
-      />
-    </React.Fragment>
-  );
+  // const buttonContents = (
+  //   <React.Fragment>
+  //     Send Request{" "}
+  //     <img
+  //       className={classes.sendIcon}
+  //       alt="airplane send icon"
+  //       src={AirplaneSend}
+  //     />
+  //   </React.Fragment>
+  // );
 
   const getTotal = () => {
     let cost = 0;
@@ -802,7 +801,7 @@ const GetStartedPage = () => {
                   item
                 >
                   <div className={classes.mainQuestion}>{question.title}</div>
-                  <div style={{ marginBottom: "3em" }} gutterBottom>
+                  <div style={{ marginBottom: "3em" }}>
                     {question.subtitle}
                   </div>
                 </Grid>
