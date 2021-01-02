@@ -255,6 +255,15 @@ export const useStyles = makeStyles((theme) => ({
       
       fontSize:'0.65em'
     },
+  },
+  getEstimateButton:{
+    background: '#558c8c',
+        color: 'White',
+        
+        "&:hover": {
+            background: theme.palette.common.lightBrown,
+            color: 'white',
+          },
   }
     
     

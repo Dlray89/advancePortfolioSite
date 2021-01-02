@@ -897,8 +897,9 @@ const GetStartedPage = () => {
                   getCustomFeature();
                   getCategory();
                 }}
+               className={classes.getEstimateButton}
               >
-                Estimate
+                Get Estimate
               </Button>
               <Dialog
                 style={{ marginTop: "5em" }}
