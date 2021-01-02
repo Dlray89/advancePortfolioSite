@@ -117,7 +117,7 @@ export const useStyles = makeStyles((theme) => ({
     
   },
   techStackIconContainer: {
-    width: "50%",
+    width: "60%",
   },
   techStackIcon:{
         height:'4em',
