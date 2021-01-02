@@ -282,7 +282,7 @@ const websiteQuestions = [
       {
         id: 2,
         title: "Industry Standard",
-        subtitle: "(Website for your current industry)",
+        subtitle: "(Business or Organization)",
         icon: Standard,
         iconAlt: "outline of two people",
         selected: false,
