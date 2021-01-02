@@ -19,56 +19,56 @@ const Footer = () => {
             <Hidden smDown>
             <Grid container direction='row' justify='space-evenly' item style={{marginTop:'1.5em'}} >
            <Grid item container justify='center' alignItems='center' className={classes.home}>
-               <Grid item component={Link} to='/' >
-                    <div style={{textDecoration:'none', color:theme.palette.common.lightBrown}} >
+               <Grid item>
+                    <Typography style={{textDecoration:'none', color:theme.palette.common.lightBrown}} component={Link} to='/' variant='h3'>
                         Home
-                    </div>
+                    </Typography>
                </Grid>
            </Grid>
 
            <Grid container direction='column' justify='center' alignItems='center' item  className={classes.services} >
                <Grid item>
-                   <div>
+                   <Typography  variant='h3'>
                        Services
-                   </div>
+                   </Typography>
                </Grid>
 
-               <Grid item component={Link} to='/services' >
-                   <div style={{textDecoration:'none', color:theme.palette.common.lightBrown}}>
+               <Grid item>
+                   <Typography style={{textDecoration:'none', color:theme.palette.common.lightBrown}}  component={Link} to='/services' variant='subtitle1'>
                    Website Development
-                   </div>
+                   </Typography>
                </Grid>
 
-               <Grid item component={Link} to='/'services>
-                   <div style={{textDecoration:'none', color:theme.palette.common.lightBrown}}>
+               <Grid item>
+                   <Typography style={{textDecoration:'none', color:theme.palette.common.lightBrown}}  component={Link} to='/services' variant='subtitle1'>
                    Web Application Development
-                   </div>
+                   </Typography>
                </Grid>
 
-               <Grid item component={Link} to='/services' >
-                   <div style={{textDecoration:'none', color:theme.palette.common.lightBrown}} >
+               <Grid item>
+                   <Typography style={{textDecoration:'none', color:theme.palette.common.lightBrown}}  component={Link} to='/services' variant='subtitle1'>
                    Website Development
-                   </div>
+                   </Typography>
                </Grid>
            </Grid>
 
            <Grid container item direction='column' justify='center' alignItems='center' className={classes.information}>
                <Grid item>
-                   <div>
+                   <Typography variant='h3'>
                         Information
-                   </div>
+                   </Typography>
                </Grid>
 
-               <Grid item component={Link} to='/about' >
-                   <div style={{textDecoration:'none', color:theme.palette.common.lightBrown}}  >
+               <Grid item >
+                   <Typography style={{textDecoration:'none', color:theme.palette.common.lightBrown}}  component={Link} to='/about' variant='subtitle1'>
                        About Me
-                   </div>
+                   </Typography>
                </Grid>
 
-               <Grid item component={Link} to='/projects'>
-                   <div style={{textDecoration:'none', color:theme.palette.common.lightBrown}}   variant='subtitle1'>
+               <Grid item>
+                   <Typography style={{textDecoration:'none', color:theme.palette.common.lightBrown}}  component={Link} to='/projects' variant='subtitle1'>
                        Portfolio
-                   </div>
+                   </Typography>
                </Grid>
            </Grid>
         </Grid>
@@ -80,9 +80,9 @@ const Footer = () => {
 
             <Grid item container justify='center' alignItems='center' className={classes.logoContainer}>
                <Grid item>
-               <div variant='subtitle2' className={classes.footerText}>
+               <Typography variant='subtitle2' className={classes.footerText}>
                     &copy; Dapnologies 2020 Design
-                </div>
+                </Typography>
                </Grid>
              </Grid>
 
