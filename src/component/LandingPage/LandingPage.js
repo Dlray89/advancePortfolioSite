@@ -54,7 +54,7 @@ const LandingPage = (props) => {
             <Grid container direction="column">
               <Grid item>
                 <CardContent>
-                  <Grid item container>
+                  <Grid  direction='column' justify='center' alignItems='center' item container>
                     <Grid item className={classes.titlleContainer}>
                       <Typography style={{ textAlign: "center", fontSize:'1.4em' }} variant="h2">
                         Turning dreams into reality
@@ -105,7 +105,7 @@ const LandingPage = (props) => {
 
       <Grid item container alignItems={mobileMD ? null : 'center'} justify={mobileMD ? 'center' : null} className={classes.servicesContainer}>
          {/*website container */}
-        <Grid item container className={classes.websiteContainer}>
+        <Grid justify='center' direction='row' alignItems='center' item container className={classes.websiteContainer}>
 
           <Grid item className={classes.websiteContentContainer}>
             <Typography className={classes.websiteTitle}>
@@ -113,7 +113,7 @@ const LandingPage = (props) => {
             </Typography>
             <Typography className={classes.websiteSubtitle}>
             <span style={{color: '#558c8c', fontWeight: 900}}>Connect, Build, and increase engagement. <br /></span>
-            Your custom site build for users to interact with your vision <br />and brand
+            Your custom site build for users to interact with your vision and brand
             </Typography>
             <Button className={classes.websiteButton} component={Link} to='/services' variant='contained'>View Service</Button>
           </Grid>
@@ -125,7 +125,7 @@ const LandingPage = (props) => {
 
 
 
-        <Grid item container  className={classes.webAppContainer}>
+        <Grid justify='center' alignItems='center' item container  className={classes.webAppContainer}>
          
           <Grid item className={classes.webAppContentContainer}>
             <Typography className={classes.webAppTitle}>
@@ -133,7 +133,7 @@ const LandingPage = (props) => {
             </Typography>
             <Typography className={classes.webAppSubtitle}>
             <span style={{color: '#558c8c', fontWeight: 900}}>Extend Functionality, Access, and Longevity <br /></span>
-              Integrate your user's web experience by creating a web  <br />application for all your loyal users
+              Integrate your user's web experience by creating a web application for all your loyal users
             </Typography>
             <Button component={Link} to='/services' className={classes.webAppButton} variant='contained'> View Service</Button>
           </Grid>
@@ -145,7 +145,7 @@ const LandingPage = (props) => {
 
 
          {/*website container */}
-        <Grid item container className={classes.responsiveContainer}>
+        <Grid justify='center' alignItems='center' direction='row' item container className={classes.responsiveContainer}>
 
           <Grid item className={classes.responsiveContentContainer}>
             <Typography className={classes.responsiveTitle}>
@@ -153,7 +153,7 @@ const LandingPage = (props) => {
             </Typography>
             <Typography className={classes.responsiveSubtitle}>
               <span style={{color: '#558c8c', fontWeight: 900}}>Mobile Phone's, Tablets, Desktop's </span><br />
-              Your custom site will be available for all screens sizes <br /> so your customer can continue to enjoy what you have <br />
+              Your custom site will be available for all screens sizes so your customer can continue to enjoy what you have <br />
               have to offer.
             </Typography>
             <Button component={Link} to='/services'  className={classes.responsiveButton} variant='contained'>View Service</Button>

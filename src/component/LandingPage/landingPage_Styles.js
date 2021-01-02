@@ -114,12 +114,19 @@ export const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("sm")]: {
       fontSize: "0.95em",
     },
+    
   },
   techStackIconContainer: {
     width: "50%",
   },
   techStackIcon:{
-        height:'4em'
+        height:'4em',
+        [theme.breakpoints.down('md')]:{
+          height:'3em'
+        },
+        [theme.breakpoints.down('xs')]:{
+          height:'2.1em'
+        }
   },
   divider: {
     background: theme.palette.common.lightBrown,
@@ -168,6 +175,12 @@ export const useStyles = makeStyles((theme) => ({
     fontSize: "2.5em",
     textAlign: "center",
     fontFamily: "Smokum cursive",
+    [theme.breakpoints.down('md')]:{
+      fontSize:'2.1em'
+    },
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "1.7em",
+    },
   },
   myMissionText: {
     fontSize: "1.2em",
@@ -176,8 +189,9 @@ export const useStyles = makeStyles((theme) => ({
   },
   websiteContainer: {
     width: "60%",
-    marginTop: "1em",
+    marginTop: "5em",
     marginLeft: "3em",
+    
     [theme.breakpoints.down("md")]: {
       width: "100%",
       margin: 0,
@@ -189,6 +203,8 @@ export const useStyles = makeStyles((theme) => ({
   },
   websiteContentContainer: {
     marginRight: "0.75em",
+    
+    width:'50%',
     [theme.breakpoints.down("md")]: {
       width: "100%",
       margin: 0,
@@ -196,13 +212,25 @@ export const useStyles = makeStyles((theme) => ({
     },
   },
   websiteTitle: {
-    fontSize: "2em",
+    fontSize: "1.7em",
     marginBottom: "1em",
+    
+    [theme.breakpoints.down('xs')]:{
+      fontSize:'1.5em'
+    }
   },
   websiteSubtitle: {
-    fontSize: "1.1em",
+    fontSize: "1em",
     marginBottom: "0.75em",
     width: "100%",
+    
+    wordWrap: 'normal',
+    [theme.breakpoints.down('md')]:{
+      fontSize:'1.2em'
+    },
+    [theme.breakpoints.down('xs')]:{
+      fontSize:'1em'
+    }
   },
   websiteButton: {
     background: "#558c8c",
@@ -213,22 +241,24 @@ export const useStyles = makeStyles((theme) => ({
     },
   },
   webdesignImgContainer: {
+    
+    width:"45%",
     [theme.breakpoints.down("md")]: {
       textAlign: "center",
       width: "100%",
     },
   },
   webdesignImg: {
-    width: "20em",
+    width: "100%",
     [theme.breakpoints.down("md")]: {
       width: "30.2",
     },
   },
   webAppContainer: {
-    width: "57.5%",
-    marginTop: "3em",
+    width: "60%",
+    marginTop: "5em",
     marginLeft: "auto",
-    marginRight: "3em",
+    
     [theme.breakpoints.down("md")]: {
       width: "100%",
       margin: 0,
@@ -239,6 +269,8 @@ export const useStyles = makeStyles((theme) => ({
   },
   webAppContentContainer: {
     marginRight: "0.75em",
+    
+    width:'50%',
     [theme.breakpoints.down("md")]: {
       width: "100%",
       margin: 0,
@@ -246,13 +278,25 @@ export const useStyles = makeStyles((theme) => ({
     },
   },
   webAppTitle: {
-    fontSize: "2em",
+    fontSize: "1.7em",
     marginBottom: "1em",
+    
+    [theme.breakpoints.down('xs')]:{
+      fontSize:'1.5em'
+    }
   },
   webAppSubtitle: {
-    fontSize: "1.1em",
+    fontSize: "1em",
     marginBottom: "0.75em",
     width: "100%",
+    
+    wordWrap: 'normal',
+    [theme.breakpoints.down('md')]:{
+      fontSize:'1.2em'
+    },
+    [theme.breakpoints.down('xs')]:{
+      fontSize:'1em'
+    }
   },
   webAppButton: {
     background: "#558c8c",
@@ -263,22 +307,25 @@ export const useStyles = makeStyles((theme) => ({
     },
   },
   webAppImgContainer: {
+    
+    width:"45%",
     [theme.breakpoints.down("md")]: {
       textAlign: "center",
       width: "100%",
     },
   },
   webAppImg: {
-    width: "20em",
+    width: "100%",
     [theme.breakpoints.down("md")]: {
       width: "30.2",
     },
   },
 
   responsiveContainer: {
-    width: "57.5%",
-    marginTop: "3em",
+    width: "60%",
+    marginTop: "5em",
     marginLeft: "3em",
+    
     [theme.breakpoints.down("md")]: {
       width: "100%",
       margin: 0,
@@ -288,6 +335,8 @@ export const useStyles = makeStyles((theme) => ({
   },
   responsiveContentContainer: {
     marginRight: "0.75em",
+    
+    width:'50%',
     [theme.breakpoints.down("md")]: {
       width: "100%",
       margin: 0,
@@ -295,13 +344,25 @@ export const useStyles = makeStyles((theme) => ({
     },
   },
   responsiveTitle: {
-    fontSize: "2em",
+    fontSize: "1.7em",
     marginBottom: "1em",
+    
+    [theme.breakpoints.down('xs')]:{
+      fontSize:'1.5em'
+    }
   },
   responsiveSubtitle: {
-    fontSize: "1.1em",
+    fontSize: "1em",
     marginBottom: "0.75em",
     width: "100%",
+    
+    wordWrap: 'normal',
+    [theme.breakpoints.down('md')]:{
+      fontSize:'1.2em'
+    },
+    [theme.breakpoints.down('xs')]:{
+      fontSize:'1em'
+    }
   },
   responsiveButton: {
     background: "#558c8c",
@@ -312,13 +373,15 @@ export const useStyles = makeStyles((theme) => ({
     },
   },
   responsiveImgContainer: {
+    
+    width:"45%",
     [theme.breakpoints.down("md")]: {
       textAlign: "center",
       width: "100%",
     },
   },
   responsiveImg: {
-    width: "20em",
+    width: "100%",
     [theme.breakpoints.down("md")]: {
       width: "30.2",
     },

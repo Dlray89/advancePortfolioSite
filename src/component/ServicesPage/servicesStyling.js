@@ -21,8 +21,9 @@ export const useStyles = makeStyles((theme) => ({
     
     websiteContainer:{
         width:'70%',
-        marginTop:'1em',
+        marginTop:'5em',
         marginLeft:'3em',
+        
         [theme.breakpoints.down('md')]:{
             
             width:'100%',
@@ -35,6 +36,8 @@ export const useStyles = makeStyles((theme) => ({
     },
     websiteContentContainer:{
         marginRight:'0.75em',
+        
+        width:'50%',
         [theme.breakpoints.down('md')]:{
             
             width:'100%',
@@ -44,20 +47,31 @@ export const useStyles = makeStyles((theme) => ({
         }
     },
     websiteTitle:{
-        fontSize:'2em',
-        marginBottom:'1em'
+        fontSize:'1.7em',
+        marginBottom:'1em',
+        
+        width:'100%'
+
     },
     websiteSubtitle:{
         fontSize:'1.1em',
         marginBottom:'0.75em',
         width:'100%',
+        wordWrap:'normal',
         [theme.breakpoints.down('md')]:{
             width:'95%',
             margin: '0 auto',
             textAlign:'center',
             marginBottom:'1em'
 
+        },
+        [theme.breakpoints.down('xs')]:{
+            
+            fontSize:'1em',
+            padding:'2%'
+
         }
+        
        
         
     },
@@ -83,13 +97,18 @@ export const useStyles = makeStyles((theme) => ({
         width:'25em',
         [theme.breakpoints.down('md')]:{
             width: '30.2'
+        },
+        [theme.breakpoints.down('xs')]:{
+            width: '100%'
         }
     },
     webAppContainer:{
-        width:'60%',
-        marginTop:'3em',
-        marginLeft: 'auto',
+        width:'70%',
+        marginTop:'6em',
+        marginLeft:'auto',
+        marginBottom:'4em',
         marginRight:'3em',
+        
         [theme.breakpoints.down('md')]:{
             
             width:'100%',
@@ -103,6 +122,7 @@ export const useStyles = makeStyles((theme) => ({
     },
     webAppContentContainer:{
         marginRight:'0.75em',
+        width:'52.55%',
         [theme.breakpoints.down('md')]:{
             
             width:'100%',
@@ -112,13 +132,29 @@ export const useStyles = makeStyles((theme) => ({
         }
     },
     webAppTitle:{
-        fontSize:'2em',
-        marginBottom:'1em'
+        fontSize:'1.7em',
+        marginBottom:'1em',
+        
+        width:'100%'
     },
     webAppSubtitle:{
         fontSize:'1.1em',
         marginBottom:'0.75em',
         width:'100%',
+        wordWrap:'normal',
+        [theme.breakpoints.down('xs')]:{
+            
+            fontSize:'1em',
+            padding:'2%'
+
+        },
+        [theme.breakpoints.down('md')]:{
+            width:'95%',
+            margin: '0 auto',
+            textAlign:'center',
+            marginBottom:'1em'
+
+        },
         
     },
     webAppButton:{
@@ -131,7 +167,8 @@ export const useStyles = makeStyles((theme) => ({
 
     },
     webAppImgContainer:{
-        marginTop:'1em',
+        marginLeft:'1em',
+        
         [theme.breakpoints.down('md')]:{
             margin:0,
             textAlign:'center',
@@ -139,17 +176,22 @@ export const useStyles = makeStyles((theme) => ({
         }
     },
     webAppImg:{
-        width:'30em',
+        width:'25em',
         [theme.breakpoints.down('md')]:{
             width: '25em'
+        },
+        [theme.breakpoints.down('xs')]:{
+            width: '100%'
         }
     },
 
     responsiveContainer:{
-        width:'80%',
-        marginTop:'3em',
+        width:'70%',
+        marginTop:'6em',
         marginLeft:'3em',
-        marginBottom: '3em',
+        marginBottom:'4em',
+
+        
         
         [theme.breakpoints.down('md')]:{
             
@@ -164,6 +206,8 @@ export const useStyles = makeStyles((theme) => ({
     },
     responsiveContentContainer:{
         marginRight:'0.75em',
+        
+        width:'50%',
         [theme.breakpoints.down('md')]:{
             
             width:'100%',
@@ -173,19 +217,29 @@ export const useStyles = makeStyles((theme) => ({
         }
     },
     responsiveTitle:{
-        fontSize:'2em',
-        marginBottom:'1em'
+        fontSize:'1.7em',
+        marginBottom:'1em',
+        
+        width:'100%'
     },
     responsiveSubtitle:{
         fontSize:'1.1em',
         marginBottom:'0.75em',
-        width:'100%',
+        width:'100%',       
+        wordWrap:'normal',
+        [theme.breakpoints.down('xs')]:{
+            
+            fontSize:'1em',
+            padding:'2%'
+
+        },
         [theme.breakpoints.down('md')]:{
             width:'95%',
-            textAlign:'center',
             margin: '0 auto',
+            textAlign:'center',
             marginBottom:'1em'
-        }
+
+        },
         
     },
     responsiveButton:{
@@ -197,8 +251,8 @@ export const useStyles = makeStyles((theme) => ({
           },
     },
     responsiveImgContainer:{
-        marginTop:'1em',
-        marginLeft:'1.5em',
+        marginLeft:'1em',
+        
         [theme.breakpoints.down('md')]:{
             margin: 0,
             textAlign:'center',
@@ -209,6 +263,9 @@ export const useStyles = makeStyles((theme) => ({
         width:'25em',
         [theme.breakpoints.down('md')]:{
             width: '30.2'
+        },
+        [theme.breakpoints.down('xs')]:{
+            width: '100%'
         }
     },
     

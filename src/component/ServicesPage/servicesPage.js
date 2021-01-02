@@ -6,7 +6,7 @@ import {
   useTheme,
   useMediaQuery,
 } from "@material-ui/core";
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom";
 import { useStyles } from "./servicesStyling";
 
 import Webdesign from "../../asset/images/webdesign.jpg";
@@ -20,10 +20,7 @@ const ServicesPage = () => {
 
   return (
     <div>
-        <div className={classes.Services}>
-            
-
-        </div>
+      <div className={classes.Services}></div>
       <Grid
         item
         container
@@ -32,21 +29,33 @@ const ServicesPage = () => {
         className={classes.servicesContainer}
       >
         {/*website container */}
-        <Grid item container className={classes.websiteContainer}>
+        <Grid
+          direction="row"
+          justify="center"
+          alignItems="center"
+          item
+          container
+          className={classes.websiteContainer}
+        >
           <Grid item className={classes.websiteContentContainer}>
             <Typography className={classes.websiteTitle}>
               Website Development
             </Typography>
             <Typography className={classes.websiteSubtitle}>
               <span style={{ color: "#558c8c", fontWeight: 900 }}>
-                Increase profits and engagement. <br />
+                Increase profits and engagement. <br /> <br />
               </span>
-              Do you need a website for your business or organization?  <br />
-              Have no fear I got you cover, with my crativity and <br /> innovation imagination you and I 
-              will collaborate on your <br /> vision and plan to increase revenue and 
-              engagement of your <br />  business. 
+              Do you need a website for your business or organization? No
+              worries I got you cover on building your own custom digital
+              product, with my creativity, innovation and imagination I'll do
+              what it takes to get the job done.
             </Typography>
-            <Button component={Link} to='/gettingstarted' className={classes.websiteButton} variant="contained">
+            <Button
+              component={Link}
+              to="/gettingstarted"
+              className={classes.websiteButton}
+              variant="contained"
+            >
               Get Started
             </Button>
           </Grid>
@@ -60,22 +69,34 @@ const ServicesPage = () => {
           </Grid>
         </Grid>
 
-        <Grid item container className={classes.webAppContainer}>
+        <Grid
+          direction="row"
+          justify="flex-end"
+          alignItems="center"
+          item
+          container
+          className={classes.webAppContainer}
+        >
           <Grid item className={classes.webAppContentContainer}>
             <Typography className={classes.webAppTitle}>
               Front-End Applications
             </Typography>
             <Typography className={classes.webAppSubtitle}>
               <span style={{ color: "#558c8c", fontWeight: 900 }}>
-                Extend Value, Connection, and Longevity <br />
-              </span>
-              It's the 21st century and most of your customer <br />  are on there mobile 
-              phone. Adding a front-end<br />  application will do a few things for you  
-              business.<br />  It will help your business provide value, You will <br />  also 
-              build a stronger brand, the best part is that<br />  you can connect better 
-              with your customers and<br />  increase profits as well.
+                Extend Value, Connection, and Longevity
+              </span>{" "}
+              <br /> <br />
+              It's the 21st century and most of your customers are on there
+              mobile devices such as phones and tablets. Adding a front-end
+              application will increase value, give your company a stronger
+              brand and be present in the market all while adding profit.
             </Typography>
-            <Button component={Link} to='/gettingstarted' className={classes.webAppButton} variant="contained">
+            <Button
+              component={Link}
+              to="/gettingstarted"
+              className={classes.webAppButton}
+              variant="contained"
+            >
               {" "}
               Get Started
             </Button>
@@ -91,7 +112,14 @@ const ServicesPage = () => {
         </Grid>
 
         {/*website container */}
-        <Grid item container className={classes.responsiveContainer}>
+        <Grid
+          direction="row"
+          justify="center"
+          alignItems="center"
+          item
+          container
+          className={classes.responsiveContainer}
+        >
           <Grid item className={classes.responsiveContentContainer}>
             <Typography className={classes.responsiveTitle}>
               Responsive Design
@@ -100,15 +128,20 @@ const ServicesPage = () => {
               <span style={{ color: "#558c8c", fontWeight: 900 }}>
                 Mobile Phone's, Tablets, Desktop's{" "}
               </span>
-              <br />
-             Do you already have a website or application but its not <br />  responsive 
-             acress all platforms? No worries im am here <br /> to assits with the  
-             responsive expertist I provide for all of <br /> my clients. I can help
-             turn your website or Application <br />  and make them responsive to help 
-             you reach out to more <br /> customers and bring ore value to what you
-             already provide.
+              <br /> <br />
+              Do you already have a website or application but it's not
+              responsive across all platforms? No worries i'm here to assist
+              with the responsive expertise I provide ill get your digital
+              product responsive in no time. Having your digital product
+              responsive will add a lot of value to your brand and will be very
+              beneficial to your customers.
             </Typography>
-            <Button component={Link} to='/gettingstarted' className={classes.responsiveButton} variant="contained">
+            <Button
+              component={Link}
+              to="/gettingstarted"
+              className={classes.responsiveButton}
+              variant="contained"
+            >
               Get Started
             </Button>
           </Grid>

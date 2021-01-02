@@ -45,8 +45,7 @@ const projects = [
   {
     id: 3,
     name: "Insure Insurance",
-    details:
-      "Insure Insurance Landing Page project. Insure is a life insurance company that ensure you and your loved ones are protected. User friendly process, great prices and they put there people first.",
+    details: "Insure Insurance Landing Page project. Insure is a life insurance company that ensures you and your loved one's are fully protected. User friendly process, great prices and they put their people first.",
     link: "https://insure-insurance.vercel.app/",
     githublink: "https://github.com/Dlray89/insure_insurance",
     img: Insure,
@@ -193,7 +192,7 @@ const PortfolioPage = () => {
           className={classes.callToActionLayer}
         >
           <Card className={classes.callToActionCard}>
-            <CardHeader title="Let get started today. " />
+            <CardHeader title="Let's get started today! " style={{fontSize:'0.85em'}} />
             <Grid alignItems="center" justify="center" container item>
               <Grid item className={classes.cardCTAContent}>
                 <ul>
