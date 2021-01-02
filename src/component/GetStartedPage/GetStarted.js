@@ -909,7 +909,7 @@ const GetStartedPage = () => {
                 <DialogTitle>
                   <Grid container justify="center" alignItems="center">
                     <Grid item>
-                      <div>
+                      <div style={{fontSize:"0.65em", textAlign:'center'}} >
                         Below is your estimate for your digital product. Please
                         review before sending a request! (
                         <span style={{ color: "red", fontWeight: "700" }}>
