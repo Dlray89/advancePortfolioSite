@@ -1,7 +1,7 @@
 import React from 'react'
 import { useStyles } from './footer_styles'
 import {Link } from "react-router-dom"
-import {Grid, Typography,useTheme, useMediaQuery, Hidden } from '@material-ui/core'
+import {Grid, Typography,useTheme, useMediaQuery, Hidden, Button } from '@material-ui/core'
 // import Logo from '../../asset/images/David.png'
 //Social media imports
 import Facebook from '../../../asset/Social Media Logos/icons8-facebook.svg'
@@ -87,19 +87,19 @@ const Footer = () => {
              </Grid>
 
              <Grid container item alignItems='center' justify={mobileMatchSM ? "center" : null} direction={mobileMatchSM ? "row" : null} className={classes.socialMediaContainer}>
-                 <Grid item>
+                 <Grid item component={Button} href='http://www.facebook.com'>
                      <img className={classes.icons}  src={Facebook} alt='facebook icon' />
                  </Grid>
 
-                 <Grid item>
+                 <Grid item component={Button} href='http://www.instagram.com/tapthedap'>
                      <img className={classes.icons} src={Instagram} alt='instagram icon' />
                  </Grid>
 
-                 <Grid item>
+                 <Grid item component={Button} href='https://www.linkedin.com/in/dapperdave1914/'>
                      <img className={classes.icons} src={LinkedIn} alt='LinkedIn icon' />
                  </Grid>
 
-                 <Grid item>
+                 <Grid item component={Button} href='https://github.com/Dlray89'>
                      <img className={classes.icons} src={Github} alt='Github icon' />
                  </Grid>
              </Grid>
