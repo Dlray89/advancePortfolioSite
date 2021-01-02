@@ -38,10 +38,10 @@ const ServicesPage = () => {
           className={classes.websiteContainer}
         >
           <Grid item className={classes.websiteContentContainer}>
-            <Typography className={classes.websiteTitle}>
+            <div className={classes.websiteTitle}>
               Website Development
-            </Typography>
-            <Typography className={classes.websiteSubtitle}>
+            </div>
+            <div className={classes.websiteSubtitle}>
               <span style={{ color: "#558c8c", fontWeight: 900 }}>
                 Increase profits and engagement. <br /> <br />
               </span>
@@ -49,7 +49,7 @@ const ServicesPage = () => {
               worries I got you cover on building your own custom digital
               product, with my creativity, innovation and imagination I'll do
               what it takes to get the job done.
-            </Typography>
+            </div>
             <Button
               component={Link}
               to="/gettingstarted"
@@ -78,10 +78,10 @@ const ServicesPage = () => {
           className={classes.webAppContainer}
         >
           <Grid item className={classes.webAppContentContainer}>
-            <Typography className={classes.webAppTitle}>
+            <div className={classes.webAppTitle}>
               Front-End Applications
-            </Typography>
-            <Typography className={classes.webAppSubtitle}>
+            </div>
+            <div className={classes.webAppSubtitle}>
               <span style={{ color: "#558c8c", fontWeight: 900 }}>
                 Extend Value, Connection, and Longevity
               </span>{" "}
@@ -90,7 +90,7 @@ const ServicesPage = () => {
               mobile devices such as phones and tablets. Adding a front-end
               application will increase value, give your company a stronger
               brand and be present in the market all while adding profit.
-            </Typography>
+            </div>
             <Button
               component={Link}
               to="/gettingstarted"
@@ -121,10 +121,10 @@ const ServicesPage = () => {
           className={classes.responsiveContainer}
         >
           <Grid item className={classes.responsiveContentContainer}>
-            <Typography className={classes.responsiveTitle}>
+            <div className={classes.responsiveTitle}>
               Responsive Design
-            </Typography>
-            <Typography className={classes.responsiveSubtitle}>
+            </div>
+            <div className={classes.responsiveSubtitle}>
               <span style={{ color: "#558c8c", fontWeight: 900 }}>
                 Mobile Phone's, Tablets, Desktop's{" "}
               </span>
@@ -135,7 +135,7 @@ const ServicesPage = () => {
               product responsive in no time. Having your digital product
               responsive will add a lot of value to your brand and will be very
               beneficial to your customers.
-            </Typography>
+            </div>
             <Button
               component={Link}
               to="/gettingstarted"
