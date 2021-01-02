@@ -159,7 +159,7 @@ const Navigation = () => {
       <ElevationScroll >
         <AppBar ref={ref} color="primary" position="fixed" style={{zIndex: theme.zIndex.modal + 1}}>
           <Toolbar disableGutters>
-            <a component={Link} to='/' className={classes.logoContainer}>
+            <div className={classes.logoContainer}>
               <img
                 className={classes.logo}
                 alt="logo for David Ray website"
@@ -167,7 +167,7 @@ const Navigation = () => {
                 ref={ref}
                 
               />
-            </a>
+            </div>
             {mobileMatch ? mobileNav : deskTopNav}
           </Toolbar>
         </AppBar>
