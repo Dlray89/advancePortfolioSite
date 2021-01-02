@@ -46,6 +46,7 @@ import disableArrowLeft from "../../asset/Social Media Logos/icons8-arrow-disabl
 import disableArrowRight from "../../asset/Social Media Logos/icons8-arrow-disable-right-100.png";
 import AirplaneSend from "../../asset/Social Media Logos/icons8-email-send-48.png";
 import Cancel from "../../asset/Social Media Logos/icons8-cancel-48.png";
+import CheckMark from "../../asset/Social Media Logos/icons8-check-box-with-check-48.png";
 
 const Questions = [
   {
@@ -304,6 +305,14 @@ const websiteQuestions = [
 
 const GetStartedPage = () => {
   const classes = useStyles();
+
+  const [services, setServices] = useState([]);
+  const [platforms, setPlatforms] = useState([]);
+  const [features, setFeatures] = useState([]);
+  const [customFeatures, setCustomFeatures] = useState([]);
+  const [category, setCategory] = useState([]);
+  const [users, setUsers] = useState([]);
+
   const theme = useTheme();
   const mobileMd = useMediaQuery(theme.breakpoints.down("md"));
   const [questions, setQuestions] = useState(Questions);
@@ -394,7 +403,6 @@ const GetStartedPage = () => {
       });
   };
 
- 
   const closeHandle = () => {
     setOpen(false);
   };
@@ -426,14 +434,221 @@ const GetStartedPage = () => {
         )
         .map((question) =>
           question.options.filter((option) => option.selected)
-        )[0][0].cost;
+        )[0][0];
 
-      cost -= userCost;
-      cost *= userCost;
+        setUsers(userCost.title)
+      cost -= userCost.cost;
+      cost *= userCost.cost;
     }
     setTotal(cost);
     console.log(cost);
   };
+
+  const getPlatforms = () => {
+    let newPlatforms = [];
+
+    if (questions.length > 2) {
+      questions
+        .filter(
+          (question) =>
+            question.title ===
+            "What kind of Application are you looking to create?"
+        )
+        .map((question) =>
+          question.options.filter((options) => options.selected)
+        )[0]
+        .map((option) => newPlatforms.push(option.title));
+
+      setPlatforms(newPlatforms);
+    }
+  };
+
+  const getFeature = () => {
+    let newFeatures = [];
+
+    if (questions.length > 2) {
+      questions
+        .filter(
+          (question) =>
+            question.title ===
+            "Which features do you expect to use?"
+        )
+        .map((question) =>
+          question.options.filter((option) => option.selected)
+        ).map(option => option.map(newFeature => newFeatures.push(newFeature.title)))
+
+      setFeatures(newFeatures)
+    }
+  };
+
+
+  const getCustomFeature = () => {
+
+    if (questions.length > 2) {
+     const newCustomFeatures = questions.filter(question => question.title === 'What type of custom features do you expect to need?').map(question =>
+      question.options.filter(option => option.selected)
+      )[0][0].title
+
+
+      setCustomFeatures(newCustomFeatures)
+    }
+    
+  };
+
+  const getCategory = () => {
+    if (questions.length === 2) {
+      const newCategory = questions.filter(question => question.title === 'Which type of website are you wanting?')[0].options.filter(option => 
+          option.selected)[0].title
+
+        setCategory(newCategory)
+    }
+
+    
+  }
+
+  const softwareSelection = (
+    <Grid
+    className={classes.softwareSelection}
+    item
+    container
+    direction='row'
+    justify='center'
+    alignItems='center'
+  >
+    
+      
+        <Grid className={classes.softwareSelectionFirstCheck} container direction='row' justify='center' alignItems='center'  >
+          <Grid item>
+            <img
+              alt="icon of a check mark"
+              src={CheckMark}
+              
+              className={classes.softwareFirstCheckIcon}
+            />
+          </Grid>
+
+          <Grid item className={classes.softwareFirstCheckContent}>
+            You want a {services}
+            {platforms.length > 0
+              ? ` about the following ${
+                  //if only web application is selected...
+                  platforms.indexOf("Web Application") >
+                    -1 && platforms.length === 1
+                    ? //then finish sentence here
+                      "that consist of the following E-Commerce."
+                    : //otherwise, if web application and another s is selected...
+                    platforms.indexOf(
+                        "E-Commerce, "
+                      ) > -1 && platforms.length === 2
+                    ? //then finish the sentence here
+                      `E-Commerce, and a ${platforms[1]}.`
+                    : //otherwise, if only one platform is selected which isn't web application...
+                    platforms.length === 1
+                    ? //then finish the sentence here
+                      `${platforms[0]}`
+                    : //otherwise, if other two options are selected...
+                    platforms.length === 2
+                    ? //then finish the sentence here
+                      "Project Management, and a Blog Application."
+                    : //otherwise if all three are selected...
+                    platforms.length === 3
+                    ? //then finish the sentence here
+                      "E-Commerce, Project Management, and a Blog Application."
+                    : null
+                }`
+              : null}
+          </Grid>
+        </Grid>
+
+        <Grid className={classes.softwareSelectionsecondCheck} item container justify='center' alignItems='center'>
+          <Grid item>
+            <img
+              alt="icon of a check mark"
+              src={CheckMark}
+             className={classes.softwareSecondCheckIcon}
+            />
+          </Grid>
+          <Grid item className={classes.softwareSecondCheckContent}>
+          {"with "}
+  {/* if we have features... */}
+  {features.length > 0
+    ? //...and there's only 1...
+      features.length === 1
+        ? //then end the sentence here
+        `${features[0]}.`
+        : //otherwise, if there are two features...
+      features.length === 2
+        ? //...then end the sentence here
+        `${features[0]} and ${features[1]}.`
+        : //otherwise, if there are three or more features...
+        features
+      //filter out the very last feature...
+      .filter(
+        (feature, index) =>
+        index !== features.length - 1
+      )
+      //and for those features return their name...
+      .map((feature, index) => (
+        <span key={index}>{`${feature}, `}</span>
+      ))
+    : null}
+  {features.length > 0 &&
+    features.length !== 1 &&
+    features.length !== 2
+      ? //...and then finally add the last feature with 'and' in front of it
+      ` and ${features[features.length - 1]}.`
+      : null}
+          </Grid>
+        </Grid>
+
+        <Grid className={classes.softwareSelectionThirdCheck} container justify='center' alignItems='center'>
+          <Grid item>
+            <img
+              alt="icon of a check mark"
+              src={CheckMark}
+    
+              className={classes.softwareThirdCheckIcon}
+            />
+          </Grid>
+          <Grid className={classes.softwareThirdCheckContent} item >the custome feature will be of {customFeatures}
+          {`, and the project will be use by about ${users} users. `}
+          
+          </Grid>
+      
+      </Grid>
+
+     
+    
+  </Grid>
+  )
+
+
+  const websiteSelection = (
+    <Grid
+    
+    item
+    container
+    direction='row'
+    justify='center'
+    alignItems='center'
+    className={classes.webSelectionContainer}
+  >
+    <Grid className={classes.webSelectioniconContainer}  item>
+            <img
+              alt="icon of a check mark"
+              src={CheckMark}
+             className={classes.webSelectionIcon}
+            />
+          </Grid>
+          
+            
+          <Grid className={classes.webSelectionContentContainer} item >
+            You want {category === 'Online Portfolio' ? 'a Porfolio Website' : `an ${category} Website.`}
+          </Grid>
+          
+    
+  </Grid>
+  )
 
   const nextQuestion = () => {
     const newQuestions = cloneDeep(questions);
@@ -506,12 +721,30 @@ const GetStartedPage = () => {
     switch (newSelected.title) {
       case "Website Development":
         setQuestions(websiteQuestions);
+        setServices(newSelected.title);
+        setPlatforms([])
+        setFeatures([])
+        setCustomFeatures('')
+        setCategory('')
+        setUsers('')
         break;
       case "Front-End Application":
         setQuestions(softwareQuestions);
+        setServices(newSelected.title);
+        setPlatforms([])
+        setFeatures([])
+        setCustomFeatures('')
+        setCategory('')
+        setUsers('')
         break;
       case "Responsive Design":
         setQuestions(websiteQuestions);
+        setServices(newSelected.title);
+        setPlatforms([])
+        setFeatures([])
+        setCustomFeatures('')
+        setCategory('')
+        setUsers('')
         break;
       default:
         setQuestions(newQuestions);
@@ -657,6 +890,10 @@ const GetStartedPage = () => {
                 onClick={() => {
                   setOpen(true);
                   getTotal();
+                  getPlatforms();
+                  getFeature()
+                  getCustomFeature()
+                  getCategory()
                 }}
               >
                 Estimate
@@ -670,7 +907,7 @@ const GetStartedPage = () => {
                   <Grid container justify="center" alignItems="center">
                     <Grid item>
                       <Typography>
-                        Your estimate for your digital product.
+                        Below is your estimate for your digital product. Please review before sending a request
                       </Typography>
                     </Grid>
                   </Grid>
@@ -678,6 +915,50 @@ const GetStartedPage = () => {
 
                 <DialogContent>
                   <Grid container item direction="column">
+                  <Grid style={{ width:'100%', color: theme.palette.common.lightBrown, background: theme.palette.common.black, padding:'0.55em', borderRadius:'0.35em'}}  container item direction="row" justify='space-evenly' alignItems='center' >
+                        <Grid
+                          container
+                          item
+                          style={{  width: "35%" }}
+                        >
+                          <Grid
+                            item
+                            container
+                            direction="column"
+                            justify="center"
+                            alignItems="center"
+                            className={classes.total}
+                          >
+                            <Grid item className={classes.solutionContainer}>
+                              We can create this digital solution for an
+                              estimated:{" "}
+                            </Grid>
+                            <Grid item>
+                              {" "}
+                              <span className={classes.specialText}>
+                                {" "}
+                                ${total.toFixed(2)}
+                              </span>
+                            </Grid>
+                          </Grid>
+
+                          <Grid
+                            container
+                            item
+                            justify="center"
+                            alignItems="center"
+                            className={classes.totalSubtitle}
+                          >
+                            Fill out your name, phone number, and email, place
+                            your request, and we'll get back to you with details
+                            moving forward and a final price.
+                          </Grid>
+                        </Grid>
+
+                        <Grid item style={{width:'65%'}} >
+                          {questions.length > 2 ? softwareSelection : websiteSelection}
+                        </Grid>
+                      </Grid>
                     <Grid item container direction="column" justify="center">
                       <Grid
                         container
@@ -753,87 +1034,7 @@ const GetStartedPage = () => {
                           onChange={(e) => setMessage(e.target.value)}
                         />
                       </Grid>
-                      <Grid
-                        container
-                        item
-                        direction="column"
-                        justify="center"
-                        alignItems="center"
-                      >
-                        <Grid
-                          item
-                          container
-                          direction="column"
-                          justify="center"
-                          alignItems="center"
-                          className={classes.total}
-                        >
-                          <Grid item>
-                            We can create this digital solution for an
-                            estimated:{" "}
-                          </Grid>
-                          <Grid item>
-                            {" "}
-                            <span className={classes.specialText}>
-                              {" "}
-                              ${total.toFixed(2)}
-                            </span>
-                          </Grid>
-                        </Grid>
-                        <Grid
-                          container
-                          item
-                          justify="center"
-                          alignItems="center"
-                          className={classes.totalSubtitle}
-                        >
-                          Fill out your name, phone number, and email, place
-                          your request, and we'll get back to you with details
-                          moving forward and a final price.
-                        </Grid>
-                      </Grid>
-
-                      <Grid
-                        item
-                        container
-                        justify="space-evenly"
-                        alignItems="center"
-                        className={classes.inputContainer}
-                      >
-                        <Grid item>
-                          <Button
-                            disabled={
-                              name.length === 0 ||
-                              message.length === 0 ||
-                              phoneHelper.length !== 0 ||
-                              emailHelper.length !== 0
-                            }
-                            onClick={onConfirm}
-                            className={classes.contactButton}
-                            variant="contained"
-                          >
-                            {loading ? (
-                              <CircularProgress color="secondary" size={30} />
-                            ) : (
-                              buttonContents
-                            )}
-                          </Button>
-                        </Grid>
-                        <Grid item>
-                          <Button
-                            className={classes.contactButton}
-                            variant="contained"
-                            onClick={closeHandle}
-                          >
-                            Cancel{" "}
-                            <img
-                              className={classes.sendIcon}
-                              alt="cancel icon"
-                              src={Cancel}
-                            />
-                          </Button>
-                        </Grid>
-                      </Grid>
+                      
                     </Grid>
                     <Snackbar
                       open={alert.open}
@@ -854,6 +1055,10 @@ const GetStartedPage = () => {
                       autoHideDuration={4000}
                     />
                   </Grid>
+
+                  <Grid className={classes.sendEstimateButtonContainer} item style={{marginBottom:'0.55em'}}>
+        <Button className={classes.sendEstimateButton}  variant='contained'>Send Request <img alt='airplane icon' src={AirplaneSend} style={{height:'2em'}} /></Button>
+      </Grid>
                   <Grid justify="center" container item>
                     <div style={{ fontSize: "0.60em" }}>
                       {" "}
