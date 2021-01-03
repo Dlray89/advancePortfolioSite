@@ -248,7 +248,7 @@ export const useStyles = makeStyles((theme) => ({
         color: 'White',
         
         "&:hover": {
-            background: theme.palette.common.lightBrown,
+            background: theme.palette.common.black,
             color: 'white',
           },
     [theme.breakpoints.down('xs')]:{
@@ -261,7 +261,7 @@ export const useStyles = makeStyles((theme) => ({
         color: 'White',
         
         "&:hover": {
-            background: theme.palette.common.lightBrown,
+            background: theme.palette.common.black,
             color: 'white',
           },
   }

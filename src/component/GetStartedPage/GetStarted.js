@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-// import axios from "axios";
+import axios from "axios";
 import {
   Grid,
   Button,
@@ -10,7 +10,7 @@ import {
   DialogContent,
   DialogTitle,
   Snackbar,
-  // CircularProgress,
+  CircularProgress,
   TextField,
 } from "@material-ui/core";
 import { cloneDeep } from "lodash";
@@ -93,8 +93,8 @@ const softwareQuestions = [
     options: [
       {
         id: 1,
-        title: "E-Commerce Application",
-        subtitle: null,
+        title: "Custom Application",
+        subtitle: '(Build your app reguarding your business',
         icon: Ecommerce,
         iconAlt: "computer outline",
         selected: false,
@@ -290,7 +290,7 @@ const websiteQuestions = [
       },
       {
         id: 3,
-        title: "E-Commerce",
+        title: "Custom Application",
         subtitle: "(Sales)",
         icon: Ecommerce,
         iconAlt: "outline of three people",
@@ -314,6 +314,7 @@ const GetStartedPage = () => {
 
   const theme = useTheme();
   const mobileMd = useMediaQuery(theme.breakpoints.down("md"));
+  const mobileXS = useMediaQuery(theme.breakpoints.down('xs'))
   const [questions, setQuestions] = useState(Questions);
   const [open, setOpen] = useState(false);
   const [total, setTotal] = useState(0);
@@ -325,7 +326,7 @@ const GetStartedPage = () => {
   const [phoneHelper, setPhoneHelper] = useState("");
 
   const [message, setMessage] = useState("");
-  // const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const [alert, setAlert] = useState({
     open: false,
@@ -366,56 +367,45 @@ const GetStartedPage = () => {
     }
   };
 
-  // const onConfirm = () => {
-  //   setLoading(true);
-  //   axios
-  //     .get(
-  //       "https://us-central1-tech-portfolio-83a00.cloudfunctions.net/sendMail",
-  //       {
-  //         params: {
-  //           name: name,
-  //           email: email,
-  //           phone: phone,
-  //           message: message,
-  //         },
-  //       }
-  //     )
-  //     .then((res) => {
-  //       setLoading(false);
-  //       setName("");
-  //       setEmail("");
-  //       setPhone("");
-  //       setMessage("");
-  //       setAlert({
-  //         open: true,
-  //         message: "sent successfully",
-  //         background: "#4bb543",
-  //       });
-  //     })
-  //     .catch((err) => {
-  //       setLoading(false);
-  //       setAlert({
-  //         open: true,
-  //         message: "Something went wrong. Please try again",
-  //         background: "#ff3232",
-  //       });
-  //     });
-  // };
+  const SendEstimate = () => {
+    setLoading(true);
+    axios
+      .get(
+        "https://us-central1-tech-portfolio-83a00.cloudfunctions.net/sendMail",
+        {
+          params: {
+            name: name,
+            email: email,
+            phone: phone,
+            message: message,
+            total: total,
+            service: services,
+            platform: platforms,
+            customFeatures: customFeatures,
+            users: users,
+            category: category,
+            features: features
+
+          },
+        }
+      ).then(res => console.log(res)).catch(err => console.log(err))
+      
+  };
 
   const closeHandle = () => {
     setOpen(false);
   };
 
-  // const buttonContents = (
-  //   <React.Fragment>
-  //     Send Request{" "}
-  //     <img
-  //       className={classes.sendIcon}
-  //       alt="airplane send icon"
-  //       src={AirplaneSend}
-  //     />
-  //   </React.Fragment>
-  // );
+  const buttonContents = (
+    <React.Fragment>
+      Send Estimate{" "}
+      <img
+        className={classes.sendIcon}
+        alt="airplane send icon"
+        src={AirplaneSend}
+      />
+    </React.Fragment>
+  );
 
   const getTotal = () => {
     let cost = 0;
@@ -541,12 +531,12 @@ const GetStartedPage = () => {
                 platforms.indexOf("Web Application") > -1 &&
                 platforms.length === 1
                   ? //then finish sentence here
-                    "that consist of the following E-Commerce."
+                    "that consist of the following Custom Application."
                   : //otherwise, if web application and another s is selected...
-                  platforms.indexOf("E-Commerce, ") > -1 &&
+                  platforms.indexOf("Custom Application, ") > -1 &&
                     platforms.length === 2
                   ? //then finish the sentence here
-                    `E-Commerce, and a ${platforms[1]}.`
+                    `Custom Application, and a ${platforms[1]}.`
                   : //otherwise, if only one platform is selected which isn't web application...
                   platforms.length === 1
                   ? //then finish the sentence here
@@ -558,7 +548,7 @@ const GetStartedPage = () => {
                   : //otherwise if all three are selected...
                   platforms.length === 3
                   ? //then finish the sentence here
-                    "E-Commerce, Project Management, and a Blog Application."
+                    "Custom Applicaiton, Project Management, and a Blog Application."
                   : null
               }`
             : null}
@@ -632,7 +622,7 @@ const GetStartedPage = () => {
     <Grid
       item
       container
-      direction="row"
+      direction={mobileXS ? 'column' : 'row'}
       justify="center"
       alignItems="center"
       className={classes.webSelectionContainer}
@@ -896,6 +886,7 @@ const GetStartedPage = () => {
                   getFeature();
                   getCustomFeature();
                   getCategory();
+                  
                 }}
                className={classes.getEstimateButton}
               >
@@ -911,12 +902,7 @@ const GetStartedPage = () => {
                     <Grid item>
                       <div style={{fontSize:"0.65em", textAlign:'center'}} >
                         Below is your estimate for your digital product. Please
-                        review before sending a request! (
-                        <span style={{ color: "red", fontWeight: "700" }}>
-                          NOTICE: This will be active by 1/3/2021
-                        </span>
-                        ) Feel free to fill out the contact form about specifics
-                        of your product!
+                        review before sending a request!
                       </div>
                     </Grid>
                   </Grid>
@@ -1083,13 +1069,20 @@ const GetStartedPage = () => {
                     <Button
                       className={classes.sendEstimateButton}
                       variant="contained"
+                      onClick={SendEstimate}
+                      disabled={
+                        name.length === 0 ||
+                    message.length === 0 ||
+                    phoneHelper.length !== 0 ||
+                    emailHelper.length !== 0
+                      }
                     >
-                      Send Request{" "}
-                      <img
-                        alt="airplane icon"
-                        src={AirplaneSend}
-                        style={{ height: "2em" }}
-                      />
+                       {loading ? (
+                    <CircularProgress color="secondary" size={30} />
+                  ) : (
+                    buttonContents
+                  )}
+                      
                     </Button>
                   </Grid>
                   <Grid justify="center" container item>
@@ -1099,6 +1092,22 @@ const GetStartedPage = () => {
                     </div>
                   </Grid>
                 </DialogContent>
+                <Snackbar
+          open={alert.open}
+          message={alert.message}
+          ContentProps={{
+            style: {
+              background: alert.background,
+              marginBottom:'2em',
+              fontSize:'0.97em',
+              textAlign:'center'
+            },
+          }}
+          anchorOrigin={{ vertical: "bottom", horizontal: "center" }}
+          onClose={() => setAlert({ ...alert, open: false })}
+          autoHideDuration={4000}
+          
+        />
               </Dialog>
             </Grid>
           </Grid>

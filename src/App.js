@@ -7,6 +7,7 @@ import LandingPage from "./component/LandingPage/LandingPage"
 import Portfolio from './component/PorfolioPage/PorfolioPage'
 import Services from './component/ServicesPage/servicesPage'
 import GetStartedPage from './component/GetStartedPage/GetStarted'
+// import About from './component/AboutPage/About'
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
         <Route exact path='/projects' component={Portfolio}  />
         <Route exact path='/services' component={Services}  />
         <Route exact path='/gettingstarted' component={GetStartedPage}  />
+        {/* <Route exact path='/about' component={About}  /> */}
 
       </Switch>
       <Footer  />

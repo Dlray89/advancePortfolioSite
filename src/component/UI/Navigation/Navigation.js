@@ -141,6 +141,11 @@ const Navigation = () => {
             <ListItemText className={classes.mobileLinks}>Services</ListItemText>
           </ListItem>
 
+          <ListItem style={{color:theme.palette.common.black, fontSize: "1em",
+    textAlign: "center"}} button divider component={Link} to='/services'>
+            <ListItemText className={classes.mobileLinks}>About</ListItemText>
+          </ListItem>
+
          </List>
          <ContactButton variant='outlined' className={classes.mobileButton}>Contact Me</ContactButton>
         
