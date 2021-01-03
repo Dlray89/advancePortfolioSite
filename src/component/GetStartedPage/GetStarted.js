@@ -46,7 +46,8 @@ import disableArrowRight from "../../asset/Social Media Logos/icons8-arrow-disab
 import AirplaneSend from "../../asset/Social Media Logos/icons8-email-send-48.png";
 // import Cancel from "../../asset/Social Media Logos/icons8-cancel-48.png";
 import CheckMark from "../../asset/Social Media Logos/icons8-check-box-with-check-48.png";
-import GoBAck from '../../asset/Social Media Logos/icons8-go-back-50.png'
+
+
 const Questions = [
   {
     id: 1,
