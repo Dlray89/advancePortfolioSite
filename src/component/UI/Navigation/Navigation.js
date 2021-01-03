@@ -95,7 +95,7 @@ const Navigation = () => {
       >
         {navigationLinks.map((link) => (
           <Tab
-          style={{color:theme.palette.common.lightBrown ,}}
+          style={{color:theme.palette.common.lightBrown , fontFamily:'Lustria serif'}}
             component={Link}
             to={link.link}
             label={link.name}
@@ -141,10 +141,7 @@ const Navigation = () => {
             <ListItemText className={classes.mobileLinks}>Services</ListItemText>
           </ListItem>
 
-          <ListItem style={{color:theme.palette.common.black, fontSize: "1em",
-    textAlign: "center"}} button divider component={Link} to='/services'>
-            <ListItemText className={classes.mobileLinks}>About</ListItemText>
-          </ListItem>
+          
 
          </List>
          <ContactButton variant='outlined' className={classes.mobileButton}>Contact Me</ContactButton>

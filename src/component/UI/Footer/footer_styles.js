@@ -15,6 +15,7 @@ export const useStyles = makeStyles((theme) => ({
 
   home: {
     width: "20%",
+    fontFamily:'Lustria serif'
   },
   services: {
     width: "20%",
@@ -32,6 +33,7 @@ export const useStyles = makeStyles((theme) => ({
   },
   footerText:{
     width:'100%',
+    fontFamily:'Lustria serif',
     [theme.breakpoints.down('sm')]:{
         width:'100%',
         textAlign:'center',

@@ -6,6 +6,8 @@ export const useStyles = makeStyles((theme) => ({
     color: 'White',
     marginRight: "3em",
     marginLeft: '2em',
+    fontFamily:'Lustria serif',
+    
     [theme.breakpoints.down('sm')]:{
         margin: '0 auto'
     },
@@ -43,6 +45,8 @@ export const useStyles = makeStyles((theme) => ({
       background: theme.palette.common.black,
       color: theme.palette.common.lightBrown,
       marginTop:'1em',
+      fontFamily:'Lustria serif',
+      fontSize:'0.75em'
       
   },
   sendIcon:{
@@ -51,7 +55,8 @@ export const useStyles = makeStyles((theme) => ({
   },
   Title:{
     fontSize:'0.9em',
-    textAlign:'center'
+    textAlign:'center',
+    fontFamily:'Lustria serif'
   }
 
 }));

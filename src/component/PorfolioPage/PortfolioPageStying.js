@@ -32,6 +32,7 @@ export const useStyle = makeStyles((theme) => ({
   },
   searchBar: {
     width: "20em",
+    
   },
   searchIcon: {
     color: theme.palette.common.black,
@@ -88,6 +89,7 @@ export const useStyle = makeStyles((theme) => ({
     color: theme.palette.common.lightBrown,
     padding: "1em",
     textAlign: "center",
+    fontFamily:'Lustria serif',
     [theme.breakpoints.down("md")]: {},
     [theme.breakpoints.down("sm")]: {
       marginLeft: "2em",
@@ -131,6 +133,7 @@ export const useStyle = makeStyles((theme) => ({
     background: "#558c8c",
     color: "White",
     width: "33em",
+    fontFamily:'Lustria serif',
     "&:hover": {
       background: theme.palette.common.lightBrown,
       color: "white",
@@ -175,6 +178,7 @@ export const useStyle = makeStyles((theme) => ({
   },
   cardCTAContent: {
     color: theme.palette.common.lightBrown,
+    fontFamily:'Lustria serif'
   },
   cardCTAButton: {
     background: "#558c8c",

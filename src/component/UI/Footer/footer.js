@@ -20,7 +20,7 @@ const Footer = () => {
             <Grid container direction='row' justify='space-evenly' item style={{marginTop:'1.5em'}} >
            <Grid item container justify='center' alignItems='center' className={classes.home}>
                <Grid item>
-                    <Typography style={{textDecoration:'none', color:theme.palette.common.lightBrown}} component={Link} to='/' variant='h3'>
+                    <Typography style={{textDecoration:'none', color:theme.palette.common.lightBrown, fontFamily:'Lustria serif', fontSize:'1.2em'}} component={Link} to='/' variant='h3'>
                         Home
                     </Typography>
                </Grid>
@@ -28,25 +28,25 @@ const Footer = () => {
 
            <Grid container direction='column' justify='center' alignItems='center' item  className={classes.services} >
                <Grid item>
-                   <Typography  variant='h3'>
+                   <Typography style={{fontFamily:'Lustria serif', fontSize:'1.2em'}} variant='h3'>
                        Services
                    </Typography>
                </Grid>
 
                <Grid item>
-                   <Typography style={{textDecoration:'none', color:theme.palette.common.lightBrown}}  component={Link} to='/services' variant='subtitle1'>
+                   <Typography style={{textDecoration:'none', color:theme.palette.common.lightBrown, fontFamily:'Lustria serif', fontSize:'0.75em'}}  component={Link} to='/services' variant='subtitle1'>
                    Website Development
                    </Typography>
                </Grid>
 
                <Grid item>
-                   <Typography style={{textDecoration:'none', color:theme.palette.common.lightBrown}}  component={Link} to='/services' variant='subtitle1'>
+                   <Typography style={{textDecoration:'none', color:theme.palette.common.lightBrown, fontFamily:'Lustria serif', fontSize:'0.75em'}}  component={Link} to='/services' variant='subtitle1'>
                    Web Application Development
                    </Typography>
                </Grid>
 
                <Grid item>
-                   <Typography style={{textDecoration:'none', color:theme.palette.common.lightBrown}}  component={Link} to='/services' variant='subtitle1'>
+                   <Typography style={{textDecoration:'none', color:theme.palette.common.lightBrown, fontFamily:'Lustria serif', fontSize:'0.75em'}}  component={Link} to='/services' variant='subtitle1'>
                    Website Development
                    </Typography>
                </Grid>
@@ -54,19 +54,19 @@ const Footer = () => {
 
            <Grid container item direction='column' justify='center' alignItems='center' className={classes.information}>
                <Grid item>
-                   <Typography variant='h3'>
+                   <Typography style={{fontFamily:'Lustria serif', fontSize:'1.2em'}} variant='h3'>
                         Information
                    </Typography>
                </Grid>
 
-               <Grid item >
-                   <Typography style={{textDecoration:'none', color:theme.palette.common.lightBrown}}  component={Link} to='/about' variant='subtitle1'>
+               <Grid item component={Button} disabled style={{textTransform:'none'}}>
+                   <Typography  style={{textDecoration:'none', color:theme.palette.common.lightBrown, fontFamily:'Lustria serif', fontSize:'0.85em'}}  component={Link} to='/about' variant='subtitle1'>
                        About Me
                    </Typography>
                </Grid>
 
                <Grid item>
-                   <Typography style={{textDecoration:'none', color:theme.palette.common.lightBrown}}  component={Link} to='/projects' variant='subtitle1'>
+                   <Typography style={{textDecoration:'none', color:theme.palette.common.lightBrown, fontFamily:'Lustria serif', fontSize:'0.75em'}}  component={Link} to='/projects' variant='subtitle1'>
                        Portfolio
                    </Typography>
                </Grid>

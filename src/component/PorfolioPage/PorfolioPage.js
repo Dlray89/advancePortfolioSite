@@ -107,6 +107,7 @@ const PortfolioPage = () => {
             style: {
               color: "black",
               fontSize: "1.5em",
+              fontFamily:'Lustria serif'
             },
           }}
         />
@@ -122,12 +123,14 @@ const PortfolioPage = () => {
               titleTypographyProps={{
                 style: {
                   fontSize: "2em",
+                  fontFamily:'Lustria serif'
                 },
               }}
               subheaderTypographyProps={{
                 style: {
                   color: theme.palette.common.lightBrown,
                   fontSize: "0.95em",
+                  fontFamily:'Lustria serif'
                 },
               }}
             />

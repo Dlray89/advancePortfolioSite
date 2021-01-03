@@ -21,6 +21,7 @@ export const useStyles = makeStyles((theme) => ({
     marginBottom: "0.1em",
     marginTop: "0.25em",
     textAlign: "center",
+    fontFamily:'Lustria serif',
 
     width: "11.7em",
     [theme.breakpoints.down("xs")]: {
@@ -61,6 +62,7 @@ export const useStyles = makeStyles((theme) => ({
   questionContainer: {
     width: "55%",
     marginTop: "5em",
+    fontFamily:'Lustria serif',
     [theme.breakpoints.down("md")]: {
       width: "47%",
       marginBottom: "2em",
@@ -76,6 +78,7 @@ export const useStyles = makeStyles((theme) => ({
   },
   mainQuestion: {
     fontSize: "1.5em",
+    fontFamily:'Lustria serif',
     [theme.breakpoints.down("xs")]: {
       textAlign: "center",
     },
@@ -88,6 +91,7 @@ export const useStyles = makeStyles((theme) => ({
     height: "5em",
   },
   services: {
+    fontFamily:'Lustria serif',
     [theme.breakpoints.down("xs")]: {
       width: "100%",
       margin: 0,
@@ -104,12 +108,14 @@ export const useStyles = makeStyles((theme) => ({
   inputContainer: {},
   input: {
     width: "70%",
+    fontFamily:'Lustria serif',
     [theme.breakpoints.down("xs")]: {
       fontSize: "0.8em",
     },
   },
   contactButton: {
     fontSize: "0.75em",
+    fontFamily:'Lustria serif',
     [theme.breakpoints.down("xs")]: {
       fontSize: "0.65em",
     },
@@ -120,10 +126,12 @@ export const useStyles = makeStyles((theme) => ({
   total: {
     textAlign: "center",
     marginBottom: "1em",
+    fontFamily:'Lustria serif'
   },
   totalSubtitle: {
     textAlign: "center",
     fontSize: "0.85em",
+    fontFamily:'Lustria serif',
     [theme.breakpoints.down('xs')]:{
       
       textAlign:'center',
@@ -141,6 +149,7 @@ export const useStyles = makeStyles((theme) => ({
   specialText: {
     color: "#558c8c",
     fontWeight: 700,
+    fontFamily:'Lustria serif',
     [theme.breakpoints.down('xs')]:{
       
       textAlign:'center',
@@ -160,11 +169,14 @@ export const useStyles = makeStyles((theme) => ({
     width: "80%",
     fontSize: "0.95em",
     textAlign: "center",
+    fontFamily:'Lustria serif'
   },
   webSelectionButtonContainer: {
     marginTop: "2em",
   },
-  webselectionButton: {},
+  webselectionButton: {
+    fontFamily:'Lustria serif'
+  },
   webSelectionButtonIcon: {
     height: "1.2em",
   },
@@ -192,7 +204,7 @@ export const useStyles = makeStyles((theme) => ({
     width: "86%",
     fontSize: "0.75em",
     textAlign: "center",
-    
+    fontFamily:'Lustria serif',
     [theme.breakpoints.down('xs')]:{
       
       fontSize:'0.65em',
@@ -210,6 +222,7 @@ export const useStyles = makeStyles((theme) => ({
     width: "86%",
     fontSize: "0.75em",
     textAlign: "center",
+    fontFamily:'Lustria serif',
     [theme.breakpoints.down('xs')]:{
       
       fontSize:'0.65em',
@@ -227,6 +240,7 @@ export const useStyles = makeStyles((theme) => ({
     width: "86%",
     fontSize: "0.75em",
     textAlign: "center",
+    fontFamily:'Lustria serif',
     [theme.breakpoints.down('xs')]:{
       
       fontSize:'0.65em',
@@ -246,7 +260,7 @@ export const useStyles = makeStyles((theme) => ({
   
     background: '#558c8c',
         color: 'White',
-        
+        fontFamily:'Lustria serif',
         "&:hover": {
             background: theme.palette.common.black,
             color: 'white',
@@ -259,11 +273,15 @@ export const useStyles = makeStyles((theme) => ({
   getEstimateButton:{
     background: '#558c8c',
         color: 'White',
-        
+        fontFamily:'Lustria serif',
         "&:hover": {
             background: theme.palette.common.black,
             color: 'white',
           },
+  },
+  goBackButton:{
+    textAlign:'center',
+    fontFamily: 'Lustria serif'
   }
     
     

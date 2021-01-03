@@ -83,12 +83,15 @@ const ContactButton = () => {
     setLoading(true);
     axios
       .get(
-        "https://us-central1-tech-portfolio-83a00.cloudfunctions.net/sendMail", {params: {
-          name: name,
-          email: email,
-          phone: phone,
-          message: message
-        }}
+        "https://us-central1-tech-portfolio-83a00.cloudfunctions.net/sendMail",
+        {
+          params: {
+            name: name,
+            email: email,
+            phone: phone,
+            message: message,
+          },
+        }
       )
       .then((res) => {
         setLoading(false);
@@ -96,9 +99,20 @@ const ContactButton = () => {
         setEmail("");
         setPhone("");
         setMessage("");
-        setAlert({open: true, message: 'sent successfully', background: '#4bb543'})
+        setAlert({
+          open: true,
+          message: "sent successfully",
+          background: "#4bb543",
+        });
       })
-      .catch((err) => {setLoading(false); setAlert({open: true, message:"Something went wrong. Please try again", background:'#ff3232'})});
+      .catch((err) => {
+        setLoading(false);
+        setAlert({
+          open: true,
+          message: "Something went wrong. Please try again",
+          background: "#ff3232",
+        });
+      });
   };
 
   const buttonContents = (
@@ -122,21 +136,20 @@ const ContactButton = () => {
         Contact Me
       </Button>
       <Dialog
-      style={{marginTop:'7em'}}
+        style={{ marginTop: "7em", fontFamily:'Lustria serif' }}
         open={open}
         onClose={closeDialog}
         classes={{ paper: classes.dialog }}
       >
         <DialogTitle className={classes.dialogTitle}>
-          <Grid container item justify='center' alignItems='center' >
-          <Typography className={classes.Title}>
-            Lets Chat about your future and turn your vision into reality
-          </Typography>
+          <Grid container item justify="center" alignItems="center">
+            <Typography className={classes.Title}>
+              Lets Chat about your future and turn your vision into reality
+            </Typography>
           </Grid>
-         
         </DialogTitle>
         <DialogContent>
-          <Grid container direction="row" justify="center" alignItems='center'>
+          <Grid container direction="row" justify="center" alignItems="center">
             <Grid
               container
               item
@@ -185,8 +198,6 @@ const ContactButton = () => {
                 </a>{" "}
               </Grid>
             </Grid>
-
-          
           </Grid>
           <Divider />
 
@@ -200,6 +211,11 @@ const ContactButton = () => {
                 placeholder="Name"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
+                inputProps={{
+                  style:{
+                    fontFamily:'Lustria serif'
+                  }
+                }}
               />
             </Grid>
 
@@ -214,6 +230,11 @@ const ContactButton = () => {
                 placeholder="Email"
                 value={email}
                 onChange={onChangeValidation}
+                inputProps={{
+                  style:{
+                    fontFamily:'Lustria serif'
+                  }
+                }}
               />
             </Grid>
 
@@ -228,6 +249,11 @@ const ContactButton = () => {
                 placeholder="Phone Number"
                 value={phone}
                 onChange={onChangeValidation}
+                inputProps={{
+                  style:{
+                    fontFamily:'Lustria serif'
+                  }
+                }}
               />
             </Grid>
 
@@ -242,6 +268,11 @@ const ContactButton = () => {
                 placeholder="Message"
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
+                inputProps={{
+                  style:{
+                    fontFamily:'Lustria serif'
+                  }
+                }}
               />
             </Grid>
 
@@ -293,15 +324,14 @@ const ContactButton = () => {
           ContentProps={{
             style: {
               background: alert.background,
-              marginBottom:'2em',
-              fontSize:'0.97em',
-              textAlign:'center'
+              marginBottom: "2em",
+              fontSize: "0.97em",
+              textAlign: "center",
             },
           }}
           anchorOrigin={{ vertical: "bottom", horizontal: "center" }}
           onClose={() => setAlert({ ...alert, open: false })}
           autoHideDuration={4000}
-          
         />
       </Dialog>
     </React.Fragment>

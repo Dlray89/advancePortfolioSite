@@ -19,9 +19,9 @@ import GettingStarted from "../../asset/images/callToAction.jpg";
 
 import WebDesignIcon from "../../asset/Social Media Logos/icons8-web-64 (1).png";
 import WebApp from "../../asset/Social Media Logos/icons8-apps-tab-48.png";
-import Responsive from "../../asset/Social Media Logos/icons8-responsive-16.png";
+import Responsive from "../../asset/Social Media Logos/icons8-responsive-64.png";
 
-import Ecommerce from "../../asset/Social Media Logos/icons8-e-commerce-64.png";
+import Ecommerce from "../../asset/Social Media Logos/icons8-design-portal-100.png";
 import ProjectManagement from "../../asset/Social Media Logos/icons8-project-management-48.png";
 import Blog from "../../asset/Social Media Logos/icons8-blog-100.png";
 import Feedback from "../../asset/Social Media Logos/icons8-feedback-64.png";
@@ -46,7 +46,7 @@ import disableArrowRight from "../../asset/Social Media Logos/icons8-arrow-disab
 import AirplaneSend from "../../asset/Social Media Logos/icons8-email-send-48.png";
 // import Cancel from "../../asset/Social Media Logos/icons8-cancel-48.png";
 import CheckMark from "../../asset/Social Media Logos/icons8-check-box-with-check-48.png";
-
+import GoBAck from '../../asset/Social Media Logos/icons8-go-back-50.png'
 const Questions = [
   {
     id: 1,
@@ -94,7 +94,7 @@ const softwareQuestions = [
       {
         id: 1,
         title: "Custom Application",
-        subtitle: '(Build your app reguarding your business',
+        subtitle: "(Business/Organization/Brand)",
         icon: Ecommerce,
         iconAlt: "computer outline",
         selected: false,
@@ -282,7 +282,7 @@ const websiteQuestions = [
       {
         id: 2,
         title: "Industry Standard",
-        subtitle: "(Business or Organization)",
+        subtitle: "(Business/Organization/Brand)",
         icon: Standard,
         iconAlt: "outline of two people",
         selected: false,
@@ -291,7 +291,7 @@ const websiteQuestions = [
       {
         id: 3,
         title: "Custom Application",
-        subtitle: "(Sales)",
+        subtitle: "(Sales/Responsive Design)",
         icon: Ecommerce,
         iconAlt: "outline of three people",
         selected: false,
@@ -314,7 +314,7 @@ const GetStartedPage = () => {
 
   const theme = useTheme();
   const mobileMd = useMediaQuery(theme.breakpoints.down("md"));
-  const mobileXS = useMediaQuery(theme.breakpoints.down('xs'))
+  const mobileXS = useMediaQuery(theme.breakpoints.down("xs"));
   const [questions, setQuestions] = useState(Questions);
   const [open, setOpen] = useState(false);
   const [total, setTotal] = useState(0);
@@ -380,32 +380,73 @@ const GetStartedPage = () => {
             message: message,
             total: total,
             service: services,
-            platform: platforms,
             customFeatures: customFeatures,
             users: users,
             category: category,
-            features: features
-
+            features: features,
           },
         }
-      ).then(res => console.log(res)).catch(err => console.log(err))
-      
+      )
+      .then((res) => {
+        setLoading(false);
+        setAlert({
+          open: true,
+          message: "Your estimate placed successfully",
+          background: "#4bb543",
+        });
+        setOpen(false);
+      })
+      .catch((err) => {
+        console.log(err);
+        setLoading(false);
+        setAlert({
+          open: true,
+          message:
+            "Something went wrong sending your estimate. Please try again!",
+          background: "#ff3232",
+        });
+      });
+  };
+
+  const estimateDisable = () => {
+    let disable = true;
+
+    const emptySelection = questions
+      .map((question) => question.options.filter((option) => option.selected))
+      .filter((question) => question.length === 0);
+
+    if (questions.length === 2) {
+      if (emptySelection.length === 1) {
+        disable = false;
+      }
+    } else if (questions.length === 1) {
+      disable = true
+    } else if (
+      emptySelection.length < 3 &&
+      questions[questions.length - 1].options.filter(
+        (option) => option.selected
+      ).length > 0
+    ) {
+      disable = false
+    }
+
+    return disable
   };
 
   const closeHandle = () => {
     setOpen(false);
   };
 
-  const buttonContents = (
-    <React.Fragment>
-      Send Estimate{" "}
-      <img
-        className={classes.sendIcon}
-        alt="airplane send icon"
-        src={AirplaneSend}
-      />
-    </React.Fragment>
-  );
+  // const buttonContents = (
+  //   <React.Fragment>
+  //     Send Request{" "}
+  //     <img
+  //       className={classes.sendIcon}
+  //       alt="airplane send icon"
+  //       src={AirplaneSend}
+  //     />
+  //   </React.Fragment>
+  // );
 
   const getTotal = () => {
     let cost = 0;
@@ -622,7 +663,7 @@ const GetStartedPage = () => {
     <Grid
       item
       container
-      direction={mobileXS ? 'column' : 'row'}
+      direction={mobileXS ? "column" : "row"}
       justify="center"
       alignItems="center"
       className={classes.webSelectionContainer}
@@ -745,6 +786,15 @@ const GetStartedPage = () => {
     }
   };
 
+  const handleCancel = () => {
+    setOpen(false)
+    setMessage('')
+    setName('')
+    setMessage('')
+    setEmail('')
+    setPhone('')
+  }
+
   return (
     <div className={classes.getEstimate}>
       <Grid
@@ -791,9 +841,7 @@ const GetStartedPage = () => {
                   item
                 >
                   <div className={classes.mainQuestion}>{question.title}</div>
-                  <div style={{ marginBottom: "3em" }}>
-                    {question.subtitle}
-                  </div>
+                  <div style={{ marginBottom: "3em", fontFamily:'Lustria serif' }}>{question.subtitle}</div>
                 </Grid>
 
                 <Grid
@@ -878,6 +926,7 @@ const GetStartedPage = () => {
 
             <Grid item style={{ marginTop: "2em" }}>
               <Button
+                disabled={estimateDisable()}
                 variant="contained"
                 onClick={() => {
                   setOpen(true);
@@ -886,21 +935,20 @@ const GetStartedPage = () => {
                   getFeature();
                   getCustomFeature();
                   getCategory();
-                  
                 }}
-               className={classes.getEstimateButton}
+                className={classes.getEstimateButton}
               >
                 Get Estimate
               </Button>
               <Dialog
-                style={{ marginTop: "5em" }}
+                style={{ marginTop: "5em", fontFamily:'Lustria serif' }}
                 open={open}
                 onClose={closeHandle}
               >
                 <DialogTitle>
                   <Grid container justify="center" alignItems="center">
                     <Grid item>
-                      <div style={{fontSize:"0.65em", textAlign:'center'}} >
+                      <div style={{ fontSize: "0.65em", textAlign: "center", fontFamily:'Lustria serif' }}>
                         Below is your estimate for your digital product. Please
                         review before sending a request!
                       </div>
@@ -980,6 +1028,11 @@ const GetStartedPage = () => {
                           className={classes.input}
                           placeholder="Name"
                           value={name}
+                          inputProps={{
+                            style:{
+                              fontFamily:'Lustria serif'
+                            }
+                          }}
                           onChange={(e) => setName(e.target.value)}
                         />
                       </Grid>
@@ -1000,6 +1053,12 @@ const GetStartedPage = () => {
                           placeholder="Email"
                           value={email}
                           onChange={onChangeValidation}
+                          inputProps={{
+                            style:{
+                              fontFamily:'Lustria serif'
+                            }
+                          }}
+                          
                         />
                       </Grid>
 
@@ -1019,6 +1078,11 @@ const GetStartedPage = () => {
                           placeholder="Phone Number"
                           value={phone}
                           onChange={onChangeValidation}
+                          inputProps={{
+                            style:{
+                              fontFamily:'Lustria serif'
+                            }
+                          }}
                         />
                       </Grid>
 
@@ -1035,9 +1099,14 @@ const GetStartedPage = () => {
                           multiline
                           rows={4}
                           className={classes.input}
-                          placeholder="Message"
+                          placeholder="Tell me more about your project"
                           value={message}
                           onChange={(e) => setMessage(e.target.value)}
+                          inputProps={{
+                            style:{
+                              fontFamily:'Lustria serif'
+                            }
+                          }}
                         />
                       </Grid>
                     </Grid>
@@ -1072,43 +1141,52 @@ const GetStartedPage = () => {
                       onClick={SendEstimate}
                       disabled={
                         name.length === 0 ||
-                    message.length === 0 ||
-                    phoneHelper.length !== 0 ||
-                    emailHelper.length !== 0
+                        message.length === 0 ||
+                        phoneHelper.length !== 0 ||
+                        emailHelper.length !== 0
                       }
                     >
-                       {loading ? (
-                    <CircularProgress color="secondary" size={30} />
-                  ) : (
-                    buttonContents
-                  )}
-                      
+                      {loading ? (
+                        <CircularProgress />
+                      ) : (
+                        <React.Fragment>
+                          Send Request
+                          <img
+                            className={classes.sendIcon}
+                            alt="airplane send icon"
+                            src={AirplaneSend}
+                          />
+                        </React.Fragment>
+                      )}
                     </Button>
                   </Grid>
+                  <Grid item className={classes.goBackButton}>
+                    <Button onClick={handleCancel}>Cancel</Button>
+                  </Grid>
                   <Grid justify="center" container item>
-                    <div style={{ fontSize: "0.60em" }}>
+                    <div style={{ fontSize: "0.60em", fontFamily:'Lustria serif' }}>
                       {" "}
                       &copy; 2020 Dapnologies
                     </div>
                   </Grid>
                 </DialogContent>
-                <Snackbar
-          open={alert.open}
-          message={alert.message}
-          ContentProps={{
-            style: {
-              background: alert.background,
-              marginBottom:'2em',
-              fontSize:'0.97em',
-              textAlign:'center'
-            },
-          }}
-          anchorOrigin={{ vertical: "bottom", horizontal: "center" }}
-          onClose={() => setAlert({ ...alert, open: false })}
-          autoHideDuration={4000}
-          
-        />
               </Dialog>
+              <Snackbar
+                open={alert.open}
+                message={alert.message}
+                ContentProps={{
+                  style: {
+                    background: alert.background,
+                    marginBottom: "2em",
+                    fontSize: "0.97em",
+                    textAlign: "center",
+                    fontFamily:'Lustria serif'
+                  },
+                }}
+                anchorOrigin={{ vertical: "bottom", horizontal: "center", fontFamily:'Lustria serif' }}
+                onClose={() => setAlert({ ...alert, open: false })}
+                autoHideDuration={4000}
+              />
             </Grid>
           </Grid>
         </Grid>

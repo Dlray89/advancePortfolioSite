@@ -120,7 +120,7 @@ export const useStyles = makeStyles((theme) => ({
     width: "60%",
   },
   techStackIcon:{
-        height:'4em',
+        height:'3em',
         [theme.breakpoints.down('md')]:{
           height:'3em'
         },
@@ -172,7 +172,7 @@ export const useStyles = makeStyles((theme) => ({
     padding: "3%",
   },
   myMissionTitle: {
-    fontSize: "2.5em",
+    fontSize: "2em",
     textAlign: "center",
     fontFamily: "Smokum cursive",
     [theme.breakpoints.down('md')]:{
@@ -214,6 +214,7 @@ export const useStyles = makeStyles((theme) => ({
   websiteTitle: {
     fontSize: "1.7em",
     marginBottom: "1em",
+    fontFamily:'Lustria serif',
     
     [theme.breakpoints.down('xs')]:{
       fontSize:'1.5em'
@@ -223,6 +224,7 @@ export const useStyles = makeStyles((theme) => ({
     fontSize: "1em",
     marginBottom: "0.75em",
     width: "100%",
+    fontFamily:'Lustria serif',
     
     wordWrap: 'normal',
     [theme.breakpoints.down('md')]:{
@@ -235,6 +237,7 @@ export const useStyles = makeStyles((theme) => ({
   websiteButton: {
     background: "#558c8c",
     color: "White",
+    fontFamily:'Lustria serif',
     "&:hover": {
       background: theme.palette.common.lightBrown,
       color: "white",
@@ -280,6 +283,7 @@ export const useStyles = makeStyles((theme) => ({
   webAppTitle: {
     fontSize: "1.7em",
     marginBottom: "1em",
+    fontFamily:'Lustria serif',
     
     [theme.breakpoints.down('xs')]:{
       fontSize:'1.5em'
@@ -289,7 +293,7 @@ export const useStyles = makeStyles((theme) => ({
     fontSize: "1em",
     marginBottom: "0.75em",
     width: "100%",
-    
+    fontFamily:'Lustria serif',
     wordWrap: 'normal',
     [theme.breakpoints.down('md')]:{
       fontSize:'1.2em'
@@ -301,6 +305,7 @@ export const useStyles = makeStyles((theme) => ({
   webAppButton: {
     background: "#558c8c",
     color: "White",
+    fontFamily:'Lustria serif',
     "&:hover": {
       background: theme.palette.common.lightBrown,
       color: "white",
@@ -346,7 +351,7 @@ export const useStyles = makeStyles((theme) => ({
   responsiveTitle: {
     fontSize: "1.7em",
     marginBottom: "1em",
-    
+    fontFamily:'Lustria serif',
     [theme.breakpoints.down('xs')]:{
       fontSize:'1.5em'
     }
@@ -355,7 +360,7 @@ export const useStyles = makeStyles((theme) => ({
     fontSize: "1em",
     marginBottom: "0.75em",
     width: "100%",
-    
+    fontFamily:'Lustria serif',
     wordWrap: 'normal',
     [theme.breakpoints.down('md')]:{
       fontSize:'1.2em'
@@ -367,6 +372,7 @@ export const useStyles = makeStyles((theme) => ({
   responsiveButton: {
     background: "#558c8c",
     color: "White",
+    fontFamily:'Lustria serif',
     "&:hover": {
       background: theme.palette.common.lightBrown,
       color: "white",
@@ -418,10 +424,12 @@ export const useStyles = makeStyles((theme) => ({
   },
   cardCTAContent: {
     color: theme.palette.common.lightBrown,
+    fontFamily:'Lustria serif'
   },
   cardCTAButton: {
     background: "#558c8c",
     color: "white",
+    fontFamily:'Lustria serif',
     marginTop: "2em",
     "&:hover": {
       background: theme.palette.common.lightBrown,

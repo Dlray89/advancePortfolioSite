@@ -36,7 +36,7 @@ export const useStyles = makeStyles((theme) => ({
     },
     websiteContentContainer:{
         marginRight:'0.75em',
-        
+        fontFamily:'Lustria serif',
         width:'50%',
         [theme.breakpoints.down('md')]:{
             
@@ -78,7 +78,7 @@ export const useStyles = makeStyles((theme) => ({
     websiteButton:{
         background: '#558c8c',
         color: 'White',
-        
+        fontFamily:'Lustria serif',
         "&:hover": {
             background: theme.palette.common.lightBrown,
             color: 'white',
@@ -123,6 +123,7 @@ export const useStyles = makeStyles((theme) => ({
     webAppContentContainer:{
         marginRight:'0.75em',
         width:'52.55%',
+        fontFamily:'Lustria serif',
         [theme.breakpoints.down('md')]:{
             
             width:'100%',
@@ -160,6 +161,7 @@ export const useStyles = makeStyles((theme) => ({
     webAppButton:{
         background: '#558c8c',
         color: 'White',
+        fontFamily:'Lustria serif',
         "&:hover": {
             background: theme.palette.common.lightBrown,
             color: 'white',
@@ -206,7 +208,7 @@ export const useStyles = makeStyles((theme) => ({
     },
     responsiveContentContainer:{
         marginRight:'0.75em',
-        
+        fontFamily:'Lustria serif',
         width:'50%',
         [theme.breakpoints.down('md')]:{
             
@@ -245,6 +247,7 @@ export const useStyles = makeStyles((theme) => ({
     responsiveButton:{
         background: '#558c8c',
         color: 'White',
+        fontFamily:'Lustria serif',
         "&:hover": {
             background: theme.palette.common.lightBrown,
             color: 'white',
