@@ -95,7 +95,7 @@ const softwareQuestions = [
       {
         id: 1,
         title: "Custom Application",
-        subtitle: "(Business/Organization/Brand)",
+        subtitle: "(Business/Brand)",
         icon: Ecommerce,
         iconAlt: "computer outline",
         selected: false,
@@ -283,7 +283,7 @@ const websiteQuestions = [
       {
         id: 2,
         title: "Industry Standard",
-        subtitle: "(Business/Organization/Brand)",
+        subtitle: "(Business/Brand)",
         icon: Standard,
         iconAlt: "outline of two people",
         selected: false,
@@ -291,8 +291,8 @@ const websiteQuestions = [
       },
       {
         id: 3,
-        title: "Custom Application",
-        subtitle: "(Sales/Responsive Design)",
+        title: "Custom Website",
+        subtitle: "(Sales/Responsive)",
         icon: Ecommerce,
         iconAlt: "outline of three people",
         selected: false,

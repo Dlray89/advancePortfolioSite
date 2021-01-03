@@ -95,7 +95,13 @@ export const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("xs")]: {
       width: "100%",
       margin: 0,
-      fontSize: "0.95em",
+      fontSize: "0.75em",
+      textAlign: "center",
+    },
+    [theme.breakpoints.down("md")]: {
+      width: "100%",
+      margin: 0,
+      fontSize: "0.85em",
       textAlign: "center",
     },
   },
