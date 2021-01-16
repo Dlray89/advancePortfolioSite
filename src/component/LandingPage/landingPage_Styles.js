@@ -1,7 +1,7 @@
 import { makeStyles } from "@material-ui/core";
-import FrontEndDesign from "../../asset/images/frontEndDevelopment.svg";
-import mobileBackground from "../../asset/images/mobileBackground.svg";
-import callToactionImg from "../../asset/images/callToAction.svg";
+import FrontEndDesign from "../../asset/images/frontEndDevelopment.jpg";
+import mobileBackground from "../../asset/images/mobileBackground.jpg";
+import callToactionImg from "../../asset/images/callToAction.jpg";
 
 export const useStyles = makeStyles((theme) => ({
   landingPage: {

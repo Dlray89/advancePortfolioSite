@@ -1,5 +1,5 @@
 import {makeStyles} from '@material-ui/core'
-import ServicesImg from '../../asset/images/servicesImg.svg'
+import ServicesImg from '../../asset/images/servicesImg.jpg'
 
 
 export const useStyles = makeStyles((theme) => ({

@@ -14,9 +14,9 @@ import {
 } from "@material-ui/core";
 
 
-import Webdesign from '../../asset/images/webdesign.svg'
-import WebApp from '../../asset/images/webApplicationDesign.svg'
-import ResponsiveDesign from '../../asset/images/responsiveDesign.svg'
+import Webdesign from '../../asset/images/webdesign.jpg'
+import WebApp from '../../asset/images/webApplicationDesign.jpg'
+import ResponsiveDesign from '../../asset/images/responsiveDesign.jpg'
 
 
 
