@@ -13,10 +13,10 @@ import {
 import { Link } from 'react-router-dom'
 
 import SearchIcon from "@material-ui/icons/Search";
-import Sauti from "../../asset/images/sauti.PNG";
-import Conway from "../../asset/images/conway.PNG";
-import Insure from "../../asset/images/insure.png";
-import Furniture_shoot from "../../asset/images/tcShoot.PNG";
+import Sauti from "../../asset/images/sauti.svg";
+import Conway from "../../asset/images/conway.svg";
+import Insure from "../../asset/images/insure.svg";
+import Furniture_shoot from "../../asset/images/tcShoot.svg";
 
 const projects = [
   {

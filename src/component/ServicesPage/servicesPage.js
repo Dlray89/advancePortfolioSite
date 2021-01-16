@@ -8,9 +8,9 @@ import {
 import { Link } from "react-router-dom";
 import { useStyles } from "./servicesStyling";
 
-import Webdesign from "../../asset/images/webdesign.jpg";
-import WebApp from "../../asset/images/webApplicationDesign.jpg";
-import ResponsiveDesign from "../../asset/images/responsiveDesign.jpg";
+import Webdesign from "../../asset/images/webdesign.svg";
+import WebApp from "../../asset/images/webApplicationDesign.svg";
+import ResponsiveDesign from "../../asset/images/responsiveDesign.svg";
 
 const ServicesPage = () => {
   const classes = useStyles();

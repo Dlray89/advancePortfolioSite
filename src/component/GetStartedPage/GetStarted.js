@@ -15,7 +15,7 @@ import {
 } from "@material-ui/core";
 import { cloneDeep } from "lodash";
 import { useStyles } from "./GetStartedStyling";
-import GettingStarted from "../../asset/images/callToAction.jpg";
+import GettingStarted from "../../asset/images/callToAction.svg";
 
 import WebDesignIcon from "../../asset/Social Media Logos/icons8-web-64 (1).png";
 import WebApp from "../../asset/Social Media Logos/icons8-apps-tab-48.png";

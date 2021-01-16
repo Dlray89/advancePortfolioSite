@@ -1,6 +1,6 @@
 import { makeStyles } from "@material-ui/core";
-import PortfolioImg from "../../asset/images/portImg.jpg";
-import callToactionImg from "../../asset/images/callToAction.jpg";
+import PortfolioImg from "../../asset/images/portImg.svg";
+import callToactionImg from "../../asset/images/callToAction.svg";
 
 export const useStyle = makeStyles((theme) => ({
   Portfolio: {

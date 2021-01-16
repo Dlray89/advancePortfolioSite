@@ -1,6 +1,6 @@
 import React, { useEffect, useState, createRef } from "react";
 import { useStyles } from "./nav_style";
-import Logo from "../../../asset/images/David.png";
+import Logo from "../../../asset/images/David.svg";
 
 import {
   Tab,
