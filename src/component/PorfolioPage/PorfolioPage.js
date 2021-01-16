@@ -16,7 +16,7 @@ import SearchIcon from "@material-ui/icons/Search";
 import Sauti from "../../asset/images/sauti.PNG";
 import Conway from "../../asset/images/conway.PNG";
 import Insure from "../../asset/images/insure.png";
-import Furniture_shoot from "../../asset/images/tc_shoot.PNG";
+import Furniture_shoot from "../../asset/images/tcShoot.PNG";
 
 const projects = [
   {
