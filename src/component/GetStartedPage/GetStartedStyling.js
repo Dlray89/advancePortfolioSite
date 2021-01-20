@@ -117,6 +117,7 @@ export const useStyles = makeStyles((theme) => ({
     fontFamily:'Lustria serif',
     [theme.breakpoints.down("xs")]: {
       fontSize: "0.8em",
+      width:'100%'
     },
   },
   contactButton: {

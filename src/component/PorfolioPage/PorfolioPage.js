@@ -17,10 +17,34 @@ import Sauti from "../../asset/images/sauti.PNG";
 import Conway from "../../asset/images/conway.PNG";
 import Insure from "../../asset/images/insure.png";
 import Furniture_shoot from "../../asset/images/tcShoot.PNG";
+import EasyBank from "../../asset/images/easybank.PNG";
+import DapPM from "../../asset/images/projectManagement.PNG";
 
 const projects = [
   {
     id: 1,
+    name: "EasyBank",
+    details:
+      "Easybank is a conventional way to save money with easy without any hassle. Need a bank with easy access to your money without problems. Easybank is the way to go ",
+    link: "https://easy-banking-lilac.vercel.app/",
+    githublink: "https://github.com/Dlray89/EasyBanking",
+    tech_stack: "JavaScript | React | material-UI",
+    img: EasyBank,
+    alt: "Picture of EasyBank Landing page",
+  },
+  {
+    id: 2,
+    name: "Dap Management",
+    details:
+      "A Project-based application to manage all of your upcoming digital projects. From website, web applications, android, and Ios projects. Keep track of what your working on and complete each task and crush your goals.",
+    link: "https://project-manager-seven.vercel.app/",
+    githublink: "https://github.com/Dlray89/ProjectManager",
+    tech_stack: "JavaScript | Material-UI | NextJS",
+    img: DapPM,
+    alt: "Picture of dapnology project management",
+  },
+  {
+    id: 3,
     name: "Sauti",
     details:
       "Sauti is a Mobile-based trade and market information platform to trade legally and safely across borders. Empowering East Africa's women to make a better life for themselves and their families. Sauti provides many resources to trade all across the wrold.",
@@ -32,7 +56,7 @@ const projects = [
   },
 
   {
-    id: 2,
+    id: 4,
     name: "JSFurniture",
     details:
       "A Project creating a landing page for a furniture store called JSFurniture. Shop for the latest, most modern design in home decor all while keeping you budget intact This was a front end challenge provided buy frontend mentors.",
@@ -43,7 +67,7 @@ const projects = [
     alt: "Picture of Sauti Landing page",
   },
   {
-    id: 3,
+    id: 5,
     name: "Insure Insurance",
     details: "Insure Insurance Landing Page project. Insure is a life insurance company that ensures you and your loved one's are fully protected. User friendly process, great prices and they put their people first.",
     link: "https://insure-insurance.vercel.app/",
@@ -54,7 +78,7 @@ const projects = [
   },
 
   {
-    id: 4,
+    id: 6,
     name: "Conway | The Game Of Life",
     details:
       "The Game of Life was invented by Cambridge mathematician John Conway. It consists of a collection of cells which, based on a few mathematical rules, can live, die or multiply.",

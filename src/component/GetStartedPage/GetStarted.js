@@ -316,6 +316,7 @@ const GetStartedPage = () => {
   const theme = useTheme();
   const mobileMd = useMediaQuery(theme.breakpoints.down("md"));
   const mobileXS = useMediaQuery(theme.breakpoints.down("xs"));
+  const mobileSM = useMediaQuery(theme.breakpoints.down("sm"));
   const [questions, setQuestions] = useState(Questions);
   const [open, setOpen] = useState(false);
   const [total, setTotal] = useState(0);
@@ -942,9 +943,10 @@ const GetStartedPage = () => {
                 Get Estimate
               </Button>
               <Dialog
-                style={{ marginTop: "5em", fontFamily:'Lustria serif' }}
+                style={{ marginTop: "6em", fontFamily:'Lustria serif' }}
                 open={open}
                 onClose={closeHandle}
+                fullScreen={mobileSM}
               >
                 <DialogTitle>
                   <Grid container justify="center" alignItems="center">

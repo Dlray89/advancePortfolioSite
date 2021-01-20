@@ -11,6 +11,8 @@ import {
   Divider,
   CircularProgress,
   Snackbar,
+  useMediaQuery,
+  useTheme
 } from "@material-ui/core";
 import { useStyles } from "./contactButton_Style";
 import Phone from "../../../asset/Social Media Logos/icons8-phone-50.png";
@@ -20,6 +22,8 @@ import Cancel from "../../../asset/Social Media Logos/icons8-cancel-48.png";
 
 const ContactButton = () => {
   const classes = useStyles();
+  const theme = useTheme()
+  const matchesSM = useMediaQuery(theme.breakpoints.down('sm'))
   const [open, setOpen] = useState(false);
 
   const [name, setName] = useState("");
@@ -136,10 +140,11 @@ const ContactButton = () => {
         Contact Me
       </Button>
       <Dialog
-        style={{ marginTop: "7em", fontFamily:'Lustria serif' }}
+        style={{ marginTop: "5.5em", fontFamily:'Lustria serif' }}
         open={open}
         onClose={closeDialog}
         classes={{ paper: classes.dialog }}
+        fullScreen={matchesSM}
       >
         <DialogTitle className={classes.dialogTitle}>
           <Grid container item justify="center" alignItems="center">
