@@ -14,7 +14,7 @@ import { Link } from 'react-router-dom'
 
 import SearchIcon from "@material-ui/icons/Search";
 import Sauti from "../../asset/images/sauti.PNG";
-import Conway from "../../asset/images/conway.PNG";
+import archStudio from "../../asset/images/archStudios.PNG";
 import Insure from "../../asset/images/insure.png";
 import Furniture_shoot from "../../asset/images/tcShoot.PNG";
 import EasyBank from "../../asset/images/easybank.PNG";
@@ -23,6 +23,17 @@ import DapPM from "../../asset/images/projectManagement.PNG";
 const projects = [
   {
     id: 1,
+    name: "Arch Studios",
+    details:
+      "This project is still in development! Coming Soon | Arch Studios is an architect firm that creates stunning building designs and brings them to real life.", 
+      link: "https://arch-studio.dlrayjr89.vercel.app/",
+    githublink: "https://github.com/Dlray89/archStudio",
+    tech_stack: "React | Javascript | Material-UI",
+    img: archStudio ,
+    alt: "Picture of archStudios Landing page",
+  },
+  {
+    id: 2,
     name: "EasyBank",
     details:
       "Easybank is a conventional way to save money with easy without any hassle. Need a bank with easy access to your money without problems. Easybank is the way to go ",
@@ -33,7 +44,7 @@ const projects = [
     alt: "Picture of EasyBank Landing page",
   },
   {
-    id: 2,
+    id: 3,
     name: "Dap Management",
     details:
       "A Project-based application to manage all of your upcoming digital projects. From website, web applications, android, and Ios projects. Keep track of what your working on and complete each task and crush your goals.",
@@ -42,17 +53,6 @@ const projects = [
     tech_stack: "JavaScript | Material-UI | NextJS",
     img: DapPM,
     alt: "Picture of dapnology project management",
-  },
-  {
-    id: 3,
-    name: "Sauti",
-    details:
-      "Sauti is a Mobile-based trade and market information platform to trade legally and safely across borders. Empowering East Africa's women to make a better life for themselves and their families. Sauti provides many resources to trade all across the wrold.",
-    link: "https://dlray89.github.io/SautiAfrica/",
-    githublink: "https://github.com/Dlray89/SautiAfrica",
-    tech_stack: "HTML | LESS",
-    img: Sauti,
-    alt: "Picture of Sauti Landing page",
   },
 
   {
@@ -67,7 +67,7 @@ const projects = [
     alt: "Picture of Sauti Landing page",
   },
   {
-    id: 5,
+    id: 5 ,
     name: "Insure Insurance",
     details: "Insure Insurance Landing Page project. Insure is a life insurance company that ensures you and your loved one's are fully protected. User friendly process, great prices and they put their people first.",
     link: "https://insure-insurance.vercel.app/",
@@ -76,18 +76,18 @@ const projects = [
     tech_stack: "HTML | React | Material-UI",
     alt: "Picture of Sauti Landing page",
   },
-
   {
     id: 6,
-    name: "Conway | The Game Of Life",
+    name: "Sauti",
     details:
-      "The Game of Life was invented by Cambridge mathematician John Conway. It consists of a collection of cells which, based on a few mathematical rules, can live, die or multiply.",
-    link: "https://the-conway-game-of-life.vercel.app/",
-    githublink: "https://github.com/Dlray89/The-Conway_game-of_life",
-    tech_stack: "React | Javascript | Material-UI",
-    img: Conway,
+      "Sauti is a Mobile-based trade and market information platform to trade legally and safely across borders. Empowering East Africa's women to make a better life for themselves and their families. Sauti provides many resources to trade all across the wrold.",
+    link: "https://dlray89.github.io/SautiAfrica/",
+    githublink: "https://github.com/Dlray89/SautiAfrica",
+    tech_stack: "HTML | LESS",
+    img: Sauti,
     alt: "Picture of Sauti Landing page",
   },
+
 ];
 
 const PortfolioPage = () => {
