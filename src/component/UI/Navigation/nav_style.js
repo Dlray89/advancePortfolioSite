@@ -1,8 +1,12 @@
 import { makeStyles } from "@material-ui/core";
 
 export const useStyles = makeStyles((theme) => ({
-  mainContainer: {},
-  appbar: {},
+  mainContainer: {
+    
+  },
+  appbar: {
+    
+  },
   tabContainer: {
     marginLeft: "auto",
   },
@@ -15,11 +19,14 @@ export const useStyles = makeStyles((theme) => ({
   },
   logoContainer: {
     height: "4em",
+    [theme.breakpoints.down('sm')]:{
+      marginLeft:'3em'
+    }
   },
   logo: {
     height: "4em",
     [theme.breakpoints.down('sm')]:{
-        width:'60%'
+        width:'70%'
     }
   },
   toolbarMargin: {
@@ -40,7 +47,6 @@ export const useStyles = makeStyles((theme) => ({
     },
   },
   mobileDrawer: {
-        
     [theme.breakpoints.down("sm")]: {
       width: "23%",
       
@@ -64,8 +70,9 @@ export const useStyles = makeStyles((theme) => ({
     textDecoration: "none",
   },
   mobileLinks: {
-    color: theme.palette.common.black,
+    color: 'white',
     fontSize: "1.7em",
     textAlign: "center",
+    fontFamily: "Lustria serif",
   },
 }));

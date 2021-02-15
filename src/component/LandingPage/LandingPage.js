@@ -191,7 +191,7 @@ const LandingPage = (props) => {
           item
           container
           direction={matchSm ? "column":"row"}
-          justify="space-evenly"
+          justify="space-between"
           alignItems='center'
           className={classes.projectContainer}
         >
@@ -282,7 +282,7 @@ const LandingPage = (props) => {
             </DialogContent>
           </Dialog>
 
-          <Grid item onClick={HandleArchOpen} component={Button}>
+          <Grid item onClick={HandleArchOpen}  className={classes.project} component={Button}>
             <img src={ArchStudio}  alt=''/>
           </Grid>
           <Dialog
@@ -364,7 +364,7 @@ const LandingPage = (props) => {
             </DialogContent>
           </Dialog>
 
-          <Grid item onClick={HandleEasyBankOpen} component={Button}>
+          <Grid item onClick={HandleEasyBankOpen} className={classes.project} component={Button}>
             <img src={EasyBank}  alt='' />
           </Grid>
           <Dialog

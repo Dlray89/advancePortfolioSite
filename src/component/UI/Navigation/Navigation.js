@@ -15,6 +15,7 @@ import {
   useMediaQuery,
   useTheme,
   IconButton,
+  Grid
 } from "@material-ui/core";
 import MenuIcon from "@material-ui/icons/Menu";
 import ContactButton from '../../UI/contactButton/contactButton'
@@ -118,7 +119,8 @@ const Navigation = () => {
         classes={{paper: classes.mobileDrawer}}
         PaperProps={{
           style:{
-            background: "#eae9bb",
+            background: '#242331',
+            
           }
         }}
       
@@ -127,16 +129,16 @@ const Navigation = () => {
       
         <List>
           <ListItem button divider component={Link} to='/' onClick={() => setOpen(false)} >
-            <ListItemText style={{color:theme.palette.common.black, fontSize: "1.7em",
-    textAlign: "center"}} className={classes.mobileLinks}>Home</ListItemText>
+            <ListItemText style={{color:'white', fontSize: "1.7em",
+    textAlign: "center", fontFamily: "Lustria serif",}} className={classes.mobileLinks}>Home</ListItemText>
           </ListItem>
 
-          <ListItem style={{color:theme.palette.common.black, fontSize: "1em" ,
-    textAlign: "center"}} onClick={() => setOpen(false)} button divider component={Link} to='/projects'>
+          <ListItem style={{color:'white', fontSize: "1em" ,
+    textAlign: "center", fontFamily: "Lustria serif",}} onClick={() => setOpen(false)} button divider component={Link} to='/projects'>
             <ListItemText  className={classes.mobileLinks}>Projects</ListItemText>
           </ListItem>
 
-          <ListItem style={{color:theme.palette.common.black, fontSize: "1em",
+          <ListItem style={{color:'white', fontSize: "1em",
     textAlign: "center"}} onClick={() => setOpen(false)} button divider component={Link} to='/services'>
             <ListItemText className={classes.mobileLinks}>Services</ListItemText>
           </ListItem>
@@ -149,7 +151,7 @@ const Navigation = () => {
       </SwipeableDrawer>
 
       <IconButton style={{marginLeft: 'auto'}}  onClick={() => setOpen(!open)}>
-        <MenuIcon style={{ color: theme.palette.common.lightBrown,
+        <MenuIcon style={{ color: '#242331',
     height: "1.5em",
     width: "1.5em",}}  />
       </IconButton>
@@ -161,7 +163,7 @@ const Navigation = () => {
       <ElevationScroll >
         <AppBar position="fixed" style={{zIndex: theme.zIndex.modal + 1, background:'white'}}>
           <Toolbar disableGutters>
-            <div className={classes.logoContainer}>
+            <Grid containerclassName={classes.logoContainer} component={Link} to='/'>
               <img
                 className={classes.logo}
                 alt="logo for David Ray website"
@@ -169,7 +171,7 @@ const Navigation = () => {
                 ref={ref}
                 
               />
-            </div>
+            </Grid>
             {mobileMatch ? mobileNav : deskTopNav}
           </Toolbar>
         </AppBar>

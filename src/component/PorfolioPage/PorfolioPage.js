@@ -216,7 +216,7 @@ const PortfolioPage = (props) => {
           style={{ border: "solid 3px #dfdfdf", width: "100%" }}
           steps={maxSteps}
           position="static"
-          variant=""
+          variant="dots"
           activeStep={activeStep}
           nextButton={
             <Button disabled={activeStep === maxSteps - 1}  onTimeUpdate={window.scrollTo(0, 0)} onClick={handleNext}>

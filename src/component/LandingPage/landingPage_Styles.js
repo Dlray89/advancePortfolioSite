@@ -165,8 +165,8 @@ export const useStyles = makeStyles((theme) => ({
     width: "40%",
     marginLeft: "auto",
     [theme.breakpoints.down("sm")]: {
-      width: "70%",
-      marginRight: "10em",
+      width: "55%",
+      marginRight: "11.5em",
     },
   },
   calltoactionServices: {
@@ -191,19 +191,21 @@ export const useStyles = makeStyles((theme) => ({
     borderTopRightRadius: "10px",
     borderTopLeftRadius: "10px",
     marginBottom: "1em",
-    [theme.breakpoints.down('sm')]:{
-      borderRadius:0
-    }
+    [theme.breakpoints.down("sm")]: {
+      borderRadius: 0,
+      height: "15em",
+    },
   },
-  newestProjectTitle:{
-    [theme.breakpoints.down('sm')]:{
-      fontSize:'1em'
-    }
+  newestProjectTitle: {
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "1em",
+    },
   },
   projectContainer: {},
   project: {
-    [theme.breakpoints.down('sm')]:{
-    }
+    [theme.breakpoints.down("sm")]: {
+      marginBottom: "3em",
+    },
   },
   projectDetails: {
     width: "50%",
@@ -213,13 +215,13 @@ export const useStyles = makeStyles((theme) => ({
     width: "90%",
     fontSize: "2.2em",
     marginBottom: "0.25em",
-    color:'white'
+    color: "white",
   },
   projectDate: {
     width: "89%",
     fontSize: "0.85em",
     marginTop: "2em",
-    color:'white'
+    color: "white",
   },
   projectSubtitle: {
     width: "90%",
@@ -227,7 +229,7 @@ export const useStyles = makeStyles((theme) => ({
     lineHeight: 1.3,
     marginTop: "0em",
     marginBottom: "3em",
-    color:'white'
+    color: "white",
   },
   projectImgContainer: {
     width: "50%",
@@ -246,8 +248,8 @@ export const useStyles = makeStyles((theme) => ({
     fontSize: "0.65em",
     width: "100%",
     marginBottom: "0.55em",
-    color:'black',
-    background:'white'
+    color: "black",
+    background: "white",
   },
   buttonContainer: {
     width: "100%",
@@ -258,7 +260,9 @@ export const useStyles = makeStyles((theme) => ({
   aboutContainer: {
     width: "92%",
     margin: "0 auto",
-    marginTop:'6em'
+    marginTop: "6em",
+    [theme.breakpoints.down('sm')]:{
+    }
   },
   about: {
     width: "100%",
@@ -266,56 +270,57 @@ export const useStyles = makeStyles((theme) => ({
   },
   aboutImgContainer: {
     width: "50%",
-    [theme.breakpoints.down('sm')]:{
-      width:'100%'
-    }
+    [theme.breakpoints.down("sm")]: {
+      width: "100%",
+    },
   },
   aboutImg: {
     width: "70%",
-    marginLeft:'0.55em',
-    [theme.breakpoints.down('sm')]:{
-      width:'100%'
-    }
+    marginLeft: "0.55em",
+    [theme.breakpoints.down("sm")]: {
+      width: "100%",
+      margin:0
+    },
   },
   aboutText: {
     width: "50%",
-    borderTop:'solid 3px #dfdfdf',
-    [theme.breakpoints.down('sm')]:{
-      width:'100%',
-      borderTop:0,
-
-    }
-    
+    borderTop: "solid 3px #dfdfdf",
+    fontFamily: "Lustria serif",
+    [theme.breakpoints.down("sm")]: {
+      width: "100%",
+      borderTop: 0,
+    },
   },
   aboutTextTitle: {
     marginTop: "0.96em",
-    fontSize:'3em',
-    marginBottom:'0.66em',
-    [theme.breakpoints.down('md')]:{
-      fontSize:'2em',
-      borderBottom:'solid 3px #dfdfdf',
-    }
+    fontSize: "3em",
+    marginBottom: "0.66em",
+    fontFamily: "Lustria serif",
+    [theme.breakpoints.down("md")]: {
+      fontSize: "2em",
+      borderBottom: "solid 3px #dfdfdf",
+    },
   },
   aboutTextDetails: {
-    width:'70%',
-    textAlign:'left',
-    lineHeight:1.7,
-    [theme.breakpoints.down('md')]:{
-      fontSize:'0.80em'
+    width: "70%",
+    textAlign: "left",
+    lineHeight: 1.7,
+    [theme.breakpoints.down("md")]: {
+      fontSize: "0.80em",
     },
-    [theme.breakpoints.down('sm')]:{
-      fontSize:'0.80em',
-      width:'100%',
-      marginBottom:'5em'
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "0.90em",
+      width: "100%",
+      marginBottom: "5em",
     },
-    
-
-  },aboutTextButtonContainer:{
-    marginTop:'auto'
   },
-  aboutTextButton:{
+  aboutTextButtonContainer: {
+    marginTop: "auto",
+  },
+  aboutTextButton: {
     borderRadius: 0,
-    border:"solid 3px #dfdfdf",
-    marginTop:''
-  }
+    border: "solid 3px #dfdfdf",
+    marginTop: "",
+    fontFamily: "Lustria serif",
+  },
 }));

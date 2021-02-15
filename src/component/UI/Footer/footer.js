@@ -54,14 +54,7 @@ const Footer = (props) => {
       
             <Grid container  justify='space-between' alignItems='center' >
 
-            <Grid item container justify='center' alignItems='center' className={classes.logoContainer}>
-               <Grid item>
-               <Typography variant='subtitle2' className={classes.footerText}>
-                    &copy; Dapnologies 2020 Design
-                </Typography>
-               </Grid>
-             </Grid>
-
+           
              <Grid container item alignItems='center' justify={mobileMatchSM ? "center" : null} direction={mobileMatchSM ? "row" : null} className={classes.socialMediaContainer}>
                  <Grid item component={Button} href='http://www.facebook.com'>
                      <img className={classes.icons}  src={Facebook} alt='facebook icon' />

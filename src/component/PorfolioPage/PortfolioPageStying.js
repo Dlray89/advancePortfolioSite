@@ -20,6 +20,7 @@ export const useStyle = makeStyles((theme) => ({
     width: "80%",
     margin: "0 auto",
     marginTop: "5em",
+    fontFamily: "Lustria serif",
   },
   bookmarkContainer: {
     borderTop: "solid 3px #dfdfdf",
@@ -50,12 +51,14 @@ export const useStyle = makeStyles((theme) => ({
   bookMarkButton: {
     border: "solid 3px #dfdfdf",
     borderRadius: 0,
+    fontFamily: "Lustria serif",
   },
 
   background: {
     marginLeft: "2em",
     fontSize: "2em",
     [theme.breakpoints.down("sm")]: {
+      margin:0
     },
   },
 
@@ -79,12 +82,15 @@ export const useStyle = makeStyles((theme) => ({
     width: "75.55%",
     margin: " 0 auto",
     marginLeft: "8.6em",
+    fontFamily: "Lustria serif",
     [theme.breakpoints.down('sm')]:{
       margin:0,
       width:'100%'
     }
   },
-  mobileStepper: {},
+  mobileStepper: {
+    fontFamily: "Lustria serif",
+  },
   callToAction: {
     background: "url(" + callToactionImg + ")",
     backgroundRepeat: "no-repeat",
