@@ -179,7 +179,7 @@ const PortfolioPage = (props) => {
               item
               container
               direction="row"
-              style={{ textAlign: "center", width: "87%", margin: "2em auto" }}
+              style={{ textAlign: "center", width:matchSM? "100%": "87%", margin: "2em auto" }}
             >
               <Grid item style={{ width: "50%" }}>
                 <img
