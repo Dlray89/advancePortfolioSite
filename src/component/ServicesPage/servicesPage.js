@@ -10,7 +10,7 @@ import { useStyles } from "./servicesStyling";
 
 import Webdesign from "../../asset/images/webdesign.jpg";
 import WebApp from "../../asset/images/webApplicationDesign.jpg";
-import ResponsiveDesign from "../../asset/images/responsiveDesign.jpg";
+// import ResponsiveDesign from "../../asset/images/responsiveDesign.jpg";
 
 const ServicesPage = () => {
   const classes = useStyles();
@@ -111,48 +111,7 @@ const ServicesPage = () => {
         </Grid>
 
         {/*website container */}
-        <Grid
-          direction="row"
-          justify="center"
-          alignItems="center"
-          item
-          container
-          className={classes.responsiveContainer}
-        >
-          <Grid item className={classes.responsiveContentContainer}>
-            <div className={classes.responsiveTitle}>
-              Responsive Design
-            </div>
-            <div className={classes.responsiveSubtitle}>
-              <span style={{ color: "#558c8c", fontWeight: 900 }}>
-                Mobile Phone's, Tablets, Desktop's{" "}
-              </span>
-              <br /> <br />
-              Do you already have a website or application but it's not
-              responsive across all platforms? No worries i'm here to assist
-              with the responsive expertise I provide ill get your digital
-              product responsive in no time. Having your digital product
-              responsive will add a lot of value to your brand and will be very
-              beneficial to your customers.
-            </div>
-            <Button
-              component={Link}
-              to="/gettingstarted"
-              className={classes.responsiveButton}
-              variant="contained"
-            >
-              Get Started
-            </Button>
-          </Grid>
-
-          <Grid className={classes.responsiveImgContainer} item>
-            <img
-              className={classes.responsiveImg}
-              src={ResponsiveDesign}
-              alt="pic of laptop, phone and tablet"
-            />
-          </Grid>
-        </Grid>
+      
       </Grid>
     </div>
   );

@@ -1,14 +1,10 @@
 import { makeStyles } from "@material-ui/core";
-import pattern from "../../../asset/patterns/leftPattern.svg";
 
 export const useStyles = makeStyles((theme) => ({
   footer: {
     background: theme.palette.common.black,
     color: theme.palette.common.lightBrown,
-    height: "14.53em",
-    backgroundImage: "url(" + pattern + ")",
-    backgroundRepeat: "no-repeat",
-    backgroundPositionX: "0em",
+    
     backgroundSize: "27em",
     [theme.breakpoints.down("sm")]: {},
   },
@@ -25,7 +21,7 @@ export const useStyles = makeStyles((theme) => ({
   },
   logoContainer:{
   
-    width:'20%',
+    width:'40%',
     [theme.breakpoints.down('sm')]:{
         width:'60%',
         margin:'0 auto',
@@ -44,7 +40,7 @@ export const useStyles = makeStyles((theme) => ({
 
   },
   socialMediaContainer:{
-      width:'20%',
+      width:'30%',
       verticalAlign:'text-bottom',
       [theme.breakpoints.down('sm')]:{
         width:'80%',

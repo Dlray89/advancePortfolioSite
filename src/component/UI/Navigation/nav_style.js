@@ -14,10 +14,13 @@ export const useStyles = makeStyles((theme) => ({
     marginLeft: "auto",
   },
   logoContainer: {
-    height: "6em",
+    height: "4em",
   },
   logo: {
-    height: "6em",
+    height: "4em",
+    [theme.breakpoints.down('sm')]:{
+        width:'60%'
+    }
   },
   toolbarMargin: {
     ...theme.mixins.toolbar,

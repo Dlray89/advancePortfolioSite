@@ -9,18 +9,18 @@ import Github from '../../../asset/Social Media Logos/icons8-github.svg'
 import Instagram from '../../../asset/Social Media Logos/icons8-instagram.svg'
 import LinkedIn from '../../../asset/Social Media Logos/icons8-linkedin.svg'
 
-const Footer = () => {
+const Footer = (props) => {
     const classes = useStyles()
     const theme = useTheme()
     const mobileMatchSM = useMediaQuery(theme.breakpoints.down('sm'))
     return(
         <div>
         <Grid container className={classes.footer}>
-            <Hidden smDown>
+            <Hidden>
             <Grid container direction='row' justify='space-evenly' item style={{marginTop:'1.5em'}} >
            <Grid item container justify='center' alignItems='center' className={classes.home}>
                <Grid item>
-                    <Typography style={{textDecoration:'none', color:theme.palette.common.lightBrown, fontFamily:'Lustria serif', fontSize:'1.2em'}} component={Link} to='/' variant='h3'>
+                    <Typography style={{textDecoration:'none', color:'white', fontFamily:'Lustria serif', fontSize:'1.2em'}} onClick={() => props.setValue(0)} component={Link} to='/' variant='h3'>
                         Home
                     </Typography>
                </Grid>
@@ -28,48 +28,24 @@ const Footer = () => {
 
            <Grid container direction='column' justify='center' alignItems='center' item  className={classes.services} >
                <Grid item>
-                   <Typography style={{fontFamily:'Lustria serif', fontSize:'1.2em'}} variant='h3'>
-                       Services
+                   <Typography style={{fontFamily:'Lustria serif', fontSize:'1.2em', textDecoration:'none', color:'white'}} variant='h3' component={Link} to='/projects' onClick={() => props.setValue(1)}>
+                      Portfolio
                    </Typography>
                </Grid>
 
-               <Grid item>
-                   <Typography style={{textDecoration:'none', color:theme.palette.common.lightBrown, fontFamily:'Lustria serif', fontSize:'0.75em'}}  component={Link} to='/services' variant='subtitle1'>
-                   Website Development
-                   </Typography>
-               </Grid>
+               
 
-               <Grid item>
-                   <Typography style={{textDecoration:'none', color:theme.palette.common.lightBrown, fontFamily:'Lustria serif', fontSize:'0.75em'}}  component={Link} to='/services' variant='subtitle1'>
-                   Web Application Development
-                   </Typography>
-               </Grid>
-
-               <Grid item>
-                   <Typography style={{textDecoration:'none', color:theme.palette.common.lightBrown, fontFamily:'Lustria serif', fontSize:'0.75em'}}  component={Link} to='/services' variant='subtitle1'>
-                   Website Development
-                   </Typography>
-               </Grid>
+              
            </Grid>
 
            <Grid container item direction='column' justify='center' alignItems='center' className={classes.information}>
                <Grid item>
-                   <Typography style={{fontFamily:'Lustria serif', fontSize:'1.2em'}} variant='h3'>
-                        Information
+                   <Typography style={{fontFamily:'Lustria serif', fontSize:'1.2em', textDecoration: 'none', color:'white'}} variant='h3'>
+                        Services
                    </Typography>
                </Grid>
 
-               <Grid item component={Button} disabled style={{textTransform:'none'}}>
-                   <Typography  style={{textDecoration:'none', color:theme.palette.common.lightBrown, fontFamily:'Lustria serif', fontSize:'0.85em'}}  component={Link} to='/about' variant='subtitle1'>
-                       About Me
-                   </Typography>
-               </Grid>
-
-               <Grid item>
-                   <Typography style={{textDecoration:'none', color:theme.palette.common.lightBrown, fontFamily:'Lustria serif', fontSize:'0.75em'}}  component={Link} to='/projects' variant='subtitle1'>
-                       Portfolio
-                   </Typography>
-               </Grid>
+              
            </Grid>
         </Grid>
 

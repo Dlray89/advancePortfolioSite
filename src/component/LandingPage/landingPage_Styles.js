@@ -1,439 +1,321 @@
 import { makeStyles } from "@material-ui/core";
-import FrontEndDesign from "../../asset/images/frontEndDevelopment.jpg";
-import mobileBackground from "../../asset/images/mobileBackground.jpg";
-import callToactionImg from "../../asset/images/callToAction.jpg";
 
+import heroCardImg from "../../asset/refactorImages/davidhero3.jpg";
+import webdesign from "../../asset/images/webdesign.jpg";
 export const useStyles = makeStyles((theme) => ({
   landingPage: {
-    backgroundImage: "url(" + FrontEndDesign + ")",
-    height: "20em",
+    backgroundImage: "url(" + heroCardImg + ")",
+    height: "40em",
     backgroundRepeat: "no-repeat",
-    backgroundSize: "cover",
-    backgroundPositionY: "-5em",
+    backgroundSize: "35% 100%, cover",
+    backgroundPosition: "right",
+    background: "#242331",
     [theme.breakpoints.down("sm")]: {
-      backgroundImage: "url(" + mobileBackground + ")",
-      backgroundSize: "100%",
-      backgroundPosition: "center",
-      backgroundPositionY: "-0em",
-      height: "29em",
-    },
-    [theme.breakpoints.down("xs")]: {
-      backgroundImage: "url(" + mobileBackground + ")",
-      backgroundSize: "100%",
-      backgroundPosition: "center",
-      backgroundPositionY: "0em",
-      height: "20em",
+      backgroundSize: "100% 100%, cover",
+      height: "40em",
     },
   },
-  servicesContainer: {},
-  introCard: {
-    position: "absolute",
-    width: "35%",
-    background: "rgba(27, 20, 17, 0.7)",
-    color: "#ddca7d",
-    marginLeft: "20em",
-    marginTop: "5%",
-    padding: "1%",
-    fontSize: "1.5em",
-    ...theme.shadows[10],
-
-    [theme.breakpoints.down("md")]: {
-      margin: 0,
-      width: "35%",
-      fontSize: "1.2em",
-      padding: "1em",
-      marginLeft: "32%",
-      marginTop: "4%",
-    },
-  },
-  titlleContainer: {
-    width: "100%",
-  },
-  buttonContainer: {
-    marginLeft: "0.65em",
-  },
-  headerButton: {
-    background: "#558c8c",
-    color: "White",
-    "&:hover": {
-      background: theme.palette.common.lightBrown,
-      color: "white",
-    },
-    [theme.breakpoints.down("sm")]: {
-      fontSize: "0.75em",
-    },
-  },
-  buttonIcon: {
-    height: "2.5em",
-  },
-  aboutButtonIcon: {
-    height: "2.5em",
-  },
-  card: {
-    width: "40%",
-    background: theme.palette.common.black,
-    boxShadow: theme.shadows[10],
+  heroCardDetails: {
+    width: "50%",
+    margin: "auto 0",
     [theme.breakpoints.down("sm")]: {
       width: "100%",
-
-      margin: 0,
-    },
-    [theme.breakpoints.down("md")]: {
-      width: "70%",
-      margin: "2% auto",
+      background: "#242331",
     },
   },
-  mainContentContainer: {
-    background: theme.palette.common.lightBrown,
-    padding: "2%",
-    display: "flex",
-    justifyContent: "space-evenly",
-    [theme.breakpoints.down("sm")]: {
-      flexDirection: "column",
-      width: "95%",
-      border: "solid 2px yellow",
-    },
-    [theme.breakpoints.down("md")]: {
-      flexDirection: "column",
-    },
-  },
-  pictureContainer: {
-    width: "100%",
-    textAlign: "center",
-    background: "#f7f8fc",
-  },
-  myMissionPicture: {
-    width: "70%",
-  },
-  myMissionContent: {
-    width: "95.5%",
-    padding: "2%",
-    margin: "1% auto",
+  heroCardTitle: {
+    color: "white",
+    fontFamily: "Smokum cursive",
+    fontSize: "4em",
+    marginLeft: "1em",
     textAlign: "left",
-    border: "solid 2px #ddca7d",
     [theme.breakpoints.down("sm")]: {
-      fontSize: "0.95em",
-    },
-    
-  },
-  techStackIconContainer: {
-    width: "60%",
-  },
-  techStackIcon:{
-        height:'3em',
-        [theme.breakpoints.down('md')]:{
-          height:'3em'
-        },
-        [theme.breakpoints.down('xs')]:{
-          height:'2.1em'
-        }
-  },
-  divider: {
-    background: theme.palette.common.lightBrown,
-  },
-  techPictureContainer: {
-    background: "#010e42",
-  },
-  myTechnologisePicture: {
-    width: "100%",
-    height: "140%",
-    textAlign: "center",
-  },
-  techContent: {
-    border: "solid 2px #ddca7d",
-    marginTop: "15%",
-    width: "100%",
-  },
-  list: {
-    width: "100%",
-  },
-  listButton: {
-    "&:hover": {
-      background: theme.palette.common.lightBrown,
-      color: theme.palette.common.black,
+      fontSize: "2.5em",
+      marginLeft: "1.2em",
+      marginTop: "1em",
     },
   },
-  listText: {
-    color: theme.palette.common.lightBrown,
-    textAlign: "center",
-    fontSize: "1.4em",
+  heroCardSubtitle: {
+    color: "white",
     fontFamily: "Smokum cursive",
-    [theme.breakpoints.down("sm")]: {
-      fontSize: "1.2em",
-    },
-  },
-  techIcons: {
-    height: "2.2em",
-    marginLeft: "0.55em",
-  },
-  myMissionContainer: {
-    background: theme.palette.common.black,
-    color: theme.palette.common.lightBrown,
-    padding: "3%",
-  },
-  myMissionTitle: {
-    fontSize: "2em",
-    textAlign: "center",
-    fontFamily: "Smokum cursive",
-    [theme.breakpoints.down('md')]:{
-      fontSize:'2.1em'
-    },
-    [theme.breakpoints.down("sm")]: {
-      fontSize: "1.7em",
-    },
-  },
-  myMissionText: {
-    fontSize: "1.2em",
-    textAlign: "center",
-    fontFamily: "Smokum cursive",
-  },
-  websiteContainer: {
-    width: "60%",
-    marginTop: "5em",
+    fontSize: "1.3em",
+    width: "70%",
+    lineHeight: 1.3,
+    marginTop: "1em",
     marginLeft: "3em",
-    
-    [theme.breakpoints.down("md")]: {
-      width: "100%",
-      margin: 0,
-      display: "flex",
-      flexDirection: "column-reverse",
-      marginBottom: "8em",
-      marginTop: "5em",
+    textAlign: "left",
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "1em",
+      lineHeight: "1.5",
     },
   },
-  websiteContentContainer: {
-    marginRight: "0.75em",
-    
-    width:'50%',
-    [theme.breakpoints.down("md")]: {
-      width: "100%",
-      margin: 0,
-      textAlign: "center",
+  heroButtonContainer: {
+    marginTop: "2em",
+    [theme.breakpoints.down("sm")]: {
+      marginBottom: "3em",
     },
   },
-  websiteTitle: {
-    fontSize: "1.7em",
-    marginBottom: "1em",
-    fontFamily:'Lustria serif',
-    
-    [theme.breakpoints.down('xs')]:{
-      fontSize:'1.5em'
-    }
+  heroButton: {
+    marginLeft: "4em",
+    width: "20em",
+    fontFamily: "Smokum cursive",
+
+    [theme.breakpoints.down("sm")]: {
+      marginLeft: "3.5em",
+    },
   },
-  websiteSubtitle: {
-    fontSize: "1em",
-    marginBottom: "0.75em",
+  techArchContainer: {
     width: "100%",
-    fontFamily:'Lustria serif',
-    
-    wordWrap: 'normal',
-    [theme.breakpoints.down('md')]:{
-      fontSize:'1.2em'
-    },
-    [theme.breakpoints.down('xs')]:{
-      fontSize:'1em'
-    }
   },
-  websiteButton: {
-    background: "#558c8c",
-    color: "White",
-    fontFamily:'Lustria serif',
-    "&:hover": {
-      background: theme.palette.common.lightBrown,
-      color: "white",
+  techArch: {
+    width: "32%",
+    [theme.breakpoints.down("sm")]: {
+      width: "90%",
+      margin: "2em auto",
     },
   },
-  webdesignImgContainer: {
-    
-    width:"45%",
-    [theme.breakpoints.down("md")]: {
-      textAlign: "center",
-      width: "100%",
-    },
-  },
-  webdesignImg: {
-    width: "100%",
-    [theme.breakpoints.down("md")]: {
-      width: "30.2",
-    },
-  },
-  webAppContainer: {
-    width: "60%",
-    marginTop: "5em",
-    marginLeft: "auto",
-    
-    [theme.breakpoints.down("md")]: {
-      width: "100%",
-      margin: 0,
-      display: "flex",
-      flexDirection: "column-reverse",
-      marginBottom: "8em",
-    },
-  },
-  webAppContentContainer: {
-    marginRight: "0.75em",
-    
-    width:'50%',
-    [theme.breakpoints.down("md")]: {
-      width: "100%",
-      margin: 0,
-      textAlign: "center",
-    },
-  },
-  webAppTitle: {
-    fontSize: "1.7em",
-    marginBottom: "1em",
-    fontFamily:'Lustria serif',
-    
-    [theme.breakpoints.down('xs')]:{
-      fontSize:'1.5em'
-    }
-  },
-  webAppSubtitle: {
-    fontSize: "1em",
-    marginBottom: "0.75em",
-    width: "100%",
-    fontFamily:'Lustria serif',
-    wordWrap: 'normal',
-    [theme.breakpoints.down('md')]:{
-      fontSize:'1.2em'
-    },
-    [theme.breakpoints.down('xs')]:{
-      fontSize:'1em'
-    }
-  },
-  webAppButton: {
-    background: "#558c8c",
-    color: "White",
-    fontFamily:'Lustria serif',
-    "&:hover": {
-      background: theme.palette.common.lightBrown,
-      color: "white",
-    },
-  },
-  webAppImgContainer: {
-    
-    width:"45%",
-    [theme.breakpoints.down("md")]: {
-      textAlign: "center",
-      width: "100%",
-    },
-  },
-  webAppImg: {
-    width: "100%",
-    [theme.breakpoints.down("md")]: {
-      width: "30.2",
-    },
+  techArchTitle: {
+    textAlign: "center",
+    fontSize: "3em",
+    marginBottom: "0.25em",
+    marginTop: "1em",
+    fontFamily: "Smokum cursive",
   },
 
-  responsiveContainer: {
-    width: "60%",
+  techArchTitle2: {
+    textAlign: "center",
+    fontSize: "1.5em",
+    fontFamily: "Smokum cursive",
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "1.8em",
+    },
+  },
+  techArchDetails: {
+    textAlign: "center",
+    fontSize: "0.85em",
+    width: "70%",
+    margin: " 0 auto",
+    lineHeight: 1.5,
+    fontFamily: "Smokum cursive",
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "1em",
+    },
+  },
+  techArchIconContainer: {
+    textAlign: "center",
+  },
+  techArchIcon: {
+    width: "3em",
+  },
+  calltoaction: {
+    backgroundImage: "url(" + webdesign + ")",
+    backgroundRepeat: "no-repeat",
+    backgroundSize: "50% 100%, cover",
+    backgroundPosition: "left",
+    height: "25em",
+    background: "#242331",
     marginTop: "5em",
-    marginLeft: "3em",
-    
-    [theme.breakpoints.down("md")]: {
-      width: "100%",
-      margin: 0,
-      display: "flex",
-      flexDirection: "column-reverse",
+    fontFamily: "Smokum cursive",
+
+    [theme.breakpoints.down("sm")]: {
+      backgroundSize: "100% 100%, cover",
+      height: "25em",
     },
   },
-  responsiveContentContainer: {
-    marginRight: "0.75em",
-    
-    width:'50%',
-    [theme.breakpoints.down("md")]: {
+  calltoactionDetails: {
+    width: "50%",
+    marginLeft: "auto",
+    margin: "auto 0",
+    [theme.breakpoints.down("sm")]: {
       width: "100%",
       margin: 0,
-      textAlign: "center",
+      background: "rgba(27, 20, 17, 0.6)",
     },
   },
-  responsiveTitle: {
-    fontSize: "1.7em",
+  calltoactionTitle: {
+    textAlign: "right",
+    fontSize: "2.5em",
+    color: "white",
+    [theme.breakpoints.down("sm")]: {
+      textAlign: "left",
+      fontSize: "2.2em",
+      width: "60%",
+      marginLeft: "0.45em",
+      marginTop: "6em",
+    },
+  },
+  calltoactionSubtitle: {
+    textAlign: "right",
+    fontSize: "1.2em",
+  },
+  calltoactionButton: {
+    color: "white",
+  },
+  calltoactionButtonContainer: {
+    textAlign: "right",
+    [theme.breakpoints.down("sm")]: {
+      width: "90%",
+      borderTop: "solid 2px white",
+      margin: "0 auto",
+      textAlign: "left",
+      marginLeft: "1em",
+    },
+  },
+  serviceContainer: {
+    width: "40%",
+    marginLeft: "auto",
+    [theme.breakpoints.down("sm")]: {
+      width: "70%",
+      marginRight: "10em",
+    },
+  },
+  calltoactionServices: {
+    color: "white",
+    textAlign: "right",
+    [theme.breakpoints.down("sm")]: {
+      textAlign: "left",
+    },
+  },
+  dot: {
+    width: "0.35em",
+    color: "white",
+  },
+  newestProject: {
+    fontSize: "1.5em",
+    background: "#242331",
+
+    marginTop: "3em",
+    margin: "0 auto",
+    width: "92%",
+    textAlign: "center",
+    borderTopRightRadius: "10px",
+    borderTopLeftRadius: "10px",
     marginBottom: "1em",
-    fontFamily:'Lustria serif',
-    [theme.breakpoints.down('xs')]:{
-      fontSize:'1.5em'
+    [theme.breakpoints.down('sm')]:{
+      borderRadius:0
     }
   },
-  responsiveSubtitle: {
-    fontSize: "1em",
-    marginBottom: "0.75em",
-    width: "100%",
-    fontFamily:'Lustria serif',
-    wordWrap: 'normal',
-    [theme.breakpoints.down('md')]:{
-      fontSize:'1.2em'
-    },
-    [theme.breakpoints.down('xs')]:{
+  newestProjectTitle:{
+    [theme.breakpoints.down('sm')]:{
       fontSize:'1em'
     }
   },
-  responsiveButton: {
-    background: "#558c8c",
-    color: "White",
-    fontFamily:'Lustria serif',
-    "&:hover": {
-      background: theme.palette.common.lightBrown,
-      color: "white",
-    },
+  projectContainer: {},
+  project: {
+    [theme.breakpoints.down('sm')]:{
+    }
   },
-  responsiveImgContainer: {
-    
-    width:"45%",
-    [theme.breakpoints.down("md")]: {
-      textAlign: "center",
-      width: "100%",
-    },
+  projectDetails: {
+    width: "50%",
+    fontFamily: "Smokum cursive",
   },
-  responsiveImg: {
-    width: "100%",
-    [theme.breakpoints.down("md")]: {
-      width: "30.2",
-    },
+  projectTitle: {
+    width: "90%",
+    fontSize: "2.2em",
+    marginBottom: "0.25em",
+    color:'white'
   },
-  callToAction: {
-    background: "url(" + callToactionImg + ")",
-    backgroundRepeat: "no-repeat",
-    backgroundPosition: "center",
-    backgroundSize: "100em",
-    height: "60em",
-    position: "relative",
-    marginTop: "9em",
-    marginBottom: 0,
-    [theme.breakpoints.down("md")]: {
-      backgroundSize: "75em",
-    },
+  projectDate: {
+    width: "89%",
+    fontSize: "0.85em",
+    marginTop: "2em",
+    color:'white'
   },
-  callToActionLayer: {
-    backgroundColor: "rgba(27, 20, 17, 0.9)",
-    position: "absolute",
-    top: 0,
-    left: 0,
+  projectSubtitle: {
+    width: "90%",
+    fontSize: "1em",
+    lineHeight: 1.3,
+    marginTop: "0em",
+    marginBottom: "3em",
+    color:'white'
+  },
+  projectImgContainer: {
+    width: "50%",
+  },
+  projectImg: {
     width: "100%",
     height: "100%",
   },
-  callToActionCard: {
-    height: "18em",
-    width: "30%",
-    background: "#242331",
-    [theme.breakpoints.down("md")]: {
-      width: "70%",
-      height: "20em",
+  projectButtonContainer: {
+    width: "90%",
+    marginBottom: "2em",
+    borderTop: "solid 2px white",
+    padding: "1em",
+  },
+  projectButton: {
+    fontSize: "0.65em",
+    width: "100%",
+    marginBottom: "0.55em",
+    color:'black',
+    background:'white'
+  },
+  buttonContainer: {
+    width: "100%",
+  },
+  projectLogo: {
+    width: "2em",
+  },
+  aboutContainer: {
+    width: "92%",
+    margin: "0 auto",
+    marginTop:'6em'
+  },
+  about: {
+    width: "100%",
+    margin: "0 auto",
+  },
+  aboutImgContainer: {
+    width: "50%",
+    [theme.breakpoints.down('sm')]:{
+      width:'100%'
+    }
+  },
+  aboutImg: {
+    width: "70%",
+    marginLeft:'0.55em',
+    [theme.breakpoints.down('sm')]:{
+      width:'100%'
+    }
+  },
+  aboutText: {
+    width: "50%",
+    borderTop:'solid 3px #dfdfdf',
+    [theme.breakpoints.down('sm')]:{
+      width:'100%',
+      borderTop:0,
+
+    }
+    
+  },
+  aboutTextTitle: {
+    marginTop: "0.96em",
+    fontSize:'3em',
+    marginBottom:'0.66em',
+    [theme.breakpoints.down('md')]:{
+      fontSize:'2em',
+      borderBottom:'solid 3px #dfdfdf',
+    }
+  },
+  aboutTextDetails: {
+    width:'70%',
+    textAlign:'left',
+    lineHeight:1.7,
+    [theme.breakpoints.down('md')]:{
+      fontSize:'0.80em'
     },
-  },
-  cardCTAContent: {
-    color: theme.palette.common.lightBrown,
-    fontFamily:'Lustria serif'
-  },
-  cardCTAButton: {
-    background: "#558c8c",
-    color: "white",
-    fontFamily:'Lustria serif',
-    marginTop: "2em",
-    "&:hover": {
-      background: theme.palette.common.lightBrown,
-      color: "white",
+    [theme.breakpoints.down('sm')]:{
+      fontSize:'0.80em',
+      width:'100%',
+      marginBottom:'5em'
     },
+    
+
+  },aboutTextButtonContainer:{
+    marginTop:'auto'
   },
+  aboutTextButton:{
+    borderRadius: 0,
+    border:"solid 3px #dfdfdf",
+    marginTop:''
+  }
 }));

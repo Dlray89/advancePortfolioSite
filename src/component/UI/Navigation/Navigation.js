@@ -1,6 +1,6 @@
 import React, { useEffect, useState, createRef } from "react";
 import { useStyles } from "./nav_style";
-import Logo from "../../../asset/images/David.png";
+import Logo from "../../../asset/images/davidlogo.svg";
 
 import {
   Tab,
@@ -95,7 +95,7 @@ const Navigation = () => {
       >
         {navigationLinks.map((link) => (
           <Tab
-          style={{color:theme.palette.common.lightBrown , fontFamily:'Lustria serif'}}
+          style={{color:'black' , fontFamily:'Lustria serif'}}
             component={Link}
             to={link.link}
             label={link.name}
@@ -126,18 +126,18 @@ const Navigation = () => {
         <div className={classes.toolbarMargin}  />
       
         <List>
-          <ListItem button divider component={Link} to='/' >
+          <ListItem button divider component={Link} to='/' onClick={() => setOpen(false)} >
             <ListItemText style={{color:theme.palette.common.black, fontSize: "1.7em",
     textAlign: "center"}} className={classes.mobileLinks}>Home</ListItemText>
           </ListItem>
 
-          <ListItem style={{color:theme.palette.common.black, fontSize: "1em",
-    textAlign: "center"}} button divider component={Link} to='/projects'>
+          <ListItem style={{color:theme.palette.common.black, fontSize: "1em" ,
+    textAlign: "center"}} onClick={() => setOpen(false)} button divider component={Link} to='/projects'>
             <ListItemText  className={classes.mobileLinks}>Projects</ListItemText>
           </ListItem>
 
           <ListItem style={{color:theme.palette.common.black, fontSize: "1em",
-    textAlign: "center"}} button divider component={Link} to='/services'>
+    textAlign: "center"}} onClick={() => setOpen(false)} button divider component={Link} to='/services'>
             <ListItemText className={classes.mobileLinks}>Services</ListItemText>
           </ListItem>
 
@@ -159,7 +159,7 @@ const Navigation = () => {
   return (
     <div className={classes.mainContainer}>
       <ElevationScroll >
-        <AppBar ref={ref} color="primary" position="fixed" style={{zIndex: theme.zIndex.modal + 1}}>
+        <AppBar position="fixed" style={{zIndex: theme.zIndex.modal + 1, background:'white'}}>
           <Toolbar disableGutters>
             <div className={classes.logoContainer}>
               <img

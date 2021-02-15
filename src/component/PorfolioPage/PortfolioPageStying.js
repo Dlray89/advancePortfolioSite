@@ -1,159 +1,96 @@
 import { makeStyles } from "@material-ui/core";
-import PortfolioImg from "../../asset/images/portImg.jpg";
+// import PortfolioImg from "../../asset/images/portImg.jpg";
 import callToactionImg from "../../asset/images/callToAction.jpg";
+import webdesign from "../../asset/images/webdesign.jpg";
 
 export const useStyle = makeStyles((theme) => ({
-  Portfolio: {
-    backgroundImage: "url(" + PortfolioImg + ")",
-    height: "25em",
-    backgroundRepeat: "no-repeat",
-    backgroundSize: "96em",
-    backgroundPositionY: "-25em",
-    backgroundPosition: "center",
-    [theme.breakpoints.down("sm")]: {
-      backgroundImage: "url(" + PortfolioImg + ")",
-      backgroundSize: "100%",
-      backgroundPosition: "center",
-      backgroundPositionY: "-0em",
-      height: "29em",
-    },
-    [theme.breakpoints.down("xs")]: {
-      backgroundImage: "url(" + PortfolioImg + ")",
-      backgroundSize: "100%",
-      backgroundPosition: "center",
-      backgroundPositionY: "0em",
-      height: "20em",
-    },
-  },
-  searchContainer: {
+  project: {},
+  projectContainer: {
     textAlign: "center",
-    background: theme.palette.common.lightBrown,
-    padding: "2em",
-  },
-  searchBar: {
-    width: "20em",
-    
-  },
-  searchIcon: {
-    color: theme.palette.common.black,
-  },
-
-  cardContainer: {
-    display: "flex",
-    flexWrap: "wrap",
-    [theme.breakpoints.down("md")]: {
-      flexDirection: "row",
-    },
-  },
-  card: {
-    margin: "2% auto",
-    background: "#242331",
-    width: "40%",
-    [theme.breakpoints.down("md")]: {
-      width: "97.5%",
-      margin: "2em auto",
-      marginLeft: "1.22em",
-    },
-    [theme.breakpoints.down("sm")]: {
-      width: "95%",
-      margin: "2em auto",
-    },
-    [theme.breakpoints.down("xs")]: {
-      width: "95%",
-      margin: "2em auto",
-    },
-  },
-  cardHeader: {
-    textAlign: "center",
-  },
-  projectImages: {
-    width: "40em",
-    [theme.breakpoints.down("md")]: {
-      width: "100%",
-    },
-    [theme.breakpoints.down("sm")]: {
-      width: "100%",
-    },
-    [theme.breakpoints.down("xs")]: {
-      width: "100%",
-    },
-  },
-  contentContainer: {
-    width: "94%",
+    width: "80%",
     margin: "0 auto",
   },
-  contentGridContainer: {
-    width: "95%",
-  },
-  contentDetails: {
-    color: theme.palette.common.lightBrown,
-    padding: "1em",
-    textAlign: "center",
-    fontFamily:'Lustria serif',
-    [theme.breakpoints.down("md")]: {},
-    [theme.breakpoints.down("sm")]: {
-      marginLeft: "2em",
-      width: "100%",
-    },
-  },
-
-  imgContainer: {
-    display: "flex",
-    flexDirection: "row",
-    [theme.breakpoints.down("md")]: {
-      textAlign: "center",
-    },
-  },
-  techIcons: {
-    height: "3em",
-  },
-
-  buttonMainContainer: {
+  projectImg: {
     width: "100%",
-
-    [theme.breakpoints.down("md")]: {
-      textAlign: "center",
-    },
-    [theme.breakpoints.down("md")]: {
-      textAlign: "center",
-    },
-    [theme.breakpoints.down("xs")]: {
-      textAlign: "center",
+    border: "solid 3px #dfdfdf",
+    marginTop: "0.55em",
+    borderRadius: "10px",
+  },
+  projectDetails: {
+    width: "80%",
+    margin: "0 auto",
+    marginTop: "5em",
+  },
+  bookmarkContainer: {
+    borderTop: "solid 3px #dfdfdf",
+    width: "35%",
+    [theme.breakpoints.down("sm")]: {
       width: "100%",
     },
   },
-  buttonContainers: {
-    margin: "0.15em 0%",
-    [theme.breakpoints.down("md")]: {},
-    [theme.breakpoints.down("sm")]: {},
-    [theme.breakpoints.down("xs")]: {
-    },
+  bookMark: {
+    fontSize: "2em",
   },
-  buttons: {
-    background: "#558c8c",
-    color: "White",
-    width: "33em",
-    fontFamily:'Lustria serif',
-    "&:hover": {
-      background: theme.palette.common.lightBrown,
-      color: "white",
-    },
+  bookMArkTitle: {
+    fontSize: "1em",
+    marginTop: "2em",
+  },
+  bookmarkDetails: {},
+  bookmarkSubtitle: {
+    fontSize: "0.75em",
+    marginTop: "1em",
+  },
+  bookMarkTechStatck: {
+    fontSize: "0.75em",
+    marginTop: "1em",
+  },
+  bookMarkButtonContainer: {
+    marginTop: "1em",
+  },
+  bookMarkButton: {
+    border: "solid 3px #dfdfdf",
+    borderRadius: 0,
+  },
 
-    [theme.breakpoints.down("md")]: {
-      width: "30em",
-    },
-    [theme.breakpoints.down("xs")]: {
-      width: "19em",
+  background: {
+    marginLeft: "2em",
+    fontSize: "2em",
+    [theme.breakpoints.down("sm")]: {
     },
   },
+
+  backgroundDetails: {
+    width: "65%",
+    [theme.breakpoints.down("sm")]: {
+      width: "100%",
+    },
+  },
+  backgroundTitle: {},
+  backgroundSubtitle: {
+    marginTop: "2em",
+    width: "60%",
+    margin: "0 auto",
+    lineHeight: 1.3,
+    marginLeft: "4em",
+    fontSize: "0.95em",
+  },
+  backgroundImg: {},
+  mobileStepperContainer: {
+    width: "75.55%",
+    margin: " 0 auto",
+    marginLeft: "8.6em",
+    [theme.breakpoints.down('sm')]:{
+      margin:0,
+      width:'100%'
+    }
+  },
+  mobileStepper: {},
   callToAction: {
     background: "url(" + callToactionImg + ")",
     backgroundRepeat: "no-repeat",
     backgroundPosition: "center",
     backgroundSize: "100em",
     height: "60em",
-    position: "relative",
-    marginTop: "1em",
     marginBottom: 0,
     [theme.breakpoints.down("md")]: {
       backgroundSize: "75em",
@@ -178,7 +115,7 @@ export const useStyle = makeStyles((theme) => ({
   },
   cardCTAContent: {
     color: theme.palette.common.lightBrown,
-    fontFamily:'Lustria serif'
+    fontFamily: "Lustria serif",
   },
   cardCTAButton: {
     background: "#558c8c",
@@ -188,5 +125,76 @@ export const useStyle = makeStyles((theme) => ({
       background: theme.palette.common.lightBrown,
       color: "white",
     },
+  },
+  calltoaction: {
+    backgroundImage: "url(" + webdesign + ")",
+    backgroundRepeat: "no-repeat",
+    backgroundSize: "50% 100%, cover",
+    backgroundPosition: "left",
+    height: "25em",
+    background: "#242331",
+    marginTop: "5em",
+    [theme.breakpoints.down("sm")]: {
+      backgroundSize: "100% 100%, cover",
+      height: "25em",
+    },
+  },
+  calltoactionDetails: {
+    width: "50%",
+    marginLeft: "auto",
+    margin: "auto 0",
+    [theme.breakpoints.down("sm")]: {
+      width: "100%",
+      margin: 0,
+      background: "rgba(27, 20, 17, 0.6)",
+    },
+  },
+  calltoactionTitle: {
+    textAlign: "right",
+    fontSize: "2.5em",
+    color: "white",
+    [theme.breakpoints.down("sm")]: {
+      textAlign: "left",
+      fontSize: "2.2em",
+      width: "60%",
+      marginLeft: "0.45em",
+      marginTop: "6em",
+    },
+  },
+  calltoactionSubtitle: {
+    textAlign: "right",
+    fontSize: "1.2em",
+  },
+  calltoactionButton: {
+    color: "white",
+  },
+  calltoactionButtonContainer: {
+    textAlign: "right",
+    [theme.breakpoints.down("sm")]: {
+      width: "90%",
+      borderTop: "solid 2px white",
+      margin: "0 auto",
+      textAlign: "left",
+      marginLeft: "1em",
+    },
+  },
+  serviceContainer: {
+    width: "55%",
+    marginLeft: "auto",
+    [theme.breakpoints.down("sm")]: {
+      width: "70%",
+      marginRight: "10em",
+    },
+  },
+  calltoactionServices: {
+    color: "white",
+    textAlign: "right",
+    [theme.breakpoints.down("sm")]: {
+      textAlign: "left",
+    },
+  },
+  dot: {
+    width: "0.35em",
+    color: "white",
   },
 }));
