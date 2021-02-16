@@ -150,7 +150,7 @@ const PortfolioPage = (props) => {
             </Grid>
 
             <Grid item className={classes.bookmarkSubtitle}>
-              Interactive Desgin/Front-End Development
+              Interactive Design/Front-End Development
             </Grid>
 
             <Grid item className={classes.bookMarkTechStatck}>
