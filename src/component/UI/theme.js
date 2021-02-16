@@ -91,7 +91,13 @@ export default createMuiTheme({
 
                 }
             }
+        },
+        MuiAppBar:{
+            root:{
+                
+            }
         }
+        
     }
     
 })

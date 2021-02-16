@@ -205,6 +205,7 @@ const Navigation = () => {
         <AppBar
           position="fixed"
           className={classes.appbar} 
+          style={{background:'white'}}
         >
           <Toolbar disableGutters>
             <Grid

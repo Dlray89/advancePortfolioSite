@@ -5,7 +5,6 @@ export const useStyles = makeStyles((theme) => ({
   },
   appbar: {
     zIndex: theme.zIndex.modal + 1,
-    background: "white",
     [theme.breakpoints.down("sm")]: {
     },
   },
