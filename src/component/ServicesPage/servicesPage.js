@@ -1,5 +1,11 @@
 import React from "react";
-import { Grid, Button, useTheme, useMediaQuery, Hidden } from "@material-ui/core";
+import {
+  Grid,
+  Button,
+  useTheme,
+  useMediaQuery,
+  Hidden,
+} from "@material-ui/core";
 import { Link } from "react-router-dom";
 import { useStyles } from "./servicesStyling";
 
@@ -10,8 +16,6 @@ import react from "../../asset/technologiesIcons/icons8-react-native-64.png";
 import MaterialUI from "../../asset/technologiesIcons/icons8-material-ui-48.png";
 import Figma from "../../asset/technologiesIcons/figmaSmall.svg";
 
-
-
 const techStackIcons = [
   {
     id: 1,
@@ -19,7 +23,7 @@ const techStackIcons = [
     alt: "icons of Figma",
     title: "Figma",
     details:
-      "Figma is a User-Interface and UX design applcation with excellent design tool to help create robust web designs before going into coding development",
+      "Figma is a User-Interface and UX design application with an excellent design tool to help create robust web designs before going into coding development",
   },
   {
     id: 2,
@@ -35,7 +39,7 @@ const techStackIcons = [
     alt: "icons of css",
     title: "CSS",
     details:
-      "CSS stands for Cascading Style Sheets. CSS adds styling to the structure of your web page. Essentially added a great presentaion for the web page usinf colors, layouts, font, etc.",
+      "CSS stands for Cascading Style Sheets. CSS adds styling to the structure of your web page. Essentially added a great presentation for the web page using colors, layouts, font, etc.",
   },
   {
     id: 4,
@@ -43,7 +47,7 @@ const techStackIcons = [
     alt: "icons of Material-ui",
     title: "Material-UI",
     details:
-      "Material-UI is used and developed by Google. IIf youwant your user interface to have a great look and feel this library will get it down.",
+      "Material-UI is used and developed by Google. If you want your user interface to have a great look and feel this library will get it down.",
   },
   {
     id: 5,
@@ -51,7 +55,7 @@ const techStackIcons = [
     alt: "icons of javascript",
     title: "JavaScript",
     details:
-      "JavaScript is a programming language commonly used in web development. JS was developed by NetScape as a means to add dynamic and interactive elements to a website.",
+      "JavaScript is a programming language commonly used in web development. JS was developed by Netscape as a means to add dynamic and interactive elements to a website.",
   },
   {
     id: 6,
@@ -59,7 +63,7 @@ const techStackIcons = [
     alt: "icons of React",
     title: "React",
     details:
-      " React is a JavaScript Framework used for building user interface for single page applications and websites. It also handles view layers for web and mobile apps",
+      " React is a JavaScript framework used for building a user interface for single-page applications and websites. It also handles view layers for web and mobile apps",
   },
 ];
 
@@ -67,46 +71,51 @@ const ServicesPage = () => {
   const classes = useStyles();
   const theme = useTheme();
   const mobileMD = useMediaQuery(theme.breakpoints.down("md"));
-  const MatchSM = useMediaQuery(theme.breakpoints.down('sm'))
+  const MatchSM = useMediaQuery(theme.breakpoints.down("sm"));
 
   return (
     <div>
-      <Grid item container className={classes.Services}> 
-      <Hidden smDown>
-        <Grid item direction="column" container className={classes.heroDetails}>
-        
-         <Grid item className={classes.heroTitle}>
-            Services
-          </Grid>
+      <Grid item container className={classes.Services}>
+        <Hidden smDown>
+          <Grid
+            item
+            direction="column"
+            container
+            className={classes.heroDetails}
+          >
+            <Grid item className={classes.heroTitle}>
+              Services
+            </Grid>
 
-          <Grid item className={classes.heroSubtitle}>
-            Services i specialized in are website developement and web
-            applications that are built responsively across all mobile
-            platforms. These services are handicap accessible and fully
-            interavtive
+            <Grid item className={classes.heroSubtitle}>
+              Services I specialized in are a website development and web
+              applications that are built responsively across all mobile
+              platforms. These services are handicap accessible and fully
+              interactive
+            </Grid>
           </Grid>
-         
-        </Grid>
         </Hidden>
       </Grid>
 
       <Grid item>
         <Hidden mdUp>
-        <Grid item direction="column" container className={classes.heroDetails}>
-        
-        <Grid item className={classes.heroTitle}>
-           Services
-         </Grid>
+          <Grid
+            item
+            direction="column"
+            container
+            className={classes.heroDetails}
+          >
+            <Grid item className={classes.heroTitle}>
+              Services
+            </Grid>
 
-         <Grid item className={classes.heroSubtitle}>
-           Services i specialized in are website developement and web
-           applications that are built responsively across all mobile
-           platforms. These services are handicap accessible and fully
-           interavtive
-         </Grid>
-        
-       </Grid>
-
+            <Grid item className={classes.heroSubtitle}>
+              Services I specialized in are a website development and web
+              applications that are built responsively across all mobile
+              platforms. These services are handicap accessible and fully
+              interactive
+            </Grid>
+          </Grid>
         </Hidden>
       </Grid>
       <Grid
@@ -125,74 +134,74 @@ const ServicesPage = () => {
           container
           className={classes.websiteContainer}
         >
-         <Hidden smDown>
-         <Grid
-            item
-            container
-            direction="column"
-            className={classes.websiteDetails}
-          >
-            <Grid item className={classes.websiteTitle}>
-              Website Development
-            </Grid>
+          <Hidden smDown>
+            <Grid
+              item
+              container
+              direction="column"
+              className={classes.websiteDetails}
+            >
+              <Grid item className={classes.websiteTitle}>
+                Website Development
+              </Grid>
 
-            <Grid item className={classes.websiteSubtitle}>
-              <span style={{ color: "#558c8c", fontWeight: 900 }}>
-                Increase profits and engagement. <br /> <br />
-              </span>
-              Do you need a website for your business or organization? No
-              worries I got you cover on building your own custom digital
-              product, with my creativity, innovation and imagination I'll do
-              what it takes to get the job done.
-            </Grid>
+              <Grid item className={classes.websiteSubtitle}>
+                <span style={{ color: "#558c8c", fontWeight: 900 }}>
+                  Increase profits and engagement. <br /> <br />
+                </span>
+                Do you need a website for your business or organization? No
+                worries I got you cover on building your custom digital
+                product, with my creativity, innovation, and imagination I'll do
+                what it takes to get the job done.
+              </Grid>
 
-            <Grid item className={classes.websiteButtonContainer}>
-              <Button
-                component={Link}
-                to="/gettingstarted"
-                className={classes.websiteButton}
-                variant="contained"
-              >
-                Get Started
-              </Button>
+              <Grid item className={classes.websiteButtonContainer}>
+                <Button
+                  component={Link}
+                  to="/gettingstarted"
+                  className={classes.websiteButton}
+                  variant="contained"
+                >
+                  Get Started
+                </Button>
+              </Grid>
             </Grid>
-          </Grid>
-         </Hidden>
+          </Hidden>
         </Grid>
 
         <Grid item>
           <Hidden mdUp>
-          <Grid
-            item
-            container
-            direction="column"
-            className={classes.websiteDetails}
-          >
-            <Grid item className={classes.websiteTitle}>
-              Website Development
-            </Grid>
+            <Grid
+              item
+              container
+              direction="column"
+              className={classes.websiteDetails}
+            >
+              <Grid item className={classes.websiteTitle}>
+                Website Development
+              </Grid>
 
-            <Grid item className={classes.websiteSubtitle}>
-              <span style={{ color: "#558c8c", fontWeight: 900 }}>
-                Increase profits and engagement. <br /> <br />
-              </span>
-              Do you need a website for your business or organization? No
-              worries I got you cover on building your own custom digital
-              product, with my creativity, innovation and imagination I'll do
-              what it takes to get the job done.
-            </Grid>
+              <Grid item className={classes.websiteSubtitle}>
+                <span style={{ color: "#558c8c", fontWeight: 900 }}>
+                  Increase profits and engagement. <br /> <br />
+                </span>
+                Do you need a website for your business or organization? No
+                worries I got you cover on building your custom digital
+                product, with my creativity, innovation, and imagination I'll do
+                what it takes to get the job done..
+              </Grid>
 
-            <Grid item className={classes.websiteButtonContainer}>
-              <Button
-                component={Link}
-                to="/gettingstarted"
-                className={classes.websiteButton}
-                variant="contained"
-              >
-                Get Started
-              </Button>
+              <Grid item className={classes.websiteButtonContainer}>
+                <Button
+                  component={Link}
+                  to="/gettingstarted"
+                  className={classes.websiteButton}
+                  variant="contained"
+                >
+                  Get Started
+                </Button>
+              </Grid>
             </Grid>
-          </Grid>
           </Hidden>
         </Grid>
 
@@ -204,62 +213,60 @@ const ServicesPage = () => {
           container
           className={classes.webAppContainer}
         >
-         <Hidden smDown>
-         <Grid
-            item
-            container
-            direction="column"
-            className={classes.webAppDetails}
-          >
-            <Grid item className={classes.webAppTitle}>
-              Front-End Applications
-            </Grid>
+          <Hidden smDown>
+            <Grid
+              item
+              container
+              direction="column"
+              className={classes.webAppDetails}
+            >
+              <Grid item className={classes.webAppTitle}>
+                Front-End Applications
+              </Grid>
 
-            <Grid item className={classes.webAppSubtitle}>
-              <span style={{ color: "#558c8c", fontWeight: 900 }}>
-                Extend Value, Connection, and Longevity
-              </span>{" "}
-              <br /> <br />
-              It's the 21st century and most of your customers are on there
-              mobile devices such as phones and tablets. Adding a front-end
-              application will increase value, give your company a stronger
-              brand and be present in the market all while adding profit.
-            </Grid>
+              <Grid item className={classes.webAppSubtitle}>
+                <span style={{ color: "#558c8c", fontWeight: 900 }}>
+                  Extend Value, Connection, and Longevity
+                </span>{" "}
+                <br /> <br />
+                It's the 21st century and most of your customers are on their mobile devices such as phones and tablets. Adding a front-end to
+                the application will increase value, give your company a stronger
+                brand and be present in the market all while adding profit.
+              </Grid>
 
-            <Grid item className={classes.websiteAppButtonContainer}>
-              <Button className={classes.webAppButton}>Get Started</Button>
+              <Grid item className={classes.websiteAppButtonContainer}>
+                <Button className={classes.webAppButton}>Get Started</Button>
+              </Grid>
             </Grid>
-          </Grid>
-         </Hidden>
+          </Hidden>
         </Grid>
 
         <Grid item>
           <Hidden mdUp>
-          <Grid
-            item
-            container
-            direction="column"
-            className={classes.webAppDetails}
-          >
-            <Grid item className={classes.webAppTitle}>
-              Front-End Applications
-            </Grid>
+            <Grid
+              item
+              container
+              direction="column"
+              className={classes.webAppDetails}
+            >
+              <Grid item className={classes.webAppTitle}>
+                Front-End Applications
+              </Grid>
 
-            <Grid item className={classes.webAppSubtitle}>
-              <span style={{ color: "#558c8c", fontWeight: 900 }}>
-                Extend Value, Connection, and Longevity
-              </span>{" "}
-              <br /> <br />
-              It's the 21st century and most of your customers are on there
-              mobile devices such as phones and tablets. Adding a front-end
-              application will increase value, give your company a stronger
-              brand and be present in the market all while adding profit.
-            </Grid>
+              <Grid item className={classes.webAppSubtitle}>
+                <span style={{ color: "#558c8c", fontWeight: 900 }}>
+                  Extend Value, Connection, and Longevity
+                </span>{" "}
+                <br /> <br />
+                It's the 21st century and most of your customers are on their mobile devices such as phones and tablets. Adding a front-end to
+                the application will increase value, give your company a stronger
+                brand and be present in the market all while adding profit.
+              </Grid>
 
-            <Grid item className={classes.websiteAppButtonContainer}>
-              <Button className={classes.webAppButton}>Get Started</Button>
+              <Grid item className={classes.websiteAppButtonContainer}>
+                <Button className={classes.webAppButton}>Get Started</Button>
+              </Grid>
             </Grid>
-          </Grid>
           </Hidden>
         </Grid>
 
@@ -279,7 +286,7 @@ const ServicesPage = () => {
         <Grid
           className={classes.techStack}
           item
-          direction={MatchSM ? "column":"row"}
+          direction={MatchSM ? "column" : "row"}
           justify="space-evenly"
           alignItems="center"
           container

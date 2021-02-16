@@ -206,8 +206,9 @@ const Navigation = () => {
           position="fixed"
           className={classes.appbar} 
           style={{background:'white'}}
+          
         >
-          <Toolbar disableGutters>
+          <Toolbar disableGutters >
             <Grid
               containerclassName={classes.logoContainer}
               component={Link}
