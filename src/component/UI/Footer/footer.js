@@ -17,7 +17,7 @@ const Footer = (props) => {
         <div>
         <Grid container className={classes.footer}>
             <Hidden>
-            <Grid container direction='row' justify='space-evenly' item style={{marginTop:'1.5em'}} >
+            <Grid container direction='row' justify='space-evenly' item style={{marginTop:'1.5em',}} >
            <Grid item container justify='center' alignItems='center' className={classes.home}>
                <Grid item>
                     <Typography style={{textDecoration:'none', color:'white', fontFamily:'Lustria serif', fontSize:'1.2em'}} onClick={() => props.setValue(0)} component={Link} to='/' variant='h3'>

@@ -2,13 +2,15 @@ import { makeStyles } from "@material-ui/core";
 
 export const useStyles = makeStyles((theme) => ({
   mainContainer: {
-    
   },
   appbar: {
-    
+    zIndex: theme.zIndex.modal + 1,
+    background: "white",
+    [theme.breakpoints.down("sm")]: {
+    },
   },
   tabContainer: {
-    marginLeft: "auto",
+    marginLeft: "20em",
   },
   tabs: {
     ...theme.typography.links,
@@ -19,15 +21,18 @@ export const useStyles = makeStyles((theme) => ({
   },
   logoContainer: {
     height: "4em",
-    [theme.breakpoints.down('sm')]:{
-      marginLeft:'3em'
-    }
+    [theme.breakpoints.down("sm")]: {
+    },
   },
   logo: {
-    height: "4em",
-    [theme.breakpoints.down('sm')]:{
-        width:'70%'
-    }
+    marginLeft: "4em",
+    width:'13em',
+    [theme.breakpoints.down("sm")]: {
+      width: "10em",
+      height: "3em",
+      margin: 0,
+      marginLeft:'1em'
+    },
   },
   toolbarMargin: {
     ...theme.mixins.toolbar,
@@ -49,12 +54,10 @@ export const useStyles = makeStyles((theme) => ({
   mobileDrawer: {
     [theme.breakpoints.down("sm")]: {
       width: "23%",
-      
     },
-   
+
     [theme.breakpoints.down("xs")]: {
       width: "42%",
-      
     },
   },
   mobileLogo: {
@@ -70,7 +73,7 @@ export const useStyles = makeStyles((theme) => ({
     textDecoration: "none",
   },
   mobileLinks: {
-    color: 'white',
+    color: "white",
     fontSize: "1.7em",
     textAlign: "center",
     fontFamily: "Lustria serif",

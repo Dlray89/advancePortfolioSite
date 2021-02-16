@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import {Link } from 'react-router-dom'
 import ScrollToTop from '../../container/routerScroll'
 import { useStyle } from "./PortfolioPageStying";
 import {
@@ -70,9 +71,9 @@ const projects = [
 
   {
       id:4,
-    name: "JSFurniture",
+    name: "Rooms Furniture",
     details:
-      "A Project creating a landing page for a furniture store called JSFurniture. Shop for the latest, most modern design in home decor all while keeping you budget intact This was a front end challenge provided buy frontend mentors.",
+      "A Project creating a landing page for a furniture store called Rooms Furniture. Shop for the latest, most modern design in home decor all while keeping you budget intact This was a front end challenge provided buy frontend mentors.",
     link: "https://js-furnitures.vercel.app/",
     tech_stack: "HTML | CSS | React | Material-UI | Javascript",
     img: Furniture_shoot,
@@ -271,7 +272,7 @@ const PortfolioPage = (props) => {
           </Grid>
 
           <Grid item className={classes.calltoactionButtonContainer}>
-            <Button className={classes.calltoactionButton}>
+            <Button className={classes.calltoactionButton} component={Link} to='/services' >
               View Services <ArrowRightIcon />
             </Button>
           </Grid>

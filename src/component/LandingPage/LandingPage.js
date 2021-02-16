@@ -19,12 +19,6 @@ import ArrowRightIcon from "@material-ui/icons/ArrowRight";
 import FiberManualRecordIcon from "@material-ui/icons/FiberManualRecord";
 //tech icons
 
-// import HTML from "../../asset/technologiesIcons/icons8-html-filetype-64.png";
-// import CSS from "../../asset/technologiesIcons/icons8-css-filetype-64.png";
-// import Javascript from "../../asset/technologiesIcons/icons8-javascript-64.png";
-// import react from "../../asset/technologiesIcons/icons8-react-native-64.png";
-// import MaterialUI from "../../asset/technologiesIcons/icons8-material-ui-48.png";
-// import Figma from "../../asset/technologiesIcons/icons8-figma-32.png";
 
 import Photosnap from "../../asset/refactorImages/photosnapLogo.svg";
 import ArchStudio from "../../asset/refactorImages/archLogo.svg";
@@ -34,56 +28,6 @@ import Federal from "../../asset/refactorImages/image-federal.jpg";
 import Mockups from "../../asset/refactorImages/image-mockups.png";
 import David from "../../asset/refactorImages/david.jpg";
 
-// const techStackIcons = [
-//   {
-//     id: 1,
-//     icon: Figma,
-//     alt: "icons of Figma",
-//     title: "Figma",
-//     details:
-//       "Figma is a User-Interface and UX design applcation with excellent design tool to help create robust web designs before going into coding development",
-//   },
-//   {
-//     id: 2,
-//     icon: HTML,
-//     alt: "icons of HTML",
-//     title: "HTML",
-//     details:
-//       "HTML stands for HyperText Mark-up Language. This is the coding language used for structuring a webpage and all of its content.",
-//   },
-//   {
-//     id: 3,
-//     icon: CSS,
-//     alt: "icons of css",
-//     title: "CSS",
-//     details:
-//       "CSS stands for Cascading Style Sheets. CSS adds styling to the structure of your web page. Essentially added a great presentaion for the web page usinf colors, layouts, font, etc.",
-//   },
-//   {
-//     id: 4,
-//     icon: MaterialUI,
-//     alt: "icons of Material-ui",
-//     title: "Material-UI",
-//     details:
-//       "Material-UI is used and developed by Google. IIf youwant your user interface to have a great look and feel this library will get it down.",
-//   },
-//   {
-//     id: 5,
-//     icon: Javascript,
-//     alt: "icons of javascript",
-//     title: "JavaScript",
-//     details:
-//       "JavaScript is a programming language commonly used in web development. JS was developed by NetScape as a means to add dynamic and interactive elements to a website.",
-//   },
-//   {
-//     id: 6,
-//     icon: react,
-//     alt: "icons of React",
-//     title: "React",
-//     details:
-//       " React is a JavaScript Framework used for building user interface for single page applications and websites. It also handles view layers for web and mobile apps",
-//   },
-// ];
 
 const Transition = forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;

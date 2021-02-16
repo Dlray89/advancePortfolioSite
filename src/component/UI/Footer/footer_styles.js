@@ -4,7 +4,6 @@ export const useStyles = makeStyles((theme) => ({
   footer: {
     background: theme.palette.common.black,
     color: theme.palette.common.lightBrown,
-    
     backgroundSize: "27em",
     [theme.breakpoints.down("sm")]: {},
   },
@@ -40,8 +39,9 @@ export const useStyles = makeStyles((theme) => ({
 
   },
   socialMediaContainer:{
-      width:'30%',
-      verticalAlign:'text-bottom',
+      width:'19%',
+      textAlign:'center',
+      margin:'0 auto',
       [theme.breakpoints.down('sm')]:{
         width:'80%',
         margin: '0 auto',
@@ -50,7 +50,6 @@ export const useStyles = makeStyles((theme) => ({
 
   icons:{
       height:'3em',
-      marginLeft: 'auto',
       [theme.breakpoints.down('sm')]:{
         height:'4em',
         

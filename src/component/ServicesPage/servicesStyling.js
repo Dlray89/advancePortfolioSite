@@ -1,276 +1,345 @@
 import {makeStyles} from '@material-ui/core'
-import ServicesImg from '../../asset/images/servicesImg.jpg'
-
+import wireframing from '../../asset/refactorImages/wireframingHero.jpg'
+import Webdesign from "../../asset/images/webdesign.jpg";
+import WebApp from "../../asset/images/webApplicationDesign.jpg";
 
 export const useStyles = makeStyles((theme) => ({
     Services:{
-        backgroundImage:'url('+ ServicesImg +')',
-        height:'20em',
+        backgroundImage:'url('+ wireframing+')',
+        height:'25em',
         backgroundRepeat:'no-repeat',
-        backgroundSize:'cover',
-        backgroundPositionY:'-30em',
+        backgroundSize:'50% 100%, cover',
+        background: "#242331",
         
         [theme.breakpoints.down('sm')]:{
-            backgroundImage:'url('+ ServicesImg +')',
+            backgroundImage:'url('+ wireframing +')',
             backgroundSize:'100%',
             backgroundPosition:'center',
             backgroundPositionY:'-0em',
             height:'22em'
         }
       },
+      heroDetails:{
+            
+            width:'50%',
+            marginLeft:'auto',
+            margin:'auto 0',
+            fontFamily: "Smokum cursive",
+            [theme.breakpoints.down('md')]:{
+
+            },
+            [theme.breakpoints.down('sm')]:{
+                background: "#242331",
+                margin:0,
+                width:'100%'
+            }
+
+      },
+
+      heroTitle:{
+            color:'white',
+            fontSize:'3em',
+            marginLeft:'1em',
+            [theme.breakpoints.down('md')]:{
+                fontSize:'2.5em'
+            },
+            [theme.breakpoints.down('sm')]:{
+                fontSize:'3em',
+                margin:0,
+                marginLeft:'0.45em'
+                
+            }
+      },
+      heroSubtitle:{
+        color:'white',
+        fontSize:'1.2em',
+        marginLeft:'2.5em',
+        width:'80%',
+        marginTop:'1em',
+        [theme.breakpoints.down('md')]:{
+            fontSize:'0.99em'
+        },
+        [theme.breakpoints.down('sm')]:{
+            marginBottom:'3em' ,
+            marginLeft:'1.2em'           
+        }
+
+      },
     
     websiteContainer:{
-        width:'70%',
-        marginTop:'5em',
-        marginLeft:'3em',
+        width:'100%',
         
-        [theme.breakpoints.down('md')]:{
+        backgroundImage:'url('+ Webdesign +')',
+        height:'25em',
+        backgroundRepeat:'no-repeat',
+        backgroundSize:'55% 100%, cover',
+        backgroundPosition:'right',
+        background: "#242331",
+
+        [theme.breakpoints.down('sm')]:{
+            backgroundSize:'100% 100%, cover'
             
-            width:'100%',
-            margin: 0,
-            display:'flex',
-            flexDirection:'column-reverse',
-            marginBottom:'8em',
         }
 
     },
-    websiteContentContainer:{
-        marginRight:'0.75em',
-        fontFamily:'Lustria serif',
-        width:'50%',
-        [theme.breakpoints.down('md')]:{
-            
-            width:'100%',
-            margin: 0,
-            textAlign:'center',
-          
+    websiteDetails:{
+        
+        width:'40%',
+        marginRight:'auto',
+        [theme.breakpoints.down('sm')]:{
+            background: "white",
+            margin:0,
+            width:'100%'
         }
+        
     },
     websiteTitle:{
-        fontSize:'1.7em',
-        marginBottom:'1em',
-        
-        width:'100%'
+        color:'white',
+        fontSize:'3em',
+        marginLeft:'0.85em',
+        fontFamily: "Smokum cursive",
+        [theme.breakpoints.down('md')]:{
+            fontSize:'2.5em',
+            marginLeft:'0.38em'
+        },
+        [theme.breakpoints.down('sm')]:{
+            fontSize:'3em',
+            marginLeft:'0.55em',
+            color:'#242331'
+        }
 
     },
     websiteSubtitle:{
-        fontSize:'1.1em',
-        marginBottom:'0.75em',
-        width:'100%',
-        wordWrap:'normal',
+        color:'white',
+        fontSize:'1.2em',
+        marginLeft:'2em',
+        width:'70%',
+        fontFamily: "Smokum cursive",
         [theme.breakpoints.down('md')]:{
-            width:'95%',
-            margin: '0 auto',
-            textAlign:'center',
-            marginBottom:'1em'
-
+            fontSize:'0.99em',
+            marginLeft:'1.55em'
         },
-        [theme.breakpoints.down('xs')]:{
-            
-            fontSize:'1em',
-            padding:'2%'
+        [theme.breakpoints.down('sm')]:{
+            marginLeft:'1.25em',
+            color:'#242331'
 
         }
-        
-       
-        
+
+    },
+    websiteButtonContainer:{
+        borderTop:'solid 2px #fdfdfd',
+        width:'90%',
+        margin: '0 auto',
+        marginTop:'2em',
+        [theme.breakpoints.down('sm')]:{
+            marginBottom:'2em',
+            borderTop:'solid 2px #242331'
+        }
     },
     websiteButton:{
-        background: '#558c8c',
-        color: 'White',
-        fontFamily:'Lustria serif',
-        "&:hover": {
-            background: theme.palette.common.lightBrown,
-            color: 'white',
-          },
-
-    },
-    webdesignImgContainer:{
-        marginLeft:'1em',
-        [theme.breakpoints.down('md')]:{
-            margin: 0,
-            textAlign:'center',
-            width:'100%'
-        }
-    },
-    webdesignImg:{
-        width:'25em',
-        [theme.breakpoints.down('md')]:{
-            width: '30.2'
+        color:'white',
+        border:'solid 3px #fdfdfd',
+        background:'inherit',
+        borderRadius:0,
+        marginTop:'1em',
+        fontFamily: "Smokum cursive",
+        width:'45%',
+        
+        '&:hover':{
+            background:'#558c8c',
+            color:'white',
+            
         },
-        [theme.breakpoints.down('xs')]:{
-            width: '100%'
+        [theme.breakpoints.down('sm')]:{
+            color:'#242331',
+            border:'solid 3px #242331',
+
         }
+
+
     },
     webAppContainer:{
-        width:'70%',
-        marginTop:'6em',
-        marginLeft:'auto',
-        marginBottom:'4em',
-        marginRight:'3em',
+        width:'100%',
         
-        [theme.breakpoints.down('md')]:{
+        backgroundImage:'url('+ WebApp +')',
+        height:'25em',
+        backgroundRepeat:'no-repeat',
+        backgroundSize:'50% 100%, cover',
+        backgroundPosition:'left',
+        background: "#242331",
+        fontFamily: "Smokum cursive",
+        [theme.breakpoints.down('sm')]:{
+            backgroundSize:'100% 100%, cover'
             
-            width:'100%',
-            margin: 0,
-            display:'flex',
-            flexDirection:'column-reverse',
-            marginBottom:'8em'
         }
-
 
     },
-    webAppContentContainer:{
-        marginRight:'0.75em',
-        width:'52.55%',
-        fontFamily:'Lustria serif',
-        [theme.breakpoints.down('md')]:{
-            
-            width:'100%',
-            margin: 0,
-            textAlign:'center',
-          
+    webAppDetails:{
+        
+        width:'50%',
+        marginLeft:'auto',
+        margin:'auto 0',
+        [theme.breakpoints.down('sm')]:{
+            background: "#242331",
+            margin:0,
+            width:'100%'
         }
+        
     },
     webAppTitle:{
-        fontSize:'1.7em',
-        marginBottom:'1em',
-        
-        width:'100%'
-    },
-    webAppSubtitle:{
-        fontSize:'1.1em',
-        marginBottom:'0.75em',
-        width:'100%',
-        wordWrap:'normal',
-        [theme.breakpoints.down('xs')]:{
-            
-            fontSize:'1em',
-            padding:'2%'
-
-        },
+        color:'white',
+        fontSize:'3em',
+        marginLeft:'0.75em',
+        fontFamily: "Smokum cursive",
         [theme.breakpoints.down('md')]:{
-            width:'95%',
-            margin: '0 auto',
-            textAlign:'center',
-            marginBottom:'1em'
-
+            fontSize:'2.5em',
+            marginLeft:'0.63em'
         },
-        
-    },
-    webAppButton:{
-        background: '#558c8c',
-        color: 'White',
-        fontFamily:'Lustria serif',
-        "&:hover": {
-            background: theme.palette.common.lightBrown,
-            color: 'white',
-          },
-
-    },
-    webAppImgContainer:{
-        marginLeft:'1em',
-        
-        [theme.breakpoints.down('md')]:{
-            margin:0,
-            textAlign:'center',
-            width:'100%'
+        [theme.breakpoints.down('sm')]:{
+            fontSize:'3em',
+            marginLeft:'0.55em'
         }
+  },
+  webAppSubtitle:{
+    color:'white',
+    fontSize:'1.2em',
+    marginLeft:'2em',
+    width:'80%',
+    fontFamily: "Smokum cursive",
+    [theme.breakpoints.down('md')]:{
+        fontSize:'0.99em',
+        marginLeft:'1.55em'
     },
-    webAppImg:{
-        width:'25em',
-        [theme.breakpoints.down('md')]:{
-            width: '25em'
-        },
-        [theme.breakpoints.down('xs')]:{
-            width: '100%'
-        }
-    },
+    [theme.breakpoints.down('sm')]:{
+        marginLeft:'1.25em'
+    }
 
-    responsiveContainer:{
+  },
+  websiteAppButtonContainer:{
+    borderTop:'solid 2px #fdfdfd',
+    width:'90%',
+    margin: '0 auto',
+    marginTop:'2em',
+    [theme.breakpoints.down('sm')]:{
+        marginBottom:'2em'
+    }
+},
+webAppButton:{
+    color:'white',
+    border:'solid 3px #fdfdfd',
+    background:'inherit',
+    borderRadius:0,
+    marginTop:'1em',
+    fontFamily: "Smokum cursive",
+    width:'40%',
+    '&:hover':{
+        background:'#558c8c',
+        color:'white',
+        
+    }
+
+
+},
+techStackContainer:{
+    marginTop:'3em',
+    marginBottom:'3em',
+    [theme.breakpoints.down('sm')]:{
+        
+
+    }
+},
+techStack:{
+    fontFamily: "Smokum cursive",
+    [theme.breakpoints.down('sm')]:{
+        
+    }
+
+},
+mainTitle:{
+    fontSize:'3em',
+    marginBottom:'1em',
+    fontFamily: "Smokum cursive",
+     [theme.breakpoints.down('md')]:{
+            fontSize:'2.50em',
+            marginLeft:'1.55em'
+        },
+
+    [theme.breakpoints.down('sm')]:{
+        fontSize:'2.3em',
+        textAlign:'left',
+        margin:0
+    }
+},
+teachStackCard:{
+    width:'30%',
+    marginBottom:'2em',
+    [theme.breakpoints.down('sm')]:{
         width:'70%',
-        marginTop:'6em',
-        marginLeft:'3em',
-        marginBottom:'4em',
+        margin:'1em auto',
+        background: "#242331",
+        padding:'1em',
+        '&:hover':{
+            marginRight:'3em',
+            borderLeft: "solid 4px transparent",
+            borderImage: "linear-gradient(to top, #558c8c, white, #b88b4a)",
+            borderImageSlice: 1,
 
-        
-        
-        [theme.breakpoints.down('md')]:{
-            
-            width:'100%',
-            margin: 0,
-            display:'flex',
-            flexDirection:'column-reverse',
-            marginBottom:'3em'
         }
 
+    }
 
+},
+techStackTitle:{
+    textAlign:'center',
+    fontSize:'1.4em',
+    marginTop:'0.45em',
+    [theme.breakpoints.down('md')]:{
+        fontSize:'2em',
     },
-    responsiveContentContainer:{
-        marginRight:'0.75em',
-        fontFamily:'Lustria serif',
-        width:'50%',
-        [theme.breakpoints.down('md')]:{
-            
-            width:'100%',
-            margin: 0,
-            textAlign:'center',
-          
-        }
-    },
-    responsiveTitle:{
-        fontSize:'1.7em',
-        marginBottom:'1em',
-        
-        width:'100%'
-    },
-    responsiveSubtitle:{
-        fontSize:'1.1em',
-        marginBottom:'0.75em',
-        width:'100%',       
-        wordWrap:'normal',
-        [theme.breakpoints.down('xs')]:{
-            
-            fontSize:'1em',
-            padding:'2%'
+    [theme.breakpoints.down('sm')]:{
+        width:'100%',
+        textAlign:'left',
+        margin:0,
+       
+        color:'white'
 
-        },
-        [theme.breakpoints.down('md')]:{
-            width:'95%',
-            margin: '0 auto',
-            textAlign:'center',
-            marginBottom:'1em'
+    }
 
-        },
-        
-    },
-    responsiveButton:{
-        background: '#558c8c',
-        color: 'White',
-        fontFamily:'Lustria serif',
-        "&:hover": {
-            background: theme.palette.common.lightBrown,
-            color: 'white',
-          },
-    },
-    responsiveImgContainer:{
-        marginLeft:'1em',
-        
-        [theme.breakpoints.down('md')]:{
-            margin: 0,
-            textAlign:'center',
-            width:'100%'
-        }
-    },
-    responsiveImg:{
-        width:'25em',
-        [theme.breakpoints.down('md')]:{
-            width: '30.2'
-        },
-        [theme.breakpoints.down('xs')]:{
-            width: '100%'
-        }
-    },
-    
 
+},
+techStackSubtitle:{
+    textAlign:'center',
+    width:'80%',
+    margin:'0em auto',
+    fontSize:'1em',
+    lineHeight:1.4,
+    [theme.breakpoints.down('md')]:{
+        fontSize:'0.89em',
+    },
+    [theme.breakpoints.down('sm')]:{
+        width:'100%',
+        textAlign:'left',
+        margin:0,
+       
+        fontSize:'0.99em',
+        marginTop:'1em',
+        color:'white'
+    }
+
+},
+techStackImgContainer:{
+    textAlign:'center',
+    [theme.breakpoints.down('sm')]:{
+        width:'100%',
+        textAlign:'left'
+    }
+},
+techStackImg:{
+    width:'3.5em',
+    [theme.breakpoints.down('sm')]:{
+        width:'3em'
+    }
+
+}
+   
 }))

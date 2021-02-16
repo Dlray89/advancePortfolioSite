@@ -5,11 +5,12 @@ import webdesign from "../../asset/images/webdesign.jpg";
 export const useStyles = makeStyles((theme) => ({
   landingPage: {
     backgroundImage: "url(" + heroCardImg + ")",
-    height: "40em",
+    height: "50em",
     backgroundRepeat: "no-repeat",
-    backgroundSize: "35% 100%, cover",
+    backgroundSize: "45% 100%, cover",
     backgroundPosition: "right",
-    background: "#242331",
+    backgroundPositionY:'3em',
+        background: "#242331",
     [theme.breakpoints.down("sm")]: {
       backgroundSize: "100% 100%, cover",
       height: "40em",

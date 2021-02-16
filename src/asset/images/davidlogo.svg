@@ -9,6 +9,6 @@
   </defs>
   <g id="Slice" clip-path="url(#clip_1)">
     <use xlink:href="#slice_1" stroke="none" fill="none" />
-    <use xlink:href="#img_1" fill="#FFFFFF" stroke="none" transform="translate(0 -2)" />
+    <use xlink:href="#img_1" fill="white" stroke="none" transform="translate(0 -2)" />
   </g>
 </svg>

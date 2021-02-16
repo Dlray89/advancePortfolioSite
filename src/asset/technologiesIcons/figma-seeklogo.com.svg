@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="53px" height="80px" viewbox="0 0 53 80" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+  <g id="figma-seeklogo.com">
+    <path d="M13.25 26.5C20.564 26.5 26.5 20.564 26.5 13.25L26.5 0L13.25 0C5.936 0 0 5.936 0 13.25C0 20.564 5.936 26.5 13.25 26.5L13.25 26.5Z" transform="translate(0 52.999985)" id="path0_fill" fill="#0ACF83" fill-rule="evenodd" stroke="none" />
+    <path d="M0 13.25C0 5.936 5.936 0 13.25 0L26.5 0L26.5 26.5L13.25 26.5C5.936 26.5 0 20.564 0 13.25L0 13.25Z" transform="translate(0 26.499985)" id="path1_fill" fill="#A259FF" fill-rule="evenodd" stroke="none" />
+    <path d="M0 13.25C0 5.936 5.936 0 13.25 0L26.5 0L26.5 26.5L13.25 26.5C5.936 26.5 0 20.564 0 13.25L0 13.25Z" id="path1_fill_1_" fill="#F24E1E" fill-rule="evenodd" stroke="none" />
+    <path d="M0 0L13.25 0C20.564 0 26.5 5.936 26.5 13.25C26.5 20.564 20.564 26.5 13.25 26.5L0 26.5L0 0L0 0Z" transform="translate(26.5 0)" id="path2_fill" fill="#FF7262" fill-rule="evenodd" stroke="none" />
+    <path d="M26.5 13.25C26.5 20.564 20.564 26.5 13.25 26.5C5.936 26.5 0 20.564 0 13.25C0 5.936 5.936 0 13.25 0C20.564 0 26.5 5.936 26.5 13.25L26.5 13.25Z" transform="translate(26.5 26.499985)" id="path3_fill" fill="#1ABCFE" fill-rule="evenodd" stroke="none" />
+  </g>
+</svg>

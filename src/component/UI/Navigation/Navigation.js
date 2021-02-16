@@ -1,6 +1,6 @@
 import React, { useEffect, useState, createRef } from "react";
 import { useStyles } from "./nav_style";
-import Logo from "../../../asset/images/davidlogo.svg";
+import Logo from "../../../asset/images/logo.svg";
 
 import {
   Tab,
@@ -15,10 +15,10 @@ import {
   useMediaQuery,
   useTheme,
   IconButton,
-  Grid
+  Grid,
 } from "@material-ui/core";
 import MenuIcon from "@material-ui/icons/Menu";
-import ContactButton from '../../UI/contactButton/contactButton'
+import ContactButton from "../../UI/contactButton/contactButton";
 
 import { Link } from "react-router-dom";
 
@@ -37,7 +37,7 @@ const ElevationScroll = (props) => {
 
 const Navigation = () => {
   const classes = useStyles();
-  const ref = createRef()
+  const ref = createRef();
 
   const [value, setValue] = useState(0);
   const [open, setOpen] = useState(false);
@@ -58,9 +58,9 @@ const Navigation = () => {
   // };
 
   const navigationLinks = [
-    {id: 1, name: "Home", link: "/" },
-    {id: 2, name: "Portfolio", link: "/projects" },
-    {id: 3, name: "Services", link: "/services" },
+    { id: 1, name: "Home", link: "/" },
+    { id: 2, name: "Portfolio", link: "/projects" },
+    { id: 3, name: "Services", link: "/services" },
   ];
 
   useEffect(() => {
@@ -89,14 +89,18 @@ const Navigation = () => {
     <React.Fragment>
       <Tabs
         indicatorColor="secondary"
+        TabIndicatorProps={{
+          style: {
+            background: "white",
+          },
+        }}
         value={value}
         onChange={changeHandler}
         className={classes.tabContainer}
-        
       >
         {navigationLinks.map((link) => (
           <Tab
-          style={{color:'black' , fontFamily:'Lustria serif'}}
+            style={{ color: "black", fontFamily: "Lustria serif" }}
             component={Link}
             to={link.link}
             label={link.name}
@@ -104,72 +108,115 @@ const Navigation = () => {
           />
         ))}
       </Tabs>
-      <ContactButton variant='outlined' className={classes.navButton}>Contact Me</ContactButton>
+      <ContactButton variant="outlined" className={classes.navButton}>
+        Contact Me
+      </ContactButton>
     </React.Fragment>
   );
 
   const mobileNav = (
     <React.Fragment>
       <SwipeableDrawer
-      disableBackdropTransition={!iOS}
-      disableDiscovery={iOS}
+        disableBackdropTransition={!iOS}
+        disableDiscovery={iOS}
         open={open}
         onOpen={() => setOpen(true)}
         onClose={() => setOpen(false)}
-        classes={{paper: classes.mobileDrawer}}
+        classes={{ paper: classes.mobileDrawer }}
         PaperProps={{
-          style:{
-            background: '#242331',
-            
-          }
+          style: {
+            background: "#242331",
+          },
         }}
-      
       >
-        <div className={classes.toolbarMargin}  />
-      
-        <List>
-          <ListItem button divider component={Link} to='/' onClick={() => setOpen(false)} >
-            <ListItemText style={{color:'white', fontSize: "1.7em",
-    textAlign: "center", fontFamily: "Lustria serif",}} className={classes.mobileLinks}>Home</ListItemText>
+        <div className={classes.toolbarMargin} />
+
+        <List >
+          <ListItem
+            button
+            divider
+            component={Link}
+            to="/"
+            onClick={() => setOpen(false)}
+          >
+            <ListItemText
+              style={{
+                color: "white",
+                fontSize: "1.7em",
+                textAlign: "center",
+                fontFamily: "Lustria serif",
+              }}
+              className={classes.mobileLinks}
+            >
+              Home
+            </ListItemText>
           </ListItem>
 
-          <ListItem style={{color:'white', fontSize: "1em" ,
-    textAlign: "center", fontFamily: "Lustria serif",}} onClick={() => setOpen(false)} button divider component={Link} to='/projects'>
-            <ListItemText  className={classes.mobileLinks}>Projects</ListItemText>
+          <ListItem
+            style={{
+              color: "white",
+              fontSize: "1em",
+              textAlign: "center",
+              fontFamily: "Lustria serif",
+            }}
+            onClick={() => setOpen(false)}
+            button
+            divider
+            component={Link}
+            to="/projects"
+          >
+            <ListItemText className={classes.mobileLinks}>
+              Projects
+            </ListItemText>
           </ListItem>
 
-          <ListItem style={{color:'white', fontSize: "1em",
-    textAlign: "center"}} onClick={() => setOpen(false)} button divider component={Link} to='/services'>
-            <ListItemText className={classes.mobileLinks}>Services</ListItemText>
+          <ListItem
+            style={{ color: "white", fontSize: "1em", textAlign: "center" }}
+            onClick={() => setOpen(false)}
+            button
+            divider
+            component={Link}
+            to="/services"
+          >
+            <ListItemText className={classes.mobileLinks}>
+              Services
+            </ListItemText>
           </ListItem>
-
-          
-
-         </List>
-         <ContactButton variant='outlined' className={classes.mobileButton}>Contact Me</ContactButton>
-        
+        </List>
+        <ContactButton variant="outlined" className={classes.mobileButton}>
+          Contact Me
+        </ContactButton>
       </SwipeableDrawer>
 
-      <IconButton style={{marginLeft: 'auto'}}  onClick={() => setOpen(!open)}>
-        <MenuIcon style={{ color: '#242331',
-    height: "1.5em",
-    width: "1.5em",}}  />
+      <IconButton
+        style={{ marginLeft: "auto"}}
+        onClick={() => setOpen(!open)}
+      >
+        <MenuIcon
+          style={{ color: "#242331", height: "1.5em", width: "1.5em" }}
+        />
       </IconButton>
     </React.Fragment>
   );
 
   return (
     <div className={classes.mainContainer}>
-      <ElevationScroll >
-        <AppBar position="fixed" style={{zIndex: theme.zIndex.modal + 1, background:'white'}}>
+      <ElevationScroll>
+        <AppBar
+          position="fixed"
+          className={classes.appbar} 
+        >
           <Toolbar disableGutters>
-            <Grid containerclassName={classes.logoContainer} component={Link} to='/'>
+            <Grid
+              containerclassName={classes.logoContainer}
+              component={Link}
+              to="/"
+            >
               <img
                 className={classes.logo}
                 alt="logo for David Ray website"
                 src={Logo}
                 ref={ref}
-                
               />
             </Grid>
             {mobileMatch ? mobileNav : deskTopNav}
@@ -177,7 +224,6 @@ const Navigation = () => {
         </AppBar>
       </ElevationScroll>
 
-      <div className={classes.toolbarMargin} />
     </div>
   );
 };

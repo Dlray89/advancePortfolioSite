@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="100%" height="49px" viewbox="0 0 33 49" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+  <g id="figma-seeklogo.com">
+    <path d="M8.08333 16.1667C12.5453 16.1667 16.1667 12.5453 16.1667 8.08333L16.1667 0L8.08333 0C3.62133 0 0 3.62133 0 8.08333C0 12.5453 3.62133 16.1667 8.08333 16.1667L8.08333 16.1667Z" transform="translate(0 32.333313)" id="path0_fill" fill="#0ACF83" fill-rule="evenodd" stroke="none" />
+    <path d="M0 8.08333C0 3.62133 3.62133 0 8.08333 0L16.1667 0L16.1667 16.1667L8.08333 16.1667C3.62133 16.1667 0 12.5453 0 8.08333L0 8.08333Z" transform="translate(0 16.166656)" id="path1_fill" fill="#A259FF" fill-rule="evenodd" stroke="none" />
+    <path d="M0 8.08333C0 3.62133 3.62133 0 8.08333 0L16.1667 0L16.1667 16.1667L8.08333 16.1667C3.62133 16.1667 0 12.5453 0 8.08333L0 8.08333Z" id="path1_fill_1_" fill="#F24E1E" fill-rule="evenodd" stroke="none" />
+    <path d="M0 0L8.08333 0C12.5453 0 16.1667 3.62133 16.1667 8.08333C16.1667 12.5453 12.5453 16.1667 8.08333 16.1667L0 16.1667L0 0L0 0Z" transform="translate(16.166672 0)" id="path2_fill" fill="#FF7262" fill-rule="evenodd" stroke="none" />
+    <path d="M16.1667 8.08333C16.1667 12.5453 12.5453 16.1667 8.08333 16.1667C3.62133 16.1667 0 12.5453 0 8.08333C0 3.62133 3.62133 0 8.08333 0C12.5453 0 16.1667 3.62133 16.1667 8.08333L16.1667 8.08333Z" transform="translate(16.166672 16.166656)" id="path3_fill" fill="#1ABCFE" fill-rule="evenodd" stroke="none" />
+  </g>
+</svg>
