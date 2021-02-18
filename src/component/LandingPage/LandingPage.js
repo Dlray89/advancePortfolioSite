@@ -177,7 +177,7 @@ const LandingPage = (props) => {
               <DialogContent className={classes.projectContainer}>
                 <Grid
                   container
-                  direction="row"
+                  direction={matchSm ? "column" : "row"}
                   alignItems="center"
                   justify="space-between"
                   className={classes.project}
@@ -273,7 +273,7 @@ const LandingPage = (props) => {
               <DialogContent className={classes.projectContainer}>
                 <Grid
                   container
-                  direction="row"
+                  direction={matchSm ? "column" : "row"}
                   alignItems="center"
                   justify="space-between"
                   className={classes.project}
@@ -359,7 +359,7 @@ const LandingPage = (props) => {
               <DialogContent className={classes.projectContainer}>
                 <Grid
                   container
-                  direction="row"
+                  direction={matchSm ? "column" : "row"}
                   alignItems="center"
                   justify="space-between"
                   className={classes.project}

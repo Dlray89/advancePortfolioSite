@@ -211,6 +211,10 @@ export const useStyles = makeStyles((theme) => ({
   projectDetails: {
     width: "50%",
     fontFamily: "Smokum cursive",
+    [theme.breakpoints.down('sm')]:{
+      width:'100%',
+      textAlign:'center'
+    }
   },
   projectTitle: {
     width: "90%",
@@ -234,10 +238,17 @@ export const useStyles = makeStyles((theme) => ({
   },
   projectImgContainer: {
     width: "50%",
+    [theme.breakpoints.down('sm')]:{
+      width:'100%',
+      height:'20em'
+    }
   },
   projectImg: {
     width: "100%",
     height: "100%",
+    [theme.breakpoints.down('sm')]:{
+      width:'100%'
+    }
   },
   projectButtonContainer: {
     width: "90%",
