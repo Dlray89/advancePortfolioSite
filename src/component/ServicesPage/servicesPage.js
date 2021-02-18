@@ -263,7 +263,8 @@ const ServicesPage = () => {
                 brand and be present in the market all while adding profit.
               </Grid>
 
-              <Grid item className={classes.websiteAppButtonContainer}>
+              <Grid item className={classes.websiteAppButtonContainer}  component={Link}
+                  to="/gettingstarted">
                 <Button className={classes.webAppButton}>Get Started</Button>
               </Grid>
             </Grid>
