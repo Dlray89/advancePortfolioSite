@@ -507,7 +507,7 @@ const LandingPage = (props) => {
             </Grid>
           </Grid>
 
-          <Grid item className={classes.calltoactionButtonContainer}>
+          <Grid item className={classes.calltoactionButtonContainer} component={Link} to='/services'>
             <Button className={classes.calltoactionButton}>
               View Services <ArrowRightIcon />
             </Button>
